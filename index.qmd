@@ -3,7 +3,7 @@ title: "Kyle Grealis"
 image: static/images/kyle.jpg
 about:
   template: trestles
-  image-shape: round
+  image-shape: rounded
   image-width: 15em
   links:
     - text: "GitHub"
