@@ -4,7 +4,7 @@ project:
 website:
   title: "kyleGrealis.github.io"
   navbar:
-    left:
+    right:
       - href: index.qmd
         text: Home
       - about.qmd
