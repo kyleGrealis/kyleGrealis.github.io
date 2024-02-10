@@ -1,7 +1,27 @@
 ---
-title: "kyleGrealis.github.io"
+title: "Kyle Grealis"
+image: static/images/kyle.jpg
+about:
+  template: trestles
+  image-shape: round
+  image-width: 15em
+  links:
+    - text: "GitHub"
+      icon: github
+      href: https://github.com/kyleGrealis/
+    - text: "LinkedIn"
+      icon: linkedin
+      href: https://www.linkedin.com/in/kyle-grealis-044030180/
+    - text: "CV"
+      icon: file-text
+      # href: static/files/Kyle_Grealis_CV.pdf
+  id: ppc
 ---
 
-## More to come...
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+::: { #ppc }
 
+## More to come...
+
+:::
+
+To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
