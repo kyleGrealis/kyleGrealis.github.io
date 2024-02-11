@@ -15,13 +15,17 @@ about:
     - text: "CV"
       icon: file-text
       # href: static/files/Kyle_Grealis_CV.pdf
-  id: ppc
+  # id: ppc
+toc: false
 ---
 
-::: { #ppc }
+::: {#ppc}
+## Hey there! 👋  I'm Kyle Grealis...
 
-## More to come...
+I'm a Biostatistician and Lead Data Analyst at the University of Miami. I spent nearly 20 years as a respiratory therapist before discovering the world of data science and its importance on healthcare. Attention to detail is as critical a skill in bedside assessment as it is in data analysis. 
 
+I've been fortunate to work with some great physicians and researchers in the field of pulmonary medicine, and I've recently transitioned to the Department of Public Health Sciences at the University of Miami. Currently, we are developing machine learning algorithms to predict individual relapse in those affected by the opioid epidemic.
+
+I'm passionate about data science and the potential it has to improve healthcare and outcomes. This website is a collection of my work, web applications that I've developed to be used as teaching tools and for bettering understanding of epidemiology and biostatistics, and a blog where I share my journey. Let's come together to share, learn, and grow in the field of data science and healthcare.
 :::
 
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.

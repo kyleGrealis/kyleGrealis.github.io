@@ -1,0 +1,23 @@
+[
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Kyle Grealis",
+    "section": "",
+    "text": "I’m a Biostatistician and Lead Data Analyst at the University of Miami. I spent nearly 20 years as a respiratory therapist before discovering the world of data science and its importance on healthcare. Attention to detail is as critical a skill in bedside assessment as it is in data analysis.\nI’ve been fortunate to work with some great physicians and researchers in the field of pulmonary medicine, and I’ve recently transitioned to the Department of Public Health Sciences at the University of Miami. Currently, we are developing machine learning algorithms to predict individual relapse in those affected by the opioid epidemic.\nI’m passionate about data science and the potential it has to improve healthcare and outcomes. This website is a collection of my work, web applications that I’ve developed to be used as teaching tools and for bettering understanding of epidemiology and biostatistics, and a blog where I share my journey. Let’s come together to share, learn, and grow in the field of data science and healthcare."
+  },
+  {
+    "objectID": "index.html#hey-there-im-kyle-grealis",
+    "href": "index.html#hey-there-im-kyle-grealis",
+    "title": "Kyle Grealis",
+    "section": "",
+    "text": "I’m a Biostatistician and Lead Data Analyst at the University of Miami. I spent nearly 20 years as a respiratory therapist before discovering the world of data science and its importance on healthcare. Attention to detail is as critical a skill in bedside assessment as it is in data analysis.\nI’ve been fortunate to work with some great physicians and researchers in the field of pulmonary medicine, and I’ve recently transitioned to the Department of Public Health Sciences at the University of Miami. Currently, we are developing machine learning algorithms to predict individual relapse in those affected by the opioid epidemic.\nI’m passionate about data science and the potential it has to improve healthcare and outcomes. This website is a collection of my work, web applications that I’ve developed to be used as teaching tools and for bettering understanding of epidemiology and biostatistics, and a blog where I share my journey. Let’s come together to share, learn, and grow in the field of data science and healthcare."
+  }
+]
