@@ -34,6 +34,15 @@ Now you should save the file and commit it to your project repo.
 The following packages are necessary to run the code in this guide:
 
 ```{r}
+#| echo: false
+# load the packages
+library(tidyverse)
+library(httr2)
+```
+
+
+```{r}
+#| eval: false
 # this will install the necessary packages if you don't already have them
 if (!require("devtools")) install.packages("devtools")
 if (!require("dotenv")) devtools::install_cran("dotenv")
@@ -41,7 +50,6 @@ if (!require("dotenv")) devtools::install_cran("dotenv")
 # load the packages
 library(tidyverse)
 library(httr2)
-library(gt)
 ```
 
 Time to load the secret key you just created and added to the `.env` file. The `dotenv` package will allow you to load the secret key from the `.env` file.
