@@ -44,8 +44,7 @@ library(httr2)
 ```{r}
 #| eval: false
 # this will install the necessary packages if you don't already have them
-if (!require("devtools")) install.packages("devtools")
-if (!require("dotenv")) devtools::install_cran("dotenv")
+if (!require("dotenv")) install.packages("dotenv")
 
 # load the packages
 library(tidyverse)
