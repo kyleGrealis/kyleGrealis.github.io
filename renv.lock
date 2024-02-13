@@ -475,7 +475,6 @@
         "graphlayouts",
         "grid",
         "gtable",
-        "igraph",
         "lifecycle",
         "rlang",
         "scales",
@@ -524,7 +523,6 @@
         "R",
         "Rcpp",
         "RcppArmadillo",
-        "igraph"
       ],
       "Hash": "5e9e4cd284ff8abba3cfc43268e3ddd5"
     },
@@ -1133,7 +1131,6 @@
         "cli",
         "cpp11",
         "dplyr",
-        "igraph",
         "lifecycle",
         "magrittr",
         "pillar",
