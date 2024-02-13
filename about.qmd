@@ -6,27 +6,27 @@ WARNING: This page is WAY under construction!
 
 
 ```{r}
-library(scholar)
-library(dplyr)
-pubs <- get_publications(
-  get_scholar_id(
-    last_name = "Grealis", 
-    first_name = "Kyle"
-  )
-)
+# library(scholar)
+# library(dplyr)
+# pubs <- get_publications(
+#   get_scholar_id(
+#     last_name = "Grealis", 
+#     first_name = "Kyle"
+#   )
+# )
 ```
 
-I have contributed to `r nrow(pubs)` publications in my career.
+<!-- I have contributed to `r nrow(pubs)` publications in my career. -->
 
 My publications are:
 ```{r}
-pubs|>
-  select(
-    Title = title,
-    `Author(s)` = author,
-    Journal = journal,
-    Edition = number,
-    Year = year
-  ) |>
-  gt::gt()
+# pubs|>
+#   select(
+#     Title = title,
+#     `Author(s)` = author,
+#     Journal = journal,
+#     Edition = number,
+#     Year = year
+#   ) |>
+#   gt::gt()
 ```
