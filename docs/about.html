@@ -168,9 +168,69 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <p>About this site</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span> <span class="sc">+</span> <span class="dv">1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(scholar)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>pubs <span class="ot">&lt;-</span> <span class="fu">get_publications</span>(</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">get_scholar_id</span>(</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">last_name =</span> <span class="st">"Grealis"</span>, </span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">first_name =</span> <span class="st">"Kyle"</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>I have contributed to 9 publications in my career.</p>
+<p>My publications are:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>pubs</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 2</code></pre>
+<pre><code>                                                                                                                                             title
+1                                      A comparative study of bronchodilator response: utilizing pre-bronchodilator versus predicted normal values
+2                                                                          Ventilation heterogeneity from X-ray Velocimetry predicts COPD severity
+3                                                                                   Quantifying ventilation by X-ray velocimetry in healthy adults
+4                                                                         The Association Between Sleep Hygiene and Cessation of Cigarette Smoking
+5                                                           Validation of X-ray Velocimetry With Pneumotachograph to Assess Respiratory Physiology
+6 Assessment of Regional Lung Ventilation Using Computer Tomography (CT) Lung Ventilation Analysis in Chronic Obstructive Pulmonary Disease (COPD)
+7                                                                    Prevalence and Burden of PRISm in Population Cohorts From Three LMIC Settings
+8                                            Accuracy and Reproducibility of Plethysmographic Thoracic Gas Volume Measurements in Healthy Subjects
+9                                                                                                 Normalizing Spirometric Bronchodilator Responses
+                                                                        author
+1                                    A Alexis, NM Punjabi, K Grealis, A Wanner
+2 S Raju, K Grealis, E Gonzalez, K Nakrani, T Otvas, J Kirkness, A Fouras, ...
+3           T Siddharthan, K Grealis, JP Kirkness, T Ötvös, D Stefanovski, ...
+4         DM Moore, K Grealis, E Gonzalez, T Siddharthan, NM Punjabi, AR Abreu
+5     AE Tombleson, K Grealis, T Otvos, JP Kirkness, A Fouras, NM Punjabi, ...
+6    D Karmali, M Dalzell, E Gonzalez, K Grealis, E Castillo, JP Kirkness, ...
+7      K Grealis, T Siddharthan, S Pollard, D Hossain, P Alupo, R Chandyo, ...
+8                    T Siddharthan, M Dalzell, K Grealis, E Gonzalez, A Wanner
+9                                    A Alexis, K Grealis, NM Punjabi, A Wanner
+                       journal
+1       BMC Pulmonary Medicine
+2 European Respiratory Journal
+3         Respiratory Research
+4                            A
+5                            A
+6                            A
+7                            C
+8                            A
+9                            B
+                                                                       number
+1                                                                  24 (1), 54
+2                                                               62 (suppl 67)
+3                                                                 24 (1), 215
+4                    A36. SLEEP-RELATED HEALTH SERVICES RESEARCH, A1433-A1433
+5         A17. TELL ME WHAT YOU SEE: NEW STUDIES IN LUNG IMAGING, A1045-A1045
+6  A108. NEW INSIGHTS INTO CHRONIC OBSTRUCTIVE PULMONARY DISEASE, A2699-A2699
+7 C17. IN THIS TOGETHER: CONFRONTING ENVIRONMENTAL HEALTH CHALLENGES AROUND&nbsp;…
+8     A41. EMERGING CLINICAL AND TRANSLATIONAL RESEARCH IN COPD AND ALPHA-1&nbsp;…
+9       B30. BREATHE (IN THE AIR): STUDIES IN PULMONARY FUNCTION, A3002-A3002
+  cites year  cid        pubid
+1     0 2024 &lt;NA&gt; qjMakFHDy7sC
+2     0 2023 &lt;NA&gt; u-x6o8ySG0sC
+3     0 2023 &lt;NA&gt; u5HHmVD_uO8C
+4     0 2023 &lt;NA&gt; zYLM7Y9cAGgC
+5     0 2023 &lt;NA&gt; IjCSPb-OGe4C
+6     0 2023 &lt;NA&gt; UeHWp8X0CEIC
+7     0 2023 &lt;NA&gt; 2osOgNQ5qMEC
+8     0 2023 &lt;NA&gt; 9yKSN-GCB0IC
+9     0 2023 &lt;NA&gt; d1gkVwhDpl0C</code></pre>
 </div>
 </div>
 
