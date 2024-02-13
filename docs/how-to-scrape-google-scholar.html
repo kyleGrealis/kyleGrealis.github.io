@@ -4768,12 +4768,11 @@ Note
 <p>The following packages are necessary to run the code in this guide:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># this will install the necessary packages if you don&#39;t already have them</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="sc">!</span><span class="fu">require</span>(<span class="st">&quot;devtools&quot;</span>)) <span class="fu">install.packages</span>(<span class="st">&quot;devtools&quot;</span>)</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="sc">!</span><span class="fu">require</span>(<span class="st">&quot;dotenv&quot;</span>)) devtools<span class="sc">::</span><span class="fu">install_cran</span>(<span class="st">&quot;dotenv&quot;</span>)</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="co"># load the packages</span></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(httr2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="sc">!</span><span class="fu">require</span>(<span class="st">&quot;dotenv&quot;</span>)) <span class="fu">install.packages</span>(<span class="st">&quot;dotenv&quot;</span>)</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co"># load the packages</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(httr2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Time to load the secret key you just created and added to the <code>.env</code> file. The <code>dotenv</code> package will allow you to load the secret key from the <code>.env</code> file.</p>
 <div class="cell">
@@ -4869,14 +4868,14 @@ Note
 <div class="cell-output cell-output-stdout">
 <pre><code>List of 4
  $ search_metadata  :List of 8
-  ..$ id                       : chr &quot;65cbeb70ca968f859939d117&quot;
+  ..$ id                       : chr &quot;65cc00593c3fb2603bf80a81&quot;
   ..$ status                   : chr &quot;Success&quot;
-  ..$ json_endpoint            : chr &quot;https://serpapi.com/searches/c6519901d3c18b24/65cbeb70ca968f859939d117.json&quot;
-  ..$ created_at               : chr &quot;2024-02-13 22:21:36 UTC&quot;
-  ..$ processed_at             : chr &quot;2024-02-13 22:21:36 UTC&quot;
+  ..$ json_endpoint            : chr &quot;https://serpapi.com/searches/c6519901d3c18b24/65cc00593c3fb2603bf80a81.json&quot;
+  ..$ created_at               : chr &quot;2024-02-13 23:50:49 UTC&quot;
+  ..$ processed_at             : chr &quot;2024-02-13 23:50:49 UTC&quot;
   ..$ google_scholar_author_url: chr &quot;https://scholar.google.com/citations?user=sdB7YAkAAAAJ&amp;hl=en&quot;
-  ..$ raw_html_file            : chr &quot;https://serpapi.com/searches/c6519901d3c18b24/65cbeb70ca968f859939d117.html&quot;
-  ..$ total_time_taken         : num 1.33
+  ..$ raw_html_file            : chr &quot;https://serpapi.com/searches/c6519901d3c18b24/65cc00593c3fb2603bf80a81.html&quot;
+  ..$ total_time_taken         : num 0.2
  $ search_parameters:List of 3
   ..$ engine   : chr &quot;google_scholar_author&quot;
   ..$ author_id: chr &quot;sdB7YAkAAAAJ&quot;
