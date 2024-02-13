@@ -5,34 +5,4 @@ title: "About"
 # Warning:
 This page is under construction!
 
-```{r}
-library(scholar)
-library(dplyr)
-library(gt)
-```
 
-```{r}
-the_pubs <- get_publications(
-  get_scholar_id(
-    last_name = "Grealis", 
-    first_name = "Kyle", 
-    affiliation = "Miami"
-  )
-) |>
-  select(
-    Title = title,
-    `Author(s)` = author,
-    Journal = journal,
-    Edition = number,
-    Year = year
-  )
-
-```
-
-
-I have contributed to `r nrow(the_pubs)` academic publications:
-
-```{r}
-gt(the_pubs)
-
-```
