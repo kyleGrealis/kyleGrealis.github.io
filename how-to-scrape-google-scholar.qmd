@@ -1,0 +1,186 @@
+---
+title: "How to scrape Google Scholar in R"
+format: 
+  html:
+    self-contained: true
+execute:
+  warning: false
+  message: false
+---
+
+# Intro
+This is a guide on how to scrape Google Scholar using the Serpapi API. This guide will show how to first obtain a free API key that will allow you to obtain the author publications and information from Google Scholar. We'll also go over how to securely store the API key in a `.env` file and how to access the key from the `.env` file.
+
+# Prerequisites
+Navigate to the [Serpapi](https://serpapi.com/users/sign_up) website to register for a free account. You can sign in using your email or GitHub. After you register and confirm your email address, you will receive a secret key located towards the bottom of the screen.
+
+<!-- insert image -->
+Create a `.env` file in your project repo. You'll want to immediately add that to your `.gitignore` file before you even commit the `.env` file to your repo. You do not want to make the mistake of scripting your secret key into your files or forget to do it later. In the `.env` file, add the following line:
+
+```{text}
+# my google scholar api key
+GOOGLE_KEY=<your_secret_key_provided_when_you_registered>
+
+```
+
+::: { .callout-note }
+End your `.env` file with a newline. This will save you a minor warning later on.
+:::
+
+Now you should save the file and commit it to your project repo.
+
+# Installing the necessary packages
+
+The following packages are necessary to run the code in this guide:
+
+```{r}
+# this will install the necessary packages if you don't already have them
+if (!require("devtools")) install.packages("devtools")
+if (!require("dotenv")) devtools::install_cran("dotenv")
+
+# load the packages
+library(tidyverse)
+library(httr2)
+library(gt)
+```
+
+Time to load the secret key you just created and added to the `.env` file. The `dotenv` package will allow you to load the secret key from the `.env` file.
+
+```{r}
+# this will load your free secret key to access the Serpapi API
+dotenv::load_dot_env()
+```
+
+# Scraping Google Scholar
+
+The base URL needed to begin Google Scholar searches comes from the same site that we used to get our access key: [https://serpapi.com/google-scholar-api](https://serpapi.com/google-scholar-api). You will notice that they provide you with guides for accessing Google Scholar information on authors, cites, organic results, and profiles. Unfortunately, none of those guides include how to obtain your desired information using R.
+
+```{r}
+# save the URL for easier scripting
+url <- "https://serpapi.com/search.json?engine=google_scholar"
+```
+
+## Get the author's unique ID
+
+The first step that we're going to do is obtain an author's unique ID. This will allow us to be certain of the other results we are planning to obtain. You may search for an author and find out that there are multiple authors with the same name. Google Scholar provides each registered author with a unique ID, so we'll grab and store that.
+
+The `httr2` package's `request` function will allow us to make a request to the Serpapi API. We'll use the `req_url_query` function to add the necessary parameters to the URL. We need to use the `google_scholar_profiles` search engine and enter my name into the `mauthors` field. The last argument is the secret key that we stored in the `.env` file. The `req_perform()` function will execute the request and store the response in the `id_response` object.
+
+```{r}
+id_response <- request(url) |>
+  req_url_query(
+    engine = "google_scholar_profiles",
+    mauthors = "Kyle Grealis",
+    # this will call on your secret key from the .env file
+    key = Sys.getenv("GOOGLE_KEY")
+  ) |>
+  req_perform()
+```
+
+If we take a few peeks at what is returned in the `response` object, we can see that the `id_response` object is a list of lists. The `resp_body_json` function will allow us to convert the response to a list of lists. The `glimpse` function will allow us to see the structure of the list of lists.
+
+```{r}
+id_response |>
+  resp_body_json() |>
+  glimpse()
+```
+
+But really-- what is that mess? Well, it's all of the information that is returned from the call to the API. We see that my name is listed in the `..$ mauthors: chr "Kyle Grealis"` line and again in `..$ name       : chr "Kyle Grealis"`. Looking down a few more lines and we'll see exactly what we're looking for: the `author_id`. I can confirm that this is my profile because we also notice that my `affiliation` is listed as "University of Miami". However, I'm sure you can see that if you find yourself, as mentioned above, searching for an author with a common name and are not familiar with their affiliations, you may have to do some more digging to find the correct author.
+
+We can move on and use the `pluck` function to grab the `author_id` from the list and save it into an object of the same name. Later, I'm going to use this same technique to scrape information for the other members of my research team as I construct and update our team website.
+
+```{r}
+author_id <- id_response |>
+  resp_body_json() |>
+  pluck("profiles", 1, "author_id")
+
+author_id
+```
+
+And, see... it's a match to the `author_id` that we saw in the `glimpse` output. Now that we have the `author_id`, we can use it in the second part to obtain the author's publications and information.
+
+## Get the author's list of publications
+
+We're now going to repeat a little of what we did above, but this time we'll be using the `google_scholar_author` search engine and the `author_id` that we just obtained.
+
+```{r}
+author_response <- request(url) |>
+  req_url_query(
+    engine = "google_scholar_author",
+    author_id = author_id,
+    # this will call on your secret key from the .env file
+    key = Sys.getenv("GOOGLE_KEY")
+  ) |>
+  req_perform()
+```
+
+Again, we'll have a look at what the API call returns to us (but I've hidden the output because it's a lot of information). We'll use the `resp_body_json` function to convert the response to a list of lists and the `glimpse` function to see the structure of the list of lists.
+
+```{r}
+author_response |>
+  resp_body_json() |>
+  glimpse()
+```
+
+Now we have a lot of useful information. This already shows that I have contributed on `r length(author_response |> resp_body_json() |> pluck("articles"))` articles. Let's again use `pluck` to grab the title of the second article in the list.
+
+```{r}
+author_response |>
+  resp_body_json() |>
+  pluck("articles", 2, "title")
+```
+
+What if I wanted to calculate the number of articles? Just use the `length` function to return the length of the list:
+
+```{r}
+author_response |> 
+  resp_body_json() |> 
+  pluck("articles") |>
+  length()
+```
+
+But what about my total number of citations? Unfortunately, as of this writing (February 13, 2024), none of my works have been cited...yet! So, instead, let's see how many times my mentor, Dr. Ray Balise, has been cited. Let's pipe everything together...
+
+```{r}
+his_id <- request(url) |>
+  req_url_query(
+    engine = "google_scholar_profiles",
+    mauthors = "Raymond Balise",
+    key = Sys.getenv("GOOGLE_KEY")
+  ) |>
+  req_perform() |>
+  resp_body_json() |>
+  pluck("profiles", 1, "author_id")
+
+his_works <- request(url) |>
+  req_url_query(
+    engine = "google_scholar_author",
+    author_id = his_id,
+    key = Sys.getenv("GOOGLE_KEY")
+  ) |>
+  req_perform() |>
+  resp_body_json()
+```
+
+Dr. Balise's first listed article was cited `r his_works |> pluck("articles", 1, "cited_by", "value")` times!
+
+```{r}
+his_works |>
+  pluck("articles", 1, "cited_by", "value")
+```
+
+And if we use the `map_dbl` function from the `purrr` package, we can calculate the total number of citations for all of his works.
+```{r}
+library(purrr)
+
+total_citations <- map_dbl(
+  his_works$articles, ~ .x$cited_by$value
+) |>
+  sum()
+```
+
+Dr. Balise has been cited `r total_citations` times!
+
+# Conclusion
+
+We've learned how to create a secret key and access author information from Google Scholar. We've also learned how to use this key with some cool tools fromt eh `httr2` package to access information about an author's publications and citations. We've also learned how to use the `purrr` package to calculate the total number of citations for an author's works. This is just the beginning of what you can do with the Serpapi API and the `httr2` package. I hope you've enjoyed this tutorial and that you'll be able to use this information to help you with your research and Shiny web design. Good luck!
