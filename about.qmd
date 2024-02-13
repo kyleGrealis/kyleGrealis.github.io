@@ -4,7 +4,6 @@ title: "About"
 
 WARNING: This page is WAY under construction!
 
-
 ```{r}
 library(scholar)
 library(dplyr)
