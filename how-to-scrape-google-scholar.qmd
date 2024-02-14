@@ -11,6 +11,8 @@ execute:
 # Intro
 This is a guide on how to scrape Google Scholar using SerpApi. This guide will show how to first obtain a free API key that will allow you to obtain the author publications and information from Google Scholar. We'll also go over how to securely store the API key in a `.env` file and how to access the key from the `.env` file.
 
+<hr>
+
 # Prerequisites
 Navigate to the [SerpApi](https://serpapi.com/users/sign_up) website and register for a free account. You can sign in using your email or GitHub. After you register and confirm your email address, you will receive a secret key located towards the bottom of the screen.
 
@@ -30,6 +32,8 @@ End your `.env` file with a newline. This will save you a minor warning later on
 :::
 
 Now you should save the file and commit it to your project repo.
+
+<hr>
 
 # Installing the necessary packages
 
@@ -60,6 +64,8 @@ Time to load the secret key you just created and added to the `.env` file. The `
 dotenv::load_dot_env()
 ```
 
+<hr>
+
 # Scraping Google Scholar
 
 The base URL needed to begin Google Scholar searches comes from the same site that we used to get our access key: [https://serpapi.com/google-scholar-api](https://serpapi.com/google-scholar-api). You will notice that they provide you with guides for accessing Google Scholar information on authors, cites, organic results, and profiles. Unfortunately, none of those guides include how to obtain your desired information using R.
@@ -68,6 +74,8 @@ The base URL needed to begin Google Scholar searches comes from the same site th
 # save the URL for easier scripting
 url <- "https://serpapi.com/search.json?engine=google_scholar"
 ```
+
+<br>
 
 ## Get the author's unique ID
 
@@ -107,6 +115,8 @@ author_id
 ```
 
 And, see... it's a match to the `author_id` that we saw in the `glimpse` output. Now that we have the `author_id`, we can use it in the second part to obtain the author's publications and information.
+
+<br>
 
 ## Get the author's list of publications
 
@@ -189,6 +199,8 @@ total_citations <- map_dbl(
 ```
 
 Dr. Balise has been cited `r total_citations` times!
+
+<hr>
 
 # Conclusion
 

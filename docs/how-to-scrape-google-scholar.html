@@ -4680,10 +4680,6 @@ vertical-align: -.125em;
     <a class="nav-link" href="./about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link active" href="./how-to-scrape-google-scholar.html" aria-current="page"> 
-<span class="menu-text">Webscraping</span></a>
-  </li>  
 </ul>
           </div> <!-- /navcollapse -->
           <div class="quarto-navbar-tools">
@@ -4737,6 +4733,7 @@ vertical-align: -.125em;
 <section id="intro" class="level1">
 <h1>Intro</h1>
 <p>This is a guide on how to scrape Google Scholar using SerpApi. This guide will show how to first obtain a free API key that will allow you to obtain the author publications and information from Google Scholar. We’ll also go over how to securely store the API key in a <code>.env</code> file and how to access the key from the <code>.env</code> file.</p>
+<hr>
 </section>
 <section id="prerequisites" class="level1">
 <h1>Prerequisites</h1>
@@ -4768,6 +4765,7 @@ Note
 </div>
 </div>
 <p>Now you should save the file and commit it to your project repo.</p>
+<hr>
 </section>
 <section id="installing-the-necessary-packages" class="level1">
 <h1>Installing the necessary packages</h1>
@@ -4785,6 +4783,7 @@ Note
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># this will load your free secret key to access the Serpapi API</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>dotenv<span class="sc">::</span><span class="fu">load_dot_env</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+<hr>
 </section>
 <section id="scraping-google-scholar" class="level1">
 <h1>Scraping Google Scholar</h1>
@@ -4793,6 +4792,7 @@ Note
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># save the URL for easier scripting</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>url <span class="ot">&lt;-</span> <span class="st">&quot;https://serpapi.com/search.json?engine=google_scholar&quot;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+<p><br></p>
 <section id="get-the-authors-unique-id" class="level2">
 <h2 class="anchored" data-anchor-id="get-the-authors-unique-id">Get the author’s unique ID</h2>
 <p>The first step that we’re going to do is obtain an author’s unique ID. This will allow us to be certain of the other results we are planning to obtain. You may search for an author and find out that there are multiple authors with the same name. Google Scholar provides each registered author with a unique ID, so we’ll grab and store that.</p>
@@ -4815,14 +4815,14 @@ Note
 <div class="cell-output cell-output-stdout">
 <pre><code>List of 3
  $ search_metadata  :List of 8
-  ..$ id                         : chr &quot;65cbf7ea3a218a86b52793ad&quot;
+  ..$ id                         : chr &quot;65ccfe6fdefa1308edb0e1dd&quot;
   ..$ status                     : chr &quot;Success&quot;
-  ..$ json_endpoint              : chr &quot;https://serpapi.com/searches/0f89992b69d5b4f3/65cbf7ea3a218a86b52793ad.json&quot;
-  ..$ created_at                 : chr &quot;2024-02-13 23:14:50 UTC&quot;
-  ..$ processed_at               : chr &quot;2024-02-13 23:14:50 UTC&quot;
+  ..$ json_endpoint              : chr &quot;https://serpapi.com/searches/0f89992b69d5b4f3/65ccfe6fdefa1308edb0e1dd.json&quot;
+  ..$ created_at                 : chr &quot;2024-02-14 17:54:55 UTC&quot;
+  ..$ processed_at               : chr &quot;2024-02-14 17:54:55 UTC&quot;
   ..$ google_scholar_profiles_url: chr &quot;https://scholar.google.com/citations?mauthors=Kyle+Grealis&amp;view_op=search_authors&amp;hl=en&quot;
-  ..$ raw_html_file              : chr &quot;https://serpapi.com/searches/0f89992b69d5b4f3/65cbf7ea3a218a86b52793ad.html&quot;
-  ..$ total_time_taken           : num 1.12
+  ..$ raw_html_file              : chr &quot;https://serpapi.com/searches/0f89992b69d5b4f3/65ccfe6fdefa1308edb0e1dd.html&quot;
+  ..$ total_time_taken           : num 0.92
  $ search_parameters:List of 3
   ..$ engine  : chr &quot;google_scholar_profiles&quot;
   ..$ mauthors: chr &quot;Kyle Grealis&quot;
@@ -4852,6 +4852,7 @@ Note
 </div>
 </div>
 <p>And, see… it’s a match to the <code>author_id</code> that we saw in the <code>glimpse</code> output. Now that we have the <code>author_id</code>, we can use it in the second part to obtain the author’s publications and information.</p>
+<p><br></p>
 </section>
 <section id="get-the-authors-list-of-publications" class="level2">
 <h2 class="anchored" data-anchor-id="get-the-authors-list-of-publications">Get the author’s list of publications</h2>
@@ -4874,14 +4875,14 @@ Note
 <div class="cell-output cell-output-stdout">
 <pre><code>List of 4
  $ search_metadata  :List of 8
-  ..$ id                       : chr &quot;65cc00593c3fb2603bf80a81&quot;
+  ..$ id                       : chr &quot;65ccfe701d986ef9d06d4ba2&quot;
   ..$ status                   : chr &quot;Success&quot;
-  ..$ json_endpoint            : chr &quot;https://serpapi.com/searches/c6519901d3c18b24/65cc00593c3fb2603bf80a81.json&quot;
-  ..$ created_at               : chr &quot;2024-02-13 23:50:49 UTC&quot;
-  ..$ processed_at             : chr &quot;2024-02-13 23:50:49 UTC&quot;
+  ..$ json_endpoint            : chr &quot;https://serpapi.com/searches/c6519901d3c18b24/65ccfe701d986ef9d06d4ba2.json&quot;
+  ..$ created_at               : chr &quot;2024-02-14 17:54:56 UTC&quot;
+  ..$ processed_at             : chr &quot;2024-02-14 17:54:56 UTC&quot;
   ..$ google_scholar_author_url: chr &quot;https://scholar.google.com/citations?user=sdB7YAkAAAAJ&amp;hl=en&quot;
-  ..$ raw_html_file            : chr &quot;https://serpapi.com/searches/c6519901d3c18b24/65cc00593c3fb2603bf80a81.html&quot;
-  ..$ total_time_taken         : num 0.2
+  ..$ raw_html_file            : chr &quot;https://serpapi.com/searches/c6519901d3c18b24/65ccfe701d986ef9d06d4ba2.html&quot;
+  ..$ total_time_taken         : num 0.92
  $ search_parameters:List of 3
   ..$ engine   : chr &quot;google_scholar_author&quot;
   ..$ author_id: chr &quot;sdB7YAkAAAAJ&quot;
@@ -5024,6 +5025,7 @@ Note
 <span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">sum</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Dr. Balise has been cited 4496 times!</p>
+<hr>
 </section>
 </section>
 <section id="conclusion" class="level1">
