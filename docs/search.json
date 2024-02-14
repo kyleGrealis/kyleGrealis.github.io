@@ -1,5 +1,12 @@
 [
   {
+    "objectID": "posts.html",
+    "href": "posts.html",
+    "title": "My Blog",
+    "section": "",
+    "text": "How to scrape Google Scholar using {httr2}\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Kyle Grealis",
@@ -19,12 +26,5 @@
     "title": "About",
     "section": "",
     "text": "Warning:\nThis page is under construction!"
-  },
-  {
-    "objectID": "how-to-scrape-google-scholar.html",
-    "href": "how-to-scrape-google-scholar.html",
-    "title": "How to scrape Google Scholar in R",
-    "section": "",
-    "text": "words\n\n\n\n\n\n\n–&gt;"
   }
 ]

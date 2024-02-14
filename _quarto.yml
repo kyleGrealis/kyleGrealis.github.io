@@ -9,8 +9,8 @@ website:
       - href: index.qmd
         text: Home
       - about.qmd
-      # - href: how-to-scrape-google-scholar.qmd
-      #   text: Webscraping
+      - href: posts.qmd
+        text: Blog
 
 format:
   html:
