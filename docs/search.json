@@ -25,7 +25,7 @@
     "href": "how-to-scrape-google-scholar.html",
     "title": "How to scrape Google Scholar in R",
     "section": "",
-    "text": "This is a guide on how to scrape Google Scholar using the Serpapi API. This guide will show how to first obtain a free API key that will allow you to obtain the author publications and information from Google Scholar. We’ll also go over how to securely store the API key in a .env file and how to access the key from the .env file."
+    "text": "This is a guide on how to scrape Google Scholar using SerpApi. This guide will show how to first obtain a free API key that will allow you to obtain the author publications and information from Google Scholar. We’ll also go over how to securely store the API key in a .env file and how to access the key from the .env file."
   },
   {
     "objectID": "how-to-scrape-google-scholar.html#get-the-authors-unique-id",

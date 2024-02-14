@@ -9,12 +9,14 @@ execute:
 ---
 
 # Intro
-This is a guide on how to scrape Google Scholar using the Serpapi API. This guide will show how to first obtain a free API key that will allow you to obtain the author publications and information from Google Scholar. We'll also go over how to securely store the API key in a `.env` file and how to access the key from the `.env` file.
+This is a guide on how to scrape Google Scholar using SerpApi. This guide will show how to first obtain a free API key that will allow you to obtain the author publications and information from Google Scholar. We'll also go over how to securely store the API key in a `.env` file and how to access the key from the `.env` file.
 
 # Prerequisites
-Navigate to the [Serpapi](https://serpapi.com/users/sign_up) website to register for a free account. You can sign in using your email or GitHub. After you register and confirm your email address, you will receive a secret key located towards the bottom of the screen.
+Navigate to the [SerpApi](https://serpapi.com/users/sign_up) website and register for a free account. You can sign in using your email or GitHub. After you register and confirm your email address, you will receive a secret key located towards the bottom of the screen.
 
-<!-- insert image -->
+<!-- # add the image here -->
+![SerpApi key](serpapi-key.png)
+
 Create a `.env` file in your project repo. You'll want to immediately add that to your `.gitignore` file before you even commit the `.env` file to your repo. You do not want to make the mistake of scripting your secret key into your files or forget to do it later. In the `.env` file, add the following line:
 
 ```{text}
