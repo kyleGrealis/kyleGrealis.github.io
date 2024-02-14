@@ -16,7 +16,9 @@ format:
   html:
     theme: sandstone
     css: styles.css
+    highlight-style: espresso
     toc: true
-
-
+    code-fold: true
+    code-summary: "Show the code"
+    code-overflow: wrap
 
