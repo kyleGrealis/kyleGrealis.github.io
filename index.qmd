@@ -1,6 +1,7 @@
 ---
 title: "Kyle Grealis"
 image: static/images/kyle.jpg
+resources: static/files/KGrealis_cv.pdf
 about:
   template: trestles
   image-shape: rounded
@@ -14,7 +15,7 @@ about:
       href: https://www.linkedin.com/in/kyle-grealis-044030180/
     - text: "CV"
       icon: file-text
-      # href: static/files/Kyle_Grealis_CV.pdf
+      href: static/files/KGrealis_cv.pdf
   # id: ppc
 toc: false
 ---
