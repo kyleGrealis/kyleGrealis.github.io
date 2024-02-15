@@ -1,5 +1,11 @@
 ---
 title: "How to scrape Google Scholar using {httr2}"
+image: "../static/images/google-scholar.png"
+author: "Kyle Grealis"
+categories:
+  - R
+  - httr2
+  - webscraping
 format: 
   html:
     self-contained: true
@@ -9,31 +15,33 @@ execute:
   message: false
 ---
 
-<!-- # Intro -->
-<!-- This is a guide on how to scrape Google Scholar using SerpApi. This guide will show how to first obtain a free API key that will allow you to obtain the author publications and information from Google Scholar. We'll also go over how to securely store the API key in a `.env` file and how to access the key from the `.env` file. -->
+# Intro
+This is a walkthrough on webscraping Google Scholar using SerpApi. This guide will show how to obtain a free API key allowing you to gather author publications and other information from Google Scholar. We'll also go over how to securely store the API key in a `.env` file and how to access the key from the `.env` file.
 
-<!-- <hr> -->
+<hr>
 
-<!-- # Prerequisites -->
-<!-- Navigate to the [SerpApi](https://serpapi.com/users/sign_up) website and register for a free account. You can sign in using your email or GitHub. After you register and confirm your email address, you will receive a secret key located towards the bottom of the screen. -->
+# Prerequisites
+Navigate to the [SerpApi](https://serpapi.com/users/sign_up) website and register for a free account. You can sign in using your email or GitHub. After you register and confirm your email address, you will receive a secret key located towards the bottom of the screen.
 
-<!-- ![SerpApi key](serpapi-key.png) -->
+![SerpApi key](../static/images/serpapi-key.png)
 
-<!-- Create a `.env` file in your project repo. You'll want to immediately add that to your `.gitignore` file before you even commit the `.env` file to your repo. You do not want to make the mistake of scripting your secret key into your files or forget to do it later. In the `.env` file, add the following line: -->
+Create a `.env` file in your project repo. You'll want to immediately add that to your `.gitignore` file before you even commit the `.env` file to your repo. You do not want to make the mistake of scripting your secret key into your files or forget to do it later. In the `.env` file, add the following line:
 
-<!-- ```{text} -->
-<!-- # my google scholar api key -->
-<!-- GOOGLE_KEY=<your_secret_key_provided_when_you_registered> -->
+```{.text}
+# my google scholar api key
+GOOGLE_KEY="<your_secret_key_provided_when_you_registered>"
 
-<!-- ``` -->
+```
 
-<!-- ::: { .callout-note } -->
-<!-- End your `.env` file with a newline. This will save you a minor warning later on. -->
-<!-- ::: -->
+::: { .callout-note }
+End your `.env` file with a newline. This will save you a minor warning later on.
+:::
 
-<!-- Now you should save the file and commit it to your project repo. -->
+Now you should save the file and commit it to your project repo.
 
-<!-- <hr> -->
+<hr>
+
+** Stay tuned... coming back with more! ** 
 
 <!-- # Installing the necessary packages -->
 
