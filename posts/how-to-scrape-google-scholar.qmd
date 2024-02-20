@@ -1,6 +1,6 @@
 ---
 title: "How to scrape Google Scholar using {httr2}"
-image: "../static/images/google-scholar.png"
+image: "/static/images/google-scholar.png"
 author: "Kyle Grealis"
 categories:
   - R
