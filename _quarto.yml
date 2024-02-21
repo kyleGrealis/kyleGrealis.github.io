@@ -1,13 +1,14 @@
 project:
   type: website
   output-dir: docs
+  preview:
+    port: 7209
+    browser: true
 
 website:
   title: "kyleGrealis.github.io"
   favicon: /static/images/favicon.ico
-  page-footer:
-    background: dark
-    center: This website is built with [Quarto](https://quarto.org/docs/website) &copy;2024
+
   navbar:
     right:
       - href: index.qmd
@@ -18,6 +19,10 @@ website:
       - icon: github
         href: https://github.com/kyleGrealis/
         target: _blank
+
+  page-footer:
+    background: #343a40
+    center: This website is built with [Quarto](https://quarto.org/docs/website) &copy;2024
 
 format:
   html:
