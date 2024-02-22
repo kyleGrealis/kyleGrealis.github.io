@@ -1,0 +1,23 @@
+---
+title: "Creating a Quarto website hero panel"
+image: "/static/images/quarto-hero.png"
+author: "Kyle Grealis"
+date: last-modified
+categories:
+  - R
+  - Quarto
+  - SCSS
+format: 
+  html:
+    self-contained: true
+    code-fold: false
+execute:
+  warning: false
+  message: false
+---
+
+Let's explore creating a hero panel in Quarto using some raw HTML code and SCSS styling tweaks.
+
+## What is a hero panel?
+
+![](../static/images/quarto-hero.png){style="border: 1px solid gray; padding: 5px;"}
