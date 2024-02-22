@@ -79,9 +79,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-title','listing-author','listing-date','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
-      searchColumns: ["listing-title","listing-author","listing-image","listing-description","listing-categories"],
+      searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description","listing-categories"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -179,7 +179,7 @@ window.Quarto = {
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(1)</span></div><div class="category" data-category="R">R <span class="quarto-category-count">(1)</span></div><div class="category" data-category="httr2">httr2 <span class="quarto-category-count">(1)</span></div><div class="category" data-category="webscraping">webscraping <span class="quarto-category-count">(1)</span></div></div></div>
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Quarto">Quarto <span class="quarto-category-count">(1)</span></div><div class="category" data-category="R">R <span class="quarto-category-count">(2)</span></div><div class="category" data-category="SCSS">SCSS <span class="quarto-category-count">(1)</span></div><div class="category" data-category="httr2">httr2 <span class="quarto-category-count">(1)</span></div><div class="category" data-category="webscraping">webscraping <span class="quarto-category-count">(1)</span></div></div></div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
@@ -209,7 +209,7 @@ window.Quarto = {
 <div class="quarto-listing quarto-listing-container-grid" id="listing-listing">
 <div class="list grid quarto-listing-cols-3">
 <div class="g-col-1" data-index="0" data-categories="R,httr2,webscraping" data-listing-file-modified-sort="1708472766652" data-listing-reading-time-sort="8" data-listing-word-count-sort="1555">
-<a href="./posts/how-to-scrape-google-scholar.html" class="quarto-grid-link">
+<a href="./posts/2024-02-15-how-to-scrape-google-scholar.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
 <img src="./static/images/google-scholar.png" class="thumbnail-image card-img" style="height: 150px;">
@@ -235,6 +235,42 @@ This is a walkthrough on webscraping Google Scholar using SerpApi. This guide wi
 <div class="card-attribution card-text-small start">
 <div class="listing-author">
 Kyle Grealis
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="1" data-categories="R,Quarto,SCSS" data-listing-date-sort="1708563516000" data-listing-file-modified-sort="1708563516470" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="22">
+<a href="./posts/2024-02-21-creating-quarto-hero.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img src="./static/images/quarto-hero.png" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Creating a Quarto website hero panel
+</h5>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('R'); return false;">
+R
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Quarto'); return false;">
+Quarto
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('SCSS'); return false;">
+SCSS
+</div>
+</div>
+<div class="card-text listing-description">
+Let’s explore creating a hero panel in Quarto using some raw HTML code and SCSS styling tweaks.
+</div>
+<div class="card-attribution card-text-small justify">
+<div class="listing-author">
+Kyle Grealis
+</div>
+<div class="listing-date">
+Feb 21, 2024
 </div>
 </div>
 </div>
