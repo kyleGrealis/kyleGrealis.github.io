@@ -4,7 +4,6 @@ format:
   html:
     page-layout: full
     embed-resources: true
-theme: styles.scss
 ---
 
 # Whoops! Something went wrong!

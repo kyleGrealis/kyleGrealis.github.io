@@ -19,7 +19,6 @@ about:
       icon: file-text
       href: /static/files/KGrealis_cv.pdf
       target: _blank
-  # id: ppc
 toc: false
 ---
 
