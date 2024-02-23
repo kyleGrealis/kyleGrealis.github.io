@@ -2,8 +2,9 @@ project:
   type: website
   output-dir: docs
 
-execute:
-  freeze: auto
+# this stops code from being executed on GitHub Actions when deploying. I want some code running right now though
+# execute:
+#   freeze: auto
 
 website:
   title: "kyleGrealis.github.io"
