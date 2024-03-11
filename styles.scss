@@ -1,8 +1,9 @@
 /*-- scss:defaults --*/
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
 $font-family-sans-serif: "Open Sans", "Poppins";
+$secondary: darkcyan;
 $code-bg: lightgray;
-$code-color: darkcyan;
+$code-color: $secondary;
 
 
 
@@ -10,5 +11,5 @@ $code-color: darkcyan;
 /*-- scss:rules --*/
 .sourceCode {
   background-color: lightgray;
-  color: darkcyan;
+  color: $secondary;
 }
