@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://kyleGrealis.github.io/posts/2024-02-21-creating-quarto-hero.html</loc>
-    <lastmod>2024-03-04T21:24:42.677Z</lastmod>
+    <loc>https://kyleGrealis.github.io/about.html</loc>
+    <lastmod>2024-03-11T18:38:08.099Z</lastmod>
   </url>
   <url>
     <loc>https://kyleGrealis.github.io/posts.html</loc>
-    <lastmod>2024-03-04T21:24:42.677Z</lastmod>
+    <lastmod>2024-03-11T18:38:08.175Z</lastmod>
   </url>
   <url>
-    <loc>https://kyleGrealis.github.io/about.html</loc>
-    <lastmod>2024-03-04T21:24:42.577Z</lastmod>
-  </url>
-  <url>
-    <loc>https://kyleGrealis.github.io/index.html</loc>
-    <lastmod>2024-03-04T21:24:42.677Z</lastmod>
+    <loc>https://kyleGrealis.github.io/posts/2024-02-21-creating-quarto-hero.html</loc>
+    <lastmod>2024-03-11T18:38:08.175Z</lastmod>
   </url>
   <url>
     <loc>https://kyleGrealis.github.io/posts/2024-02-15-how-to-scrape-google-scholar.html</loc>
-    <lastmod>2024-03-04T21:24:42.677Z</lastmod>
+    <lastmod>2024-03-11T18:38:08.175Z</lastmod>
+  </url>
+  <url>
+    <loc>https://kyleGrealis.github.io/index.html</loc>
+    <lastmod>2024-03-11T18:38:08.175Z</lastmod>
   </url>
 </urlset>
