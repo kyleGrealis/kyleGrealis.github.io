@@ -29,8 +29,7 @@ website:
 
 format:
   html:
-    theme: sandstone
-    css: styles.scss
+    theme: [sandstone, styles.scss]
     toc: true
     code-fold: true
     code-summary: "Show the code"
