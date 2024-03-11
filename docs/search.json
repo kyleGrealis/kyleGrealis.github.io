@@ -61,5 +61,26 @@
     "title": "Creating a Quarto website hero panel",
     "section": "Happy coding!",
     "text": "Happy coding!"
+  },
+  {
+    "objectID": "apps.html",
+    "href": "apps.html",
+    "title": "About",
+    "section": "",
+    "text": "something"
+  },
+  {
+    "objectID": "apps/apps.html",
+    "href": "apps/apps.html",
+    "title": "About",
+    "section": "",
+    "text": "something"
+  },
+  {
+    "objectID": "apps/index.html",
+    "href": "apps/index.html",
+    "title": "kyleGrealis.github.io",
+    "section": "",
+    "text": "PowerViz\nIntroducing PowerViz, an engaging Shiny app designed to bring power calculations to life! Originally crafted as a handy tool for a clinical trials class presentation, it has evolved into a comprehensive web application due to overwhelming positive feedback.\nPowerViz was born out of a need to illustrate the impact of sample size and effect size on power calculations. It’s a testament to the adage that necessity is the mother of invention. Built on the robust pwr R package, PowerViz offers an interactive platform where users can manipulate variables such as significance level, effect size, and sample size or proportion.\nBut PowerViz is more than just a tool; it’s an immersive learning experience. As you interact with the plots and adjust the inputs, you receive real-time feedback, providing valuable insights into the dynamics of power calculations. Whether you’re looking to enhance your learning or in the throes of designing a study, PowerViz is your go-to resource. Dive in and experience the fun side of statistics!\n\nTry it!\n\n\n\n\n\n\n\n\n\nEpiMatch\nEpiMatch is your indispensable partner for case-control matching and it’s now available as a Shiny web application. This tool is designed to streamline the matching process, strategically minimizing biases and saving you precious time. Case-control matching is a critical technique used in epidemiological studies to identify and analyze factors that may contribute to a medical condition or disease.\nEpiMatch empowers you to upload your own data and engage with a sophisticated matching algorithm, tailored to your specific criteria. While the tool comes with comprehensive instructions on its main page, it does require a touch of preprocessing before use.\nAfter running through five matching iterations, EpiMatch presents you with the results from the iteration that yielded the highest number of matched cases to controls. And the best part? Every table is downloadable, ensuring no data is lost, even for those individuals (cases and controls) that were not successfully matched.\nSo why wait? Dive into EpiMatch and experience the future of case-control matching!\n\nTry it!"
   }
 ]

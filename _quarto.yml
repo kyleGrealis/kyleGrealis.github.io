@@ -14,7 +14,8 @@ website:
     right:
       - href: index.qmd
         text: Home
-      - about.qmd
+      - href: apps.qmd
+        text: Apps
       - href: posts.qmd
         text: Blog
       - href: https://kylegrealis.github.io/feaster-balise-lab/
@@ -29,7 +30,7 @@ website:
 
 format:
   html:
-    theme: [sandstone, styles.scss]
+    theme: [styles.scss]
     toc: true
     code-fold: true
     code-summary: "Show the code"

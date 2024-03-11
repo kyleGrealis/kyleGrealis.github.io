@@ -1,15 +1,116 @@
 /*-- scss:defaults --*/
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
 $font-family-sans-serif: "Open Sans", "Poppins";
+$primary: gray;
 $secondary: darkcyan;
+$navbar-bg: #343a40;
 $code-bg: lightgray;
 $code-color: $secondary;
+$bg-dark-shadow: 1px 1px 1px gray;
+$bg-light-shadow: 1px 1px 1px #c0c0c0;
 
+@mixin border-styles {
+  border: 1px solid #9e9e9e;
+  border-radius: 3px;
+  box-shadow: 1px 1px 8px 1px #9e9e9e;
+}
 
+@mixin button-border-styles {
+  border: 1px solid $black;
+  border-radius: 3px;
+  box-shadow: 1px 1px 8px 1px #9e9e9e;
+}
 
 
 /*-- scss:rules --*/
 .sourceCode {
   background-color: lightgray;
   color: $secondary;
+}
+
+
+// apps page -------------------------------------------------------
+div.img-text {
+  display: flex;
+  align-items: center;
+
+  // This selects all immediate children inside the container div.img-text
+  > * {
+    padding: 10px;
+  }
+
+  &:hover {
+    .img-group img {
+      box-shadow: 1px 1px 8px 4px #9e9e9e;
+    }
+  }
+
+  // this contains an image and sometimes extra buttons
+  .img-group {
+    flex: 0 0 40%;
+
+    img {
+      width: 100%;
+      border: 2px solid $black;
+      @include border-styles;
+      transition: box-shadow 0.3s ease;
+    }
+
+    // This is the button container under product image
+    .btn-grp {
+      display: flex;
+      justify-content: space-evenly;
+      border-bottom: none;
+
+      @media screen and (max-width: 1090px) {
+        flex-direction: column;
+        text-align: center; // this is because Quarto wraps the buttons in p tags
+      }
+    }
+  }
+
+  .text-grp {
+    margin-top: -15px;
+
+    // this is the product name
+    h3 {
+      margin: 10px 0;
+      font-weight: bold;
+      text-align: center;
+      color: $secondary;
+      text-shadow: $bg-light-shadow;
+      opacity: 1;
+    }
+  }
+
+  // this is the button under the product description
+  .cntr-btn {
+    text-align: center;
+  }
+
+  a.btn {
+    background-color: $secondary;
+    font-size: 0.85em;
+    text-shadow: $bg-dark-shadow;
+    margin: 10px 30px;
+    @include button-border-styles;
+
+    &:hover {
+      color: lightcyan;
+      box-shadow: 1px 1px 8px 3px #9e9e9e;
+    }
+  }
+
+  @media screen and (max-width: 900px) {
+    flex-direction: column;
+
+    // this moves the image below the name and interest block
+    .img-group {
+      order: 1;
+    }
+
+    .text-grp {
+      order: 0;
+    }
+  }
 }
