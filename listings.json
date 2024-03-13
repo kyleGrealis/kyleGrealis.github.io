@@ -1,9 +1,9 @@
 [
   {
-    "listing": "/posts.html",
+    "listing": "/blog/index.html",
     "items": [
-      "/posts/2024-02-15-how-to-scrape-google-scholar.html",
-      "/posts/2024-02-21-creating-quarto-hero.html"
+      "/blog/posts/2024-03-04-creating-quarto-hero.html",
+      "/blog/posts/2024-02-15-how-to-scrape-google-scholar.html"
     ]
   }
 ]
