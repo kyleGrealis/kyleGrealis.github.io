@@ -14,9 +14,9 @@ website:
     right:
       - href: index.qmd
         text: Home
-      - href: apps.qmd
+      - href: apps/index.qmd
         text: Apps
-      - href: posts.qmd
+      - href: blog/index.qmd
         text: Blog
       - href: https://kylegrealis.github.io/feaster-balise-lab/
         text: Team
