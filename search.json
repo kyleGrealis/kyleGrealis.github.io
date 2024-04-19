@@ -1,10 +1,101 @@
 [
   {
-    "objectID": "blog/index.html",
-    "href": "blog/index.html",
-    "title": "My Blog",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Kyle Grealis",
     "section": "",
-    "text": "Creating a Quarto website hero panel\n\n\n\nR\n\n\nQuarto\n\n\nSCSS\n\n\n\n\n\n\n\nKyle Grealis\n\n\nMar 4, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHow to scrape Google Scholar using {httr2}\n\n\n\nR\n\n\nhttr2\n\n\nwebscraping\n\n\n\n\n\n\n\nKyle Grealis\n\n\nFeb 15, 2024\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "I’m a Biostatistician and Lead Data Analyst at the University of Miami. I spent nearly 20 years as a respiratory therapist before discovering the world of data science and its importance on healthcare. Attention to detail is as critical a skill in bedside care as it is in data analysis.\nI’ve been fortunate to work with some great physicians and researchers in the field of pulmonary medicine, and I’ve recently transitioned to the Department of Public Health Sciences at the University of Miami. Currently, we are developing machine learning algorithms to predict individual relapse in those affected by the opioid epidemic.\nI’m excited about data science and the potential it has to improve healthcare and outcomes. This website is a collection of my work: web applications that I’ve developed to better our understanding of epidemiology and biostatistics, and a blog where I share what I’m learning along the way. Let’s come together to grow the fields of data science and healthcare."
+  },
+  {
+    "objectID": "index.html#hey-there-im-kyle-grealis",
+    "href": "index.html#hey-there-im-kyle-grealis",
+    "title": "Kyle Grealis",
+    "section": "",
+    "text": "I’m a Biostatistician and Lead Data Analyst at the University of Miami. I spent nearly 20 years as a respiratory therapist before discovering the world of data science and its importance on healthcare. Attention to detail is as critical a skill in bedside care as it is in data analysis.\nI’ve been fortunate to work with some great physicians and researchers in the field of pulmonary medicine, and I’ve recently transitioned to the Department of Public Health Sciences at the University of Miami. Currently, we are developing machine learning algorithms to predict individual relapse in those affected by the opioid epidemic.\nI’m excited about data science and the potential it has to improve healthcare and outcomes. This website is a collection of my work: web applications that I’ve developed to better our understanding of epidemiology and biostatistics, and a blog where I share what I’m learning along the way. Let’s come together to grow the fields of data science and healthcare."
+  },
+  {
+    "objectID": "blog/posts/2024-04-19-KNN-in-python.html",
+    "href": "blog/posts/2024-04-19-KNN-in-python.html",
+    "title": "Machine Learning in Python - KNN",
+    "section": "",
+    "text": "In this post, I’m sharing the code that was created from following Kirill Eremenko and the SuperDataScience Team’s “Machine Learning A-Z” course on Udemy.\nThe prediction scenario is this: which demographic would social networking marketing ads affect best? We work for a car dealership and have data regarding consumers’ age and estimated salary. To where should marketing efforts be aimed as we try to predict which consumers will purchase our newest & best SUV model?\n\nEuclidean Distance between two points: \\(\\sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}\\)\nk-Nearest Neighbors (KNN) is machine learning technique used to classify a new data point to a nearby cluster. We will set up our algorithm to calculate the Euclidean distances from our new data point to existing data points. Then, using the predetermined k number of nearest neighbors (we’ll be using 5 neighbors), assign that new point to the closest cluster with at least three like \\(&gt;k/2\\) neighbors.\nTo think of it in really simple terms, all of our existing customers (points) are scattered in the \\((x, y)\\) space. Our new customer has \\(x\\) age and \\(y\\) salary, so we’ll plot this onto our existing grid. Then we draw circles around the new customer until we hit the closest existing point – that’s one “neighbor”. We repeat the process until we have our chosen number of 5. How many of the neighbors purchased the SUV and how many did not? Whichever group has more, that’s what we’re going to predict the new customer would do too!\n\n\n\nCourtesy of DataCamp"
+  },
+  {
+    "objectID": "blog/posts/2024-04-19-KNN-in-python.html#what-is-knn",
+    "href": "blog/posts/2024-04-19-KNN-in-python.html#what-is-knn",
+    "title": "Machine Learning in Python - KNN",
+    "section": "",
+    "text": "In this post, I’m sharing the code that was created from following Kirill Eremenko and the SuperDataScience Team’s “Machine Learning A-Z” course on Udemy.\nThe prediction scenario is this: which demographic would social networking marketing ads affect best? We work for a car dealership and have data regarding consumers’ age and estimated salary. To where should marketing efforts be aimed as we try to predict which consumers will purchase our newest & best SUV model?\n\nEuclidean Distance between two points: \\(\\sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}\\)\nk-Nearest Neighbors (KNN) is machine learning technique used to classify a new data point to a nearby cluster. We will set up our algorithm to calculate the Euclidean distances from our new data point to existing data points. Then, using the predetermined k number of nearest neighbors (we’ll be using 5 neighbors), assign that new point to the closest cluster with at least three like \\(&gt;k/2\\) neighbors.\nTo think of it in really simple terms, all of our existing customers (points) are scattered in the \\((x, y)\\) space. Our new customer has \\(x\\) age and \\(y\\) salary, so we’ll plot this onto our existing grid. Then we draw circles around the new customer until we hit the closest existing point – that’s one “neighbor”. We repeat the process until we have our chosen number of 5. How many of the neighbors purchased the SUV and how many did not? Whichever group has more, that’s what we’re going to predict the new customer would do too!\n\n\n\nCourtesy of DataCamp"
+  },
+  {
+    "objectID": "blog/posts/2024-04-19-KNN-in-python.html#import-libraries",
+    "href": "blog/posts/2024-04-19-KNN-in-python.html#import-libraries",
+    "title": "Machine Learning in Python - KNN",
+    "section": "Import libraries",
+    "text": "Import libraries\n\nimport numpy as np\nimport pandas as pd"
+  },
+  {
+    "objectID": "blog/posts/2024-04-19-KNN-in-python.html#import-dataset",
+    "href": "blog/posts/2024-04-19-KNN-in-python.html#import-dataset",
+    "title": "Machine Learning in Python - KNN",
+    "section": "Import dataset",
+    "text": "Import dataset\n\ndataset = pd.read_csv('data/Social_Network_Ads.csv')\nX = dataset.iloc[:, :-1].values\ny = dataset.iloc[:, -1].values"
+  },
+  {
+    "objectID": "blog/posts/2024-04-19-KNN-in-python.html#splitting-the-dataset-to-training-testing",
+    "href": "blog/posts/2024-04-19-KNN-in-python.html#splitting-the-dataset-to-training-testing",
+    "title": "Machine Learning in Python - KNN",
+    "section": "Splitting the dataset to training & testing",
+    "text": "Splitting the dataset to training & testing\n\nfrom sklearn.model_selection import train_test_split\nX_train, X_test, y_train, y_test = train_test_split(\n  X, y,\n  test_size=0.25,\n  random_state=0\n)"
+  },
+  {
+    "objectID": "blog/posts/2024-04-19-KNN-in-python.html#feature-scaling",
+    "href": "blog/posts/2024-04-19-KNN-in-python.html#feature-scaling",
+    "title": "Machine Learning in Python - KNN",
+    "section": "Feature scaling",
+    "text": "Feature scaling\n\nfrom sklearn.preprocessing import StandardScaler\nsc = StandardScaler()\nX_train = sc.fit_transform(X_train)\nX_test = sc.fit_transform(X_test)\n\n```\n# array([[-1.455..., -0.784...],\n#        [ 2.067...,  1.372...],\n#        [-0.253..., -0.309...],\n#        ...,\n#        [-0.253..., -0.309...],\n#        [ 2.067..., -1.113...],\n#        [-1.455..., -0.309...]])\n```"
+  },
+  {
+    "objectID": "blog/posts/2024-04-19-KNN-in-python.html#train-fit-the-knn-model",
+    "href": "blog/posts/2024-04-19-KNN-in-python.html#train-fit-the-knn-model",
+    "title": "Machine Learning in Python - KNN",
+    "section": "Train & fit the KNN model",
+    "text": "Train & fit the KNN model\n\n\n\n\n\n\nTip\n\n\n\nTo learn the more technical details of sklearn’s classes and functions, checkout the sklearn API Reference.\n\n\n\nfrom sklearn.neighbors import KNeighborsClassifier\nclassifier = KNeighborsClassifier(\n  n_neighbors=5,  # default\n  p=2,            # euclidean distance; default \n  metric='minkowski'\n)\n\n\nclassifier.fit(X_train, y_train)"
+  },
+  {
+    "objectID": "blog/posts/2024-04-19-KNN-in-python.html#predicting-a-new-result",
+    "href": "blog/posts/2024-04-19-KNN-in-python.html#predicting-a-new-result",
+    "title": "Machine Learning in Python - KNN",
+    "section": "Predicting a new result",
+    "text": "Predicting a new result\n30y/o $87k/yr – first observation of X_test\n\nperson = X_test[[0]]\nsingle_pred = classifier.predict(person)\nsingle_prob = classifier.predict_proba(person)\nprint('1=\"Yes\", 0=\"No\"\\n')\nprint(f'Single prediction for 30 y/o earning $87k/yr: {single_pred[0]} at a probability of {single_prob[0][0].round(3)}')\n\n```\n# 1=\"Yes\", 0=\"No\"\n#\n# Single prediction for 30 y/o earning $87k/yr: 0 at a \n# probability of 0.8\n```"
+  },
+  {
+    "objectID": "blog/posts/2024-04-19-KNN-in-python.html#predicting-the-test-set-results",
+    "href": "blog/posts/2024-04-19-KNN-in-python.html#predicting-the-test-set-results",
+    "title": "Machine Learning in Python - KNN",
+    "section": "Predicting the test set results",
+    "text": "Predicting the test set results\n\ny_pred = classifier.predict(X_test)"
+  },
+  {
+    "objectID": "blog/posts/2024-04-19-KNN-in-python.html#creating-the-confusion-matrix",
+    "href": "blog/posts/2024-04-19-KNN-in-python.html#creating-the-confusion-matrix",
+    "title": "Machine Learning in Python - KNN",
+    "section": "Creating the confusion matrix",
+    "text": "Creating the confusion matrix\n\nfrom sklearn.metrics import confusion_matrix, accuracy_score\nprint(confusion_matrix(y_test, y_pred))\nprint(f'Accuracy: {accuracy_score(y_test, y_pred)}')\n\n```\n# [[64  4]\n#  [ 3 29]]\n# Accuracy: 0.93\n```"
+  },
+  {
+    "objectID": "blog/posts/2024-04-19-KNN-in-python.html#visualizing-the-training-set-results",
+    "href": "blog/posts/2024-04-19-KNN-in-python.html#visualizing-the-training-set-results",
+    "title": "Machine Learning in Python - KNN",
+    "section": "Visualizing the training set results",
+    "text": "Visualizing the training set results\n\n\n\n\n\n\nWarning\n\n\n\nThese next two code chunks will take a while. The KNN algorithm is already compute-expensive and we’re adding to the heavy lifting by creating a grid of many values to be calculated. The final result is two plots with a visual mapping of our decision boundary and our training & predicted data points appearing as the dots within the field.\n\n\n\nimport matplotlib.pyplot as plt\nfrom matplotlib.colors import ListedColormap\n\nX_set, y_set = sc.inverse_transform(X_train), y_train\nX1, X2 = np.meshgrid(\n  np.arange(\n    start = X_set[:, 0].min() - 10, \n    stop = X_set[:, 0].max() + 10, \n    step = 0.25\n  ),\n  np.arange(\n    start = X_set[:, 1].min() - 1000, \n    stop = X_set[:, 1].max() + 1000, \n    step = 0.25\n  )\n)\nplt.contourf(\n  X1, X2, \n  classifier.predict(\n    sc.transform(np.array([X1.ravel(), X2.ravel()]).T)\n  ).reshape(X1.shape),\n  alpha = 0.75, \n  cmap = ListedColormap(('red', 'green'))\n)\n\nplt.xlim(X1.min(), X1.max())\nplt.ylim(X2.min(), X2.max())\n\nfor i, j in enumerate(np.unique(y_set)):\n  plt.scatter(\n    X_set[y_set == j, 0], \n    X_set[y_set == j, 1], \n    c = ListedColormap(('red', 'green'))(i), \n    label = j\n  )\n\nplt.title('KNN Regression (Training set)')\nplt.xlabel('Age')\nplt.ylabel('Estimated Salary')\nplt.legend()\nplt.show()\n\n\n\n\nKNN training set results"
+  },
+  {
+    "objectID": "blog/posts/2024-04-19-KNN-in-python.html#visualizing-the-test-set-results",
+    "href": "blog/posts/2024-04-19-KNN-in-python.html#visualizing-the-test-set-results",
+    "title": "Machine Learning in Python - KNN",
+    "section": "Visualizing the test set results",
+    "text": "Visualizing the test set results\n\nX_set, y_set = sc.inverse_transform(X_test), y_test\nX1, X2 = np.meshgrid(\n  np.arange(\n    start = X_set[:, 0].min() - 10, \n    stop = X_set[:, 0].max() + 10, \n    step = 0.25\n  ),\n  np.arange(\n    start = X_set[:, 1].min() - 1000, \n    stop = X_set[:, 1].max() + 1000, \n    step = 0.25\n  )\n)\nplt.contourf(\n  X1, X2, \n  classifier.predict(\n    sc.transform(np.array([X1.ravel(), X2.ravel()]).T)\n  ).reshape(X1.shape),\n  alpha = 0.75, \n  cmap = ListedColormap(('red', 'green'))\n)\n\nplt.xlim(X1.min(), X1.max())\nplt.ylim(X2.min(), X2.max())\n\nfor i, j in enumerate(np.unique(y_set)):\n    plt.scatter(\n      X_set[y_set == j, 0], \n      X_set[y_set == j, 1], \n      c = ListedColormap(('red', 'green'))(i), \n      label = j\n    )\n\nplt.title('KNN Regression (Test set)')\nplt.xlabel('Age')\nplt.ylabel('Estimated Salary')\nplt.legend()\nplt.show()\n\n\n\n\nKNN testing set results"
   },
   {
     "objectID": "blog/posts/2024-03-04-creating-quarto-hero.html",
@@ -42,24 +133,17 @@
     "text": "PowerViz\nIntroducing PowerViz, an engaging Shiny app designed to bring power calculations to life! Originally crafted as a handy tool for a clinical trials class presentation, it has evolved into a comprehensive web application due to overwhelming positive feedback.\nPowerViz was born out of a need to illustrate the impact of sample size and effect size on power calculations. It’s a testament to the adage that necessity is the mother of invention. Built on the robust pwr R package, PowerViz offers an interactive platform where users can manipulate variables such as significance level, effect size, and sample size or proportion.\nBut PowerViz is more than just a tool; it’s an immersive learning experience. As you interact with the plots and adjust the inputs, you receive real-time feedback, providing valuable insights into the dynamics of power calculations. Whether you’re looking to enhance your learning or in the throes of designing a study, PowerViz is your go-to resource. Dive in and experience the fun side of statistics!\n\nTry it!\n\n\n\n\n\n\n\n\n\nEpiMatch\nEpiMatch is your indispensable partner for case-control matching and it’s now available as a Shiny web application. This tool is designed to streamline the matching process, strategically minimizing biases and saving you precious time. Case-control matching is a critical technique used in epidemiological studies to identify and analyze factors that may contribute to a medical condition or disease.\nEpiMatch empowers you to upload your own data and engage with a sophisticated matching algorithm, tailored to your specific criteria. While the tool comes with comprehensive instructions on its main page, it does require a touch of preprocessing before use.\nAfter running through five matching iterations, EpiMatch presents you with the results from the iteration that yielded the highest number of matched cases to controls. And the best part? Every table is downloadable, ensuring no data is lost, even for those individuals (cases and controls) that were not successfully matched.\nSo why wait? Dive into EpiMatch and experience the future of case-control matching!\n\nTry it!"
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Kyle Grealis",
-    "section": "",
-    "text": "I’m a Biostatistician and Lead Data Analyst at the University of Miami. I spent nearly 20 years as a respiratory therapist before discovering the world of data science and its importance on healthcare. Attention to detail is as critical a skill in bedside care as it is in data analysis.\nI’ve been fortunate to work with some great physicians and researchers in the field of pulmonary medicine, and I’ve recently transitioned to the Department of Public Health Sciences at the University of Miami. Currently, we are developing machine learning algorithms to predict individual relapse in those affected by the opioid epidemic.\nI’m excited about data science and the potential it has to improve healthcare and outcomes. This website is a collection of my work: web applications that I’ve developed to better our understanding of epidemiology and biostatistics, and a blog where I share what I’m learning along the way. Let’s come together to grow the fields of data science and healthcare."
-  },
-  {
-    "objectID": "index.html#hey-there-im-kyle-grealis",
-    "href": "index.html#hey-there-im-kyle-grealis",
-    "title": "Kyle Grealis",
-    "section": "",
-    "text": "I’m a Biostatistician and Lead Data Analyst at the University of Miami. I spent nearly 20 years as a respiratory therapist before discovering the world of data science and its importance on healthcare. Attention to detail is as critical a skill in bedside care as it is in data analysis.\nI’ve been fortunate to work with some great physicians and researchers in the field of pulmonary medicine, and I’ve recently transitioned to the Department of Public Health Sciences at the University of Miami. Currently, we are developing machine learning algorithms to predict individual relapse in those affected by the opioid epidemic.\nI’m excited about data science and the potential it has to improve healthcare and outcomes. This website is a collection of my work: web applications that I’ve developed to better our understanding of epidemiology and biostatistics, and a blog where I share what I’m learning along the way. Let’s come together to grow the fields of data science and healthcare."
-  },
-  {
     "objectID": "blog/posts/2024-02-15-how-to-scrape-google-scholar.html",
     "href": "blog/posts/2024-02-15-how-to-scrape-google-scholar.html",
     "title": "How to scrape Google Scholar using {httr2}",
     "section": "",
     "text": "Intro\nThis is a walkthrough on webscraping Google Scholar using SerpApi. This guide will show how to obtain a free API key allowing you to gather author publications and other information from Google Scholar. We’ll also go over how to securely store the API key in a .env file and how to access the key from the .env file.\n\n\n\nPrerequisites\nNavigate to the SerpApi website and register for a free account. You can sign in using your email or GitHub. After you register and confirm your email address, you will receive a secret key located towards the bottom of the screen.\n\n\n\nSerpApi key\n\n\nCreate a .env file in your project repo. You’ll want to immediately add that to your .gitignore file before you even commit the .env file to your repo. You do not want to make the mistake of scripting your secret key into your files or forget to do it later. In the .env file, add the following line:\n# my google scholar api key\nGOOGLE_KEY=\"&lt;your_secret_key_provided_when_you_registered&gt;\"\n\n\n\n\n\n\n\nNote\n\n\n\nEnd your .env file with a newline. This will save you a minor warning later on.\n\n\nNow you should save the file and commit it to your project repo.\n\n** Stay tuned… coming back with more! **"
+  },
+  {
+    "objectID": "blog/index.html",
+    "href": "blog/index.html",
+    "title": "My Blog",
+    "section": "",
+    "text": "Machine Learning in Python - KNN\n\n\n\nPython\n\n\nQuarto\n\n\nMachine Learning\n\n\n\n\n\n\n\nKyle Grealis\n\n\nApr 19, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCreating a Quarto website hero panel\n\n\n\nR\n\n\nQuarto\n\n\nSCSS\n\n\n\n\n\n\n\nKyle Grealis\n\n\nMar 4, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHow to scrape Google Scholar using {httr2}\n\n\n\nR\n\n\nhttr2\n\n\nwebscraping\n\n\n\n\n\n\n\nKyle Grealis\n\n\nFeb 15, 2024\n\n\n\n\n\n\n\n\nNo matching items"
   }
 ]

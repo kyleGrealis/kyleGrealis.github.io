@@ -1,23 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://kyleGrealis.github.io/blog/index.html</loc>
-    <lastmod>2024-03-13T04:49:32.580Z</lastmod>
+    <loc>https://kyleGrealis.github.io/index.html</loc>
+    <lastmod>2024-04-19T23:01:07.665Z</lastmod>
+  </url>
+  <url>
+    <loc>https://kyleGrealis.github.io/blog/posts/2024-04-19-KNN-in-python.html</loc>
+    <lastmod>2024-04-19T23:01:07.585Z</lastmod>
   </url>
   <url>
     <loc>https://kyleGrealis.github.io/blog/posts/2024-03-04-creating-quarto-hero.html</loc>
-    <lastmod>2024-03-13T04:49:32.580Z</lastmod>
+    <lastmod>2024-04-19T23:01:07.585Z</lastmod>
   </url>
   <url>
     <loc>https://kyleGrealis.github.io/apps/index.html</loc>
-    <lastmod>2024-03-13T04:49:32.580Z</lastmod>
-  </url>
-  <url>
-    <loc>https://kyleGrealis.github.io/index.html</loc>
-    <lastmod>2024-03-13T04:49:32.672Z</lastmod>
+    <lastmod>2024-04-19T23:01:07.585Z</lastmod>
   </url>
   <url>
     <loc>https://kyleGrealis.github.io/blog/posts/2024-02-15-how-to-scrape-google-scholar.html</loc>
-    <lastmod>2024-03-13T04:49:32.580Z</lastmod>
+    <lastmod>2024-04-19T23:01:07.585Z</lastmod>
+  </url>
+  <url>
+    <loc>https://kyleGrealis.github.io/blog/index.html</loc>
+    <lastmod>2024-04-19T23:01:07.585Z</lastmod>
   </url>
 </urlset>
