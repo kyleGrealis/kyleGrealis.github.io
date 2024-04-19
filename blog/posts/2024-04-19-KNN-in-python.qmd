@@ -31,7 +31,7 @@ import pandas as pd
 ## Import dataset
 
 ```{python}
-dataset = pd.read_csv('../data/Social_Network_Ads.csv')
+dataset = pd.read_csv('data/Social_Network_Ads.csv')
 X = dataset.iloc[:, :-1].values
 y = dataset.iloc[:, -1].values
 ```
