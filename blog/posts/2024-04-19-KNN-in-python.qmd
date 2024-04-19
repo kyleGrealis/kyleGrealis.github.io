@@ -9,7 +9,7 @@ categories:
   - Machine Learning
 format: 
   html:
-    self-contained: true
+    embed-resources: true
     code-fold: false
     code-copy: true
 execute:
