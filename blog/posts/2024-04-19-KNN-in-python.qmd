@@ -1,6 +1,6 @@
 ---
-title: "Learning Machine Learning in Python - KNN"
-image: /static/images/posts/quarto-hero.png
+title: "Machine Learning in Python - KNN"
+image: /static/images/posts/knn-gist.png
 author: "Kyle Grealis"
 date: April 19, 2024
 categories:
@@ -15,11 +15,27 @@ format:
 execute:
   warning: false
   message: false
+  eval: false
 ---
+
+## What is KNN? 
+
+In this post, I'm sharing the code that was created from following Kirill Eremenko and the SuperDataScience Team's "Machine Learning A-Z" course on [Udemy](https://www.udemy.com/share/101Wci3@tAEY1lIEWWOQUxgTL4Ik8e59A6uu7QPTXm_rtWFphiUAplRw_mYHYKk1ACy8OBd_Kw==/). 
+
+The prediction scenario is this: which demographic would social networking marketing ads affect best? We work for a car dealership and have data regarding consumers' age and estimated salary. To where should marketing efforts be aimed as we try to predict which consumers will purchase our newest & best SUV model? 
+
+----
+
 
 Euclidean Distance between two points: $\sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}$
 
-KNN is used to assign a new data point to a nearby cluster. One option is to measure the Euclidean distances of the new data point and existing data points and, using the predetermined *k* number of nearest neighbors, assign the new point to the cluster with $>k/2$ neighbors. 
+*k*-Nearest Neighbors (KNN) is machine learning technique used to classify a new data point to a nearby cluster. We will set up our algorithm to calculate the Euclidean distances from our new data point to existing data points. Then, using the predetermined *k* number of nearest neighbors (we'll be using 5 neighbors), assign that new point to the closest cluster with at least three like $>k/2$ neighbors. 
+
+To think of it in really simple terms, all of our existing customers (points) are scattered in the $(x, y)$ space. Our new customer has $x$ age and $y$ salary, so we'll plot this onto our existing grid. Then we draw circles around the new customer until we hit the closest existing point -- that's one "neighbor". We repeat the process until we have our chosen number of 5. How many of the neighbors purchased the SUV and how many did not? Whichever group has more, that's what we're going to predict the new customer would do too!
+
+![*Courtesy of [DataCamp](https://www.datacamp.com)*](images/knn-gist.png)
+
+----
 
 ## Import libraries
 
@@ -35,6 +51,8 @@ dataset = pd.read_csv('data/Social_Network_Ads.csv')
 X = dataset.iloc[:, :-1].values
 y = dataset.iloc[:, -1].values
 ```
+
+----
 
 ## Splitting the dataset to training & testing
 ```{python}
@@ -55,7 +73,26 @@ X_train = sc.fit_transform(X_train)
 X_test = sc.fit_transform(X_test)
 ```
 
+````{markdown}
+```
+# array([[-1.455..., -0.784...],
+#        [ 2.067...,  1.372...],
+#        [-0.253..., -0.309...],
+#        ...,
+#        [-0.253..., -0.309...],
+#        [ 2.067..., -1.113...],
+#        [-1.455..., -0.309...]])
+```
+````
+
+
+----
+
 ## Train & fit the KNN model
+
+::: {.callout-tip}
+To learn the more technical details of `sklearn`'s classes and functions, checkout the [`sklearn` API Reference](https://scikit-learn.org/1.4/modules/classes.html).
+:::
 
 ```{python}
 from sklearn.neighbors import KNeighborsClassifier
@@ -70,6 +107,11 @@ classifier = KNeighborsClassifier(
 classifier.fit(X_train, y_train)
 ```
 
+![](images/knn-classifier.png)
+
+
+----
+
 ## Predicting a new result
 
 30y/o $87k/yr -- first observation of X_test
@@ -82,14 +124,22 @@ print('1="Yes", 0="No"\n')
 print(f'Single prediction for 30 y/o earning $87k/yr: {single_pred[0]} at a probability of {single_prob[0][0].round(3)}')
 ```
 
+````{markdown}
+```
+# 1="Yes", 0="No"
+#
+# Single prediction for 30 y/o earning $87k/yr: 0 at a 
+# probability of 0.8
+```
+````
+
 ## Predicting the test set results
 
 ```{python}
 y_pred = classifier.predict(X_test)
-# print(np.concatenate(
-#   (y_pred.reshape(len(y_pred), 1), y_test.reshape(len(y_test), 1)), 1
-# ))
 ```
+
+----
 
 ## Creating the confusion matrix
 
@@ -99,20 +149,59 @@ print(confusion_matrix(y_test, y_pred))
 print(f'Accuracy: {accuracy_score(y_test, y_pred)}')
 ```
 
+````{markdown}
+```
+# [[64  4]
+#  [ 3 29]]
+# Accuracy: 0.93
+```
+````
+
+----
+
 ## Visualizing the training set results
+
+::: {.callout-warning}
+These next two code chunks will take a while. The KNN algorithm is already compute-expensive and we're adding to the heavy lifting by creating a grid of many values to be calculated. The final result is two plots with a visual mapping of our decision boundary **and** our training & predicted data points appearing as the dots within the field.
+:::
 
 ```{python}
 import matplotlib.pyplot as plt
 from matplotlib.colors import ListedColormap
+
 X_set, y_set = sc.inverse_transform(X_train), y_train
-X1, X2 = np.meshgrid(np.arange(start = X_set[:, 0].min() - 10, stop = X_set[:, 0].max() + 10, step = 0.25),
-                     np.arange(start = X_set[:, 1].min() - 1000, stop = X_set[:, 1].max() + 1000, step = 0.25))
-plt.contourf(X1, X2, classifier.predict(sc.transform(np.array([X1.ravel(), X2.ravel()]).T)).reshape(X1.shape),
-             alpha = 0.75, cmap = ListedColormap(('red', 'green')))
+X1, X2 = np.meshgrid(
+  np.arange(
+    start = X_set[:, 0].min() - 10, 
+    stop = X_set[:, 0].max() + 10, 
+    step = 0.25
+  ),
+  np.arange(
+    start = X_set[:, 1].min() - 1000, 
+    stop = X_set[:, 1].max() + 1000, 
+    step = 0.25
+  )
+)
+plt.contourf(
+  X1, X2, 
+  classifier.predict(
+    sc.transform(np.array([X1.ravel(), X2.ravel()]).T)
+  ).reshape(X1.shape),
+  alpha = 0.75, 
+  cmap = ListedColormap(('red', 'green'))
+)
+
 plt.xlim(X1.min(), X1.max())
 plt.ylim(X2.min(), X2.max())
+
 for i, j in enumerate(np.unique(y_set)):
-    plt.scatter(X_set[y_set == j, 0], X_set[y_set == j, 1], c = ListedColormap(('red', 'green'))(i), label = j)
+  plt.scatter(
+    X_set[y_set == j, 0], 
+    X_set[y_set == j, 1], 
+    c = ListedColormap(('red', 'green'))(i), 
+    label = j
+  )
+
 plt.title('KNN Regression (Training set)')
 plt.xlabel('Age')
 plt.ylabel('Estimated Salary')
@@ -120,19 +209,45 @@ plt.legend()
 plt.show()
 ```
 
+![KNN training set results](images/knn-training.png)
+
 ## Visualizing the test set results
 
+
 ```{python}
-from matplotlib.colors import ListedColormap
 X_set, y_set = sc.inverse_transform(X_test), y_test
-X1, X2 = np.meshgrid(np.arange(start = X_set[:, 0].min() - 10, stop = X_set[:, 0].max() + 10, step = 0.25),
-                     np.arange(start = X_set[:, 1].min() - 1000, stop = X_set[:, 1].max() + 1000, step = 0.25))
-plt.contourf(X1, X2, classifier.predict(sc.transform(np.array([X1.ravel(), X2.ravel()]).T)).reshape(X1.shape),
-             alpha = 0.75, cmap = ListedColormap(('red', 'green')))
+X1, X2 = np.meshgrid(
+  np.arange(
+    start = X_set[:, 0].min() - 10, 
+    stop = X_set[:, 0].max() + 10, 
+    step = 0.25
+  ),
+  np.arange(
+    start = X_set[:, 1].min() - 1000, 
+    stop = X_set[:, 1].max() + 1000, 
+    step = 0.25
+  )
+)
+plt.contourf(
+  X1, X2, 
+  classifier.predict(
+    sc.transform(np.array([X1.ravel(), X2.ravel()]).T)
+  ).reshape(X1.shape),
+  alpha = 0.75, 
+  cmap = ListedColormap(('red', 'green'))
+)
+
 plt.xlim(X1.min(), X1.max())
 plt.ylim(X2.min(), X2.max())
+
 for i, j in enumerate(np.unique(y_set)):
-    plt.scatter(X_set[y_set == j, 0], X_set[y_set == j, 1], c = ListedColormap(('red', 'green'))(i), label = j)
+    plt.scatter(
+      X_set[y_set == j, 0], 
+      X_set[y_set == j, 1], 
+      c = ListedColormap(('red', 'green'))(i), 
+      label = j
+    )
+
 plt.title('KNN Regression (Test set)')
 plt.xlabel('Age')
 plt.ylabel('Estimated Salary')
@@ -140,7 +255,4 @@ plt.legend()
 plt.show()
 ```
 
-
-```{python}
-# end
-```
+![KNN testing set results](images/knn-testing.png)
