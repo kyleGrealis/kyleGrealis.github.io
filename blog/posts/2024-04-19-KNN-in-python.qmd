@@ -1,7 +1,20 @@
 ---
-title: "KNN"
-format: html
-embed-resources: true
+title: "Learning Machine Learning in Python - KNN"
+image: /static/images/posts/quarto-hero.png
+author: "Kyle Grealis"
+date: April 19, 2024
+categories:
+  - Python
+  - Quarto
+  - Machine Learning
+format: 
+  html:
+    self-contained: true
+    code-fold: false
+    code-copy: true
+execute:
+  warning: false
+  message: false
 ---
 
 Euclidean Distance between two points: $\sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}$
