@@ -13,7 +13,6 @@ format:
     embed-resources: true
     code-fold: false
     code-copy: true
-    code-block-border-left: true
 execute:
   warning: false
   message: false
@@ -35,8 +34,7 @@ Organize your Python scripts so that each script is responsible for a specific p
 
 Create a main script that imports and runs the functions from your other scripts in the necessary order. For example:
 
-````
-```
+```{python}
 # main.py
 
 # Import the functions from your other scripts
@@ -55,7 +53,6 @@ def main():
 if __name__ == "__main__":
     main()
 ```
-````
 
 ## Step 3: Create a requirements.txt File
 
@@ -65,8 +62,7 @@ Create a `requirements.txt` file that lists the Python packages your project d
 
 Create a Dockerfile that sets up the environment for your project. Here's an example:
 
-````
-```
+```{bash}
 # Use an official Python runtime as a parent image
 FROM python:3.12-slim-buster
 
@@ -82,24 +78,20 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Run main.py when the container launches
 CMD ["python", "main.py"]
 ```
-````
 
 ## Step 5: Build and Run Your Docker Container
 
 To build the Docker image, run the following command in your project directory (the same directory where the Dockerfile is located):
 
-````
-```
-docker build -t your-image-name .
-```
-````
 To run the Docker container, run the following command:
 
-````
+```{bash}
+docker build -t your-image-name .
 ```
+
+```{bash}
 docker run your-image-name
 ```
-````
 
 This will run your Python script in a Docker container with an environment that matches the one specified in your Dockerfile.
 
@@ -111,24 +103,19 @@ This will run your Python script in a Docker container with an environment that 
     
 2. **Installing Packages:** Instead of using a `requirements.txt` file and `pip install`, you'd install R packages using the `install.packages()` function in R. You can do this directly in your Dockerfile. For example:
 
-````
-```
+```{bash}
 RUN R -e "install.packages(c('dplyr', 'ggplot2'), repos='http://cran.rstudio.com/')"
 ```
-````
 
 3. **Running Your Script:** Instead of running a Python script, you'd run an R script. For example:
 
-````
-```
+```{bash}
 CMD ["Rscript", "your_script.R"]
 ```
-````
 
 Here's what a full Dockerfile might look like for an R project:
 
-````
-```
+```{bash}
 # Use an official R runtime as a parent image
 FROM r-base:4.4.0
 
@@ -144,6 +131,5 @@ RUN R -e "install.packages(c('dplyr', 'ggplot2'), repos='http://cran.rstudio.com
 # Run your_script.R when the container launches
 CMD ["Rscript", "your_script.R"]
 ```
-````
 
 As with the Python example, if you have multiple R scripts that need to be run in a specific order, you can create a main R script that sources and runs your other scripts in the necessary order, and call that script in the `CMD` line.
