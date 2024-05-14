@@ -133,6 +133,55 @@
     "text": "PowerViz\nIntroducing PowerViz, an engaging Shiny app designed to bring power calculations to life! Originally crafted as a handy tool for a clinical trials class presentation, it has evolved into a comprehensive web application due to overwhelming positive feedback.\nPowerViz was born out of a need to illustrate the impact of sample size and effect size on power calculations. It’s a testament to the adage that necessity is the mother of invention. Built on the robust pwr R package, PowerViz offers an interactive platform where users can manipulate variables such as significance level, effect size, and sample size or proportion.\nBut PowerViz is more than just a tool; it’s an immersive learning experience. As you interact with the plots and adjust the inputs, you receive real-time feedback, providing valuable insights into the dynamics of power calculations. Whether you’re looking to enhance your learning or in the throes of designing a study, PowerViz is your go-to resource. Dive in and experience the fun side of statistics!\n\nTry it!\n\n\n\n\n\n\n\n\n\nEpiMatch\nEpiMatch is your indispensable partner for case-control matching and it’s now available as a Shiny web application. This tool is designed to streamline the matching process, strategically minimizing biases and saving you precious time. Case-control matching is a critical technique used in epidemiological studies to identify and analyze factors that may contribute to a medical condition or disease.\nEpiMatch empowers you to upload your own data and engage with a sophisticated matching algorithm, tailored to your specific criteria. While the tool comes with comprehensive instructions on its main page, it does require a touch of preprocessing before use.\nAfter running through five matching iterations, EpiMatch presents you with the results from the iteration that yielded the highest number of matched cases to controls. And the best part? Every table is downloadable, ensuring no data is lost, even for those individuals (cases and controls) that were not successfully matched.\nSo why wait? Dive into EpiMatch and experience the future of case-control matching!\n\nTry it!"
   },
   {
+    "objectID": "blog/posts/2024-05-14-using-docker-python-r.html",
+    "href": "blog/posts/2024-05-14-using-docker-python-r.html",
+    "title": "Setting Up a Python or R Project with Docker",
+    "section": "",
+    "text": "This guide will walk you through the process of setting up a Python or R project with Docker. This is particularly useful for data science projects where you need to ensure that your code runs in a consistent environment."
+  },
+  {
+    "objectID": "blog/posts/2024-05-14-using-docker-python-r.html#step-1-organize-your-python-scripts",
+    "href": "blog/posts/2024-05-14-using-docker-python-r.html#step-1-organize-your-python-scripts",
+    "title": "Setting Up a Python or R Project with Docker",
+    "section": "Step 1: Organize Your Python Scripts",
+    "text": "Step 1: Organize Your Python Scripts\nOrganize your Python scripts so that each script is responsible for a specific part of your project. For example:\n\nimport_and_clean.py: Responsible for importing and cleaning your data.\nexplore.py: Responsible for exploring your data (e.g., generating descriptive statistics, creating visualizations).\nmodeling.py: Responsible for building and evaluating your models.\ncreate_api.py: Responsible for creating an API for your model (if applicable)."
+  },
+  {
+    "objectID": "blog/posts/2024-05-14-using-docker-python-r.html#step-2-create-a-main-script",
+    "href": "blog/posts/2024-05-14-using-docker-python-r.html#step-2-create-a-main-script",
+    "title": "Setting Up a Python or R Project with Docker",
+    "section": "Step 2: Create a Main Script",
+    "text": "Step 2: Create a Main Script\nCreate a main script that imports and runs the functions from your other scripts in the necessary order. For example:\n```\n# main.py\n\n# Import the functions from your other scripts\nfrom import_and_clean import import_and_clean\nfrom explore import explore\nfrom modeling import modeling\nfrom create_api import create_api\n\ndef main():\n    # Call the functions in the necessary order\n    import_and_clean()\n    explore()\n    modeling()\n    create_api()\n\nif __name__ == \"__main__\":\n    main()\n```"
+  },
+  {
+    "objectID": "blog/posts/2024-05-14-using-docker-python-r.html#step-3-create-a-requirements.txt-file",
+    "href": "blog/posts/2024-05-14-using-docker-python-r.html#step-3-create-a-requirements.txt-file",
+    "title": "Setting Up a Python or R Project with Docker",
+    "section": "Step 3: Create a requirements.txt File",
+    "text": "Step 3: Create a requirements.txt File\nCreate a requirements.txt file that lists the Python packages your project depends on. You can generate it by running pip freeze &gt; requirements.txt in your virtual environment."
+  },
+  {
+    "objectID": "blog/posts/2024-05-14-using-docker-python-r.html#step-4-create-a-dockerfile",
+    "href": "blog/posts/2024-05-14-using-docker-python-r.html#step-4-create-a-dockerfile",
+    "title": "Setting Up a Python or R Project with Docker",
+    "section": "Step 4: Create a Dockerfile",
+    "text": "Step 4: Create a Dockerfile\nCreate a Dockerfile that sets up the environment for your project. Here’s an example:\n```\n# Use an official Python runtime as a parent image\nFROM python:3.12-slim-buster\n\n# Set the working directory in the container to /app\nWORKDIR /app\n\n# Add the current directory contents into the container at /app\nADD . /app\n\n# Install any needed packages specified in requirements.txt\nRUN pip install --no-cache-dir -r requirements.txt\n\n# Run main.py when the container launches\nCMD [\"python\", \"main.py\"]\n```"
+  },
+  {
+    "objectID": "blog/posts/2024-05-14-using-docker-python-r.html#step-5-build-and-run-your-docker-container",
+    "href": "blog/posts/2024-05-14-using-docker-python-r.html#step-5-build-and-run-your-docker-container",
+    "title": "Setting Up a Python or R Project with Docker",
+    "section": "Step 5: Build and Run Your Docker Container",
+    "text": "Step 5: Build and Run Your Docker Container\nTo build the Docker image, run the following command in your project directory (the same directory where the Dockerfile is located):\n```\ndocker build -t your-image-name .\n```\nTo run the Docker container, run the following command:\n```\ndocker run your-image-name\n```\nThis will run your Python script in a Docker container with an environment that matches the one specified in your Dockerfile."
+  },
+  {
+    "objectID": "blog/posts/2024-05-14-using-docker-python-r.html#step-6-if-building-a-project-in-r",
+    "href": "blog/posts/2024-05-14-using-docker-python-r.html#step-6-if-building-a-project-in-r",
+    "title": "Setting Up a Python or R Project with Docker",
+    "section": "Step 6: If Building a project in R",
+    "text": "Step 6: If Building a project in R\n\nCreate a Dockerfile\n\nDocker Base Image: Instead of using a Python base image, you’d use an R base image. For example, you might use FROM r-base:4.1.0 to use R version 4.1.0.\nInstalling Packages: Instead of using a requirements.txt file and pip install, you’d install R packages using the install.packages() function in R. You can do this directly in your Dockerfile. For example:\n\n```\nRUN R -e \"install.packages(c('dplyr', 'ggplot2'), repos='http://cran.rstudio.com/')\"\n```\n\nRunning Your Script: Instead of running a Python script, you’d run an R script. For example:\n\n```\nCMD [\"Rscript\", \"your_script.R\"]\n```\nHere’s what a full Dockerfile might look like for an R project:\n```\n# Use an official R runtime as a parent image\nFROM r-base:4.4.0\n\n# Set the working directory in the container to /app\nWORKDIR /app\n\n# Add the current directory contents into the container at /app\nADD . /app\n\n# Install any needed packages\nRUN R -e \"install.packages(c('dplyr', 'ggplot2'), repos='http://cran.rstudio.com/')\"\n\n# Run your_script.R when the container launches\nCMD [\"Rscript\", \"your_script.R\"]\n```\nAs with the Python example, if you have multiple R scripts that need to be run in a specific order, you can create a main R script that sources and runs your other scripts in the necessary order, and call that script in the CMD line."
+  },
+  {
     "objectID": "blog/posts/2024-02-15-how-to-scrape-google-scholar.html",
     "href": "blog/posts/2024-02-15-how-to-scrape-google-scholar.html",
     "title": "How to scrape Google Scholar using {httr2}",
@@ -144,6 +193,6 @@
     "href": "blog/index.html",
     "title": "My Blog",
     "section": "",
-    "text": "Machine Learning in Python - KNN\n\n\n\nPython\n\n\nQuarto\n\n\nMachine Learning\n\n\n\n\n\n\n\nKyle Grealis\n\n\nApr 19, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCreating a Quarto website hero panel\n\n\n\nR\n\n\nQuarto\n\n\nSCSS\n\n\n\n\n\n\n\nKyle Grealis\n\n\nMar 4, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHow to scrape Google Scholar using {httr2}\n\n\n\nR\n\n\nhttr2\n\n\nwebscraping\n\n\n\n\n\n\n\nKyle Grealis\n\n\nFeb 15, 2024\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "Setting Up a Python or R Project with Docker\n\n\n\nPython\n\n\nR\n\n\nDocker\n\n\nData science\n\n\n\n\n\n\n\nKyle Grealis\n\n\nMay 14, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMachine Learning in Python - KNN\n\n\n\nPython\n\n\nQuarto\n\n\nMachine Learning\n\n\n\n\n\n\n\nKyle Grealis\n\n\nApr 19, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCreating a Quarto website hero panel\n\n\n\nR\n\n\nQuarto\n\n\nSCSS\n\n\n\n\n\n\n\nKyle Grealis\n\n\nMar 4, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHow to scrape Google Scholar using {httr2}\n\n\n\nR\n\n\nhttr2\n\n\nwebscraping\n\n\n\n\n\n\n\nKyle Grealis\n\n\nFeb 15, 2024\n\n\n\n\n\n\n\n\nNo matching items"
   }
 ]
