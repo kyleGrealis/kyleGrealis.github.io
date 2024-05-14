@@ -1,6 +1,7 @@
 /*-- scss:defaults --*/
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
 $font-family-sans-serif: "Open Sans", "Poppins";
+$font-size: 1.5rem;
 $primary: gray;
 $secondary: #866ee0;
 $tertiary: darkcyan;
@@ -24,9 +25,8 @@ $bg-light-shadow: 1px 1px 1px #c0c0c0;
 
 
 /*-- scss:rules --*/
-.sourceCode {
-  background-color: lightgray;
-  color: $secondary;
+code:not(.sourceCode), code.sourceCode.python {
+  background-color: rgb(229, 229, 229) !important; 
 }
 
 
