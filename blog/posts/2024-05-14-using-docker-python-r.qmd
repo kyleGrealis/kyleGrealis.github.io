@@ -1,0 +1,149 @@
+---
+title: "Setting Up a Python or R Project with Docker"
+# image: /static/images/posts/knn-gist.png
+author: "Kyle Grealis"
+date: May 14, 2024
+categories:
+  - Python
+  - R
+  - Docker
+  - Data science
+format: 
+  html:
+    embed-resources: true
+    code-fold: false
+    code-copy: true
+    code-block-border-left: true
+execute:
+  warning: false
+  message: false
+  eval: false
+---
+
+This guide will walk you through the process of setting up a Python or R project with Docker. This is particularly useful for data science projects where you need to ensure that your code runs in a consistent environment.
+
+## Step 1: Organize Your Python Scripts
+
+Organize your Python scripts so that each script is responsible for a specific part of your project. For example:
+
+- `import_and_clean.py`: Responsible for importing and cleaning your data.
+- `explore.py`: Responsible for exploring your data (e.g., generating descriptive statistics, creating visualizations).
+- `modeling.py`: Responsible for building and evaluating your models.
+- `create_api.py`: Responsible for creating an API for your model (if applicable).
+
+## Step 2: Create a Main Script
+
+Create a main script that imports and runs the functions from your other scripts in the necessary order. For example:
+
+````
+```
+# main.py
+
+# Import the functions from your other scripts
+from import_and_clean import import_and_clean
+from explore import explore
+from modeling import modeling
+from create_api import create_api
+
+def main():
+    # Call the functions in the necessary order
+    import_and_clean()
+    explore()
+    modeling()
+    create_api()
+
+if __name__ == "__main__":
+    main()
+```
+````
+
+## Step 3: Create a requirements.txt File
+
+Create a `requirements.txt` file that lists the Python packages your project depends on. You can generate it by running `pip freeze > requirements.txt` in your virtual environment.
+
+## Step 4: Create a Dockerfile
+
+Create a Dockerfile that sets up the environment for your project. Here's an example:
+
+````
+```
+# Use an official Python runtime as a parent image
+FROM python:3.12-slim-buster
+
+# Set the working directory in the container to /app
+WORKDIR /app
+
+# Add the current directory contents into the container at /app
+ADD . /app
+
+# Install any needed packages specified in requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Run main.py when the container launches
+CMD ["python", "main.py"]
+```
+````
+
+## Step 5: Build and Run Your Docker Container
+
+To build the Docker image, run the following command in your project directory (the same directory where the Dockerfile is located):
+
+````
+```
+docker build -t your-image-name .
+```
+````
+To run the Docker container, run the following command:
+
+````
+```
+docker run your-image-name
+```
+````
+
+This will run your Python script in a Docker container with an environment that matches the one specified in your Dockerfile.
+
+## Step 6: If Building a project in R
+
+### Create a Dockerfile
+
+1. **Docker Base Image:** Instead of using a Python base image, you'd use an R base image. For example, you might use `FROM r-base:4.1.0` to use R version 4.1.0.
+    
+2. **Installing Packages:** Instead of using a `requirements.txt` file and `pip install`, you'd install R packages using the `install.packages()` function in R. You can do this directly in your Dockerfile. For example:
+
+````
+```
+RUN R -e "install.packages(c('dplyr', 'ggplot2'), repos='http://cran.rstudio.com/')"
+```
+````
+
+3. **Running Your Script:** Instead of running a Python script, you'd run an R script. For example:
+
+````
+```
+CMD ["Rscript", "your_script.R"]
+```
+````
+
+Here's what a full Dockerfile might look like for an R project:
+
+````
+```
+# Use an official R runtime as a parent image
+FROM r-base:4.4.0
+
+# Set the working directory in the container to /app
+WORKDIR /app
+
+# Add the current directory contents into the container at /app
+ADD . /app
+
+# Install any needed packages
+RUN R -e "install.packages(c('dplyr', 'ggplot2'), repos='http://cran.rstudio.com/')"
+
+# Run your_script.R when the container launches
+CMD ["Rscript", "your_script.R"]
+```
+````
+
+As with the Python example, if you have multiple R scripts that need to be run in a specific order, you can create a main R script that sources and runs your other scripts in the necessary order, and call that script in the `CMD` line.
