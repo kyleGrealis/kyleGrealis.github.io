@@ -4817,7 +4817,7 @@ vertical-align: -.125em;
 <section id="step-2-create-a-main-script" class="level2">
 <h2 class="anchored" data-anchor-id="step-2-create-a-main-script">Step 2: Create a Main Script</h2>
 <p>Create a main script that imports and runs the functions from your other scripts in the necessary order. For example:</p>
-<div id="7e33f824" class="cell" data-execution_count="1">
+<div id="a02ae10c" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># main.py</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Import the functions from your other scripts</span></span>
@@ -4896,6 +4896,9 @@ RUN R -e &quot;install.packages(c(&#39;dplyr&#39;, &#39;ggplot2&#39;), repos=&#3
 # Run your_script.R when the container launches
 CMD [&quot;Rscript&quot;, &quot;your_script.R&quot;]</code></pre>
 <p>As with the Python example, if you have multiple R scripts that need to be run in a specific order, you can create a main R script that sources and runs your other scripts in the necessary order, and call that script in the <code>CMD</code> line.</p>
+<hr>
+<p><span style="font-size: 2rem;">Happy coding!</span></p>
+<p><span style="font-size: 2rem; font-weight: bold">~Kyle</span></p>
 
 
 </section>
