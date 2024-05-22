@@ -149,4 +149,8 @@ To be honest, I hope that I reread this post in a few months and immediately wan
 
 Thank you for your time and check back soon!
 
-## Happy coding!
+----
+
+[Happy coding!]{style='font-size: 2rem;'}
+
+[~Kyle]{style='font-size: 2rem; font-weight: bold'}
