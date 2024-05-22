@@ -133,3 +133,9 @@ CMD ["Rscript", "your_script.R"]
 ```
 
 As with the Python example, if you have multiple R scripts that need to be run in a specific order, you can create a main R script that sources and runs your other scripts in the necessary order, and call that script in the `CMD` line.
+
+----
+
+[Happy coding!]{style='font-size: 2rem;'}
+
+[~Kyle]{style='font-size: 2rem; font-weight: bold'}
