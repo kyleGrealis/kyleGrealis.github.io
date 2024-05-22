@@ -29,6 +29,14 @@ code:not(.sourceCode), code.sourceCode.python {
   background-color: rgb(229, 229, 229) !important; 
 }
 
+a {
+  color: teal;
+  font-weight: bold;
+  &:hover {
+    color: orange;
+  }
+}
+
 
 // apps page -------------------------------------------------------
 div.img-text {
