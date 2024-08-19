@@ -160,7 +160,7 @@ I hope this `renv` project guide proves valuable in streamlining your R project 
 
 When working with `renv`, think of your `renv.lock` file as a crucial piece of documentation: it tells the story of your project's exact environment. Just as you'd write clear git commit messages (not just "updated stuff" but "feat: added tidymodels for ML pipeline"), be intentional about when and why you update your lockfile. A well-maintained `renv` setup can be as informative as well-commented code!
 
-This guide is, of course, a work in progress. As I explore more advanced `renv` features or discover new best practices in R project management, I'll update this post accordingly. If you've found clever ways to use `renv` in your data science projects or have tips for smoother collaboration using these tools, I'm all ears! Share your insights at [your.email@example.com](mailto:your.email@example.com). Together, we can make our R projects more robust, reproducible, and ready for collaboration!
+This guide is, of course, a work in progress. As I explore more advanced `renv` features or discover new best practices in R project management, I'll update this post accordingly. If you've found clever ways to use `renv` in your data science projects or have tips for smoother collaboration using these tools, I'm all ears! Share your insights at [kylegrealis@icloud.com](mailto:kylegrealis@icloud.com). Together, we can make our R projects more robust, reproducible, and ready for collaboration!
 
 [Happy coding!]{style='font-size: 2rem;'}
 
