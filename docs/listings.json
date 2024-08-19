@@ -9,6 +9,7 @@
   {
     "listing": "/blog/index.html",
     "items": [
+      "/blog/posts/2024-08-19-renv-project-sharing-guide.html",
       "/blog/posts/2024-05-22-beginner-git-team-workflow.html",
       "/blog/posts/2024-05-14-using-docker-python-r.html",
       "/blog/posts/2024-04-19-KNN-in-python.html",
