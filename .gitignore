@@ -6,3 +6,5 @@
 /.quarto/
 /_site/
 /docs/
+
+/blog/posts/blog_template.qmd
