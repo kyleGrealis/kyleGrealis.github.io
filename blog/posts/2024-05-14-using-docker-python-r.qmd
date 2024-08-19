@@ -1,6 +1,6 @@
 ---
 title: "Setting Up a Python or R Project with Docker"
-# image: /static/images/posts/knn-gist.png
+image: /static/images/posts/docker-logo.png
 author: "Kyle Grealis"
 date: May 14, 2024
 categories:
@@ -18,6 +18,8 @@ execute:
   message: false
   eval: false
 ---
+
+![](/static/images/posts/docker-logo.png)
 
 This guide will walk you through the process of setting up a Python or R project with Docker. This is particularly useful for data science projects where you need to ensure that your code runs in a consistent environment.
 
