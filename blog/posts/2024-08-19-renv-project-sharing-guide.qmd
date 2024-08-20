@@ -93,7 +93,7 @@ project_root/
 
 ### Alternative option
 
-If you have been working on non-`renv` activated project while conducting exploratory data analysis (EDA) or just tinkering with machine learning preprocessing recipes and modeling types, you can activate `renv` after you project is in a steady state. 
+If you have been working on non-`renv` activated project while conducting exploratory data analysis (EDA) or just tinkering with machine learning preprocessing recipes and modeling types, you can activate `renv` after your project is in a steady state. 
 
 1. Set up `renv`:
    - Run `install.packages("renv")` if not already installed.
@@ -101,7 +101,7 @@ If you have been working on non-`renv` activated project while conducting explor
      ```r
      renv::init()
      ```
-   - This will analyze your existing project and create an initial lockfile based on your current package usage. It examines the scripts your using for the presence of any `library()` or `require()` calls and adds those packages.
+   - This will analyze your existing project and create an initial lockfile based on your current package usage. It examines the scripts you've written for the presence of any `library()` or `require()` calls and adds those packages.
 
 2. Capture the project state:
    - After finalizing your scripts, run:
