@@ -4935,14 +4935,14 @@ vertical-align: -.125em;
 </ol>
 <section id="alternative-option" class="level3">
 <h3 class="anchored" data-anchor-id="alternative-option">Alternative option</h3>
-<p>If you have been working on non-<code>renv</code> activated project while conducting exploratory data analysis (EDA) or just tinkering with machine learning preprocessing recipes and modeling types, you can activate <code>renv</code> after you project is in a steady state.</p>
+<p>If you have been working on non-<code>renv</code> activated project while conducting exploratory data analysis (EDA) or just tinkering with machine learning preprocessing recipes and modeling types, you can activate <code>renv</code> after your project is in a steady state.</p>
 <ol type="1">
 <li>Set up <code>renv</code>:
 <ul>
 <li><p>Run <code>install.packages(&quot;renv&quot;)</code> if not already installed.</p></li>
 <li><p>Initialize <code>renv</code> by running:</p>
 <div class="sourceCode" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>renv<span class="sc">::</span><span class="fu">init</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
-<li><p>This will analyze your existing project and create an initial lockfile based on your current package usage. It examines the scripts your using for the presence of any <code>library()</code> or <code>require()</code> calls and adds those packages.</p></li>
+<li><p>This will analyze your existing project and create an initial lockfile based on your current package usage. It examines the scripts you’ve written for the presence of any <code>library()</code> or <code>require()</code> calls and adds those packages.</p></li>
 </ul></li>
 <li>Capture the project state:
 <ul>
