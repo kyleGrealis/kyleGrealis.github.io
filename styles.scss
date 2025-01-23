@@ -3,11 +3,13 @@
 $font-family-sans-serif: "Open Sans", "Poppins";
 $font-size: 1.5rem;
 $primary: gray;
-$secondary: #866ee0;
-$tertiary: darkcyan;
-$navbar-bg: #343a40;
-$code-bg: lightgray;
-$code-color: $secondary;
+
+// Incorporating Nord theme colors. See https://nordtheme.com/docs/colors-and-palettes
+$secondary: #a3be8c;
+$tertiary: #81a1c1;
+$navbar-bg: #3b4252;
+$code-bg: #d8dee9;
+$code-color: #434c5e;
 $bg-dark-shadow: 1px 1px 1px gray;
 $bg-light-shadow: 1px 1px 1px #c0c0c0;
 
@@ -30,10 +32,10 @@ code:not(.sourceCode), code.sourceCode.python {
 }
 
 a {
-  color: teal;
+  color: $tertiary;
   font-weight: bold;
   &:hover {
-    color: orange;
+    color: $secondary;
   }
 }
 
