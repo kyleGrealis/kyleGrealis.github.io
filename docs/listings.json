@@ -1,12 +1,5 @@
 [
   {
-    "listing": "/posts.html",
-    "items": [
-      "/posts/2024-02-15-how-to-scrape-google-scholar.html",
-      "/posts/2024-02-21-creating-quarto-hero.html"
-    ]
-  },
-  {
     "listing": "/blog/index.html",
     "items": [
       "/blog/posts/2024-08-19-renv-project-sharing-guide.html",
