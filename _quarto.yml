@@ -14,6 +14,8 @@ website:
     right:
       - href: index.qmd
         text: Home
+      - href: cran/index.qmd
+        text: R Packages
       - href: apps/index.qmd
         text: Apps
       - href: blog/index.qmd
@@ -25,8 +27,8 @@ website:
         target: _blank
 
   page-footer:
-    background: "#343a40"
-    center: This website is built with [Quarto](https://quarto.org/docs/website) &copy;2024
+    background: "#4c566a"
+    center: This website is built with [Quarto](https://quarto.org/docs/website) &copy;2025
 
 format:
   html:
