@@ -52,7 +52,7 @@ After running through five matching iterations, EpiMatch presents you with the r
 So why wait? Dive into EpiMatch and experience the future of case-control matching!
 
 ::: { .cntr-btn }
-[Try it!](https://kylegrealis.shinyapps.io/powerViz/){target="_blank" .btn}
+[Try it!](https://kylegrealis.shinyapps.io/case-control-matching/){target="_blank" .btn}
 :::
 
 :::
