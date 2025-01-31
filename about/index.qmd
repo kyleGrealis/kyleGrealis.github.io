@@ -1,0 +1,34 @@
+---
+title: "Kyle Grealis"
+image: /static/images/kyle.jpg
+resources: /static/files/KGrealis_cv.pdf
+about:
+  template: trestles
+  image-shape: rounded
+  image-width: 15em
+  links:
+    - text: "GitHub"
+      icon: github
+      href: https://github.com/kyleGrealis/
+      target: _blank
+    - text: "LinkedIn"
+      icon: linkedin
+      href: https://www.linkedin.com/in/kyle-grealis-044030180/
+      target: _blank
+    - text: "CV"
+      icon: file-text
+      href: /static/files/KGrealis_cv.pdf
+      target: _blank
+toc: false
+---
+
+::: {#ppc}
+## Hey there! 👋  I'm Kyle Grealis...
+
+I'm a Biostatistician and Lead Data Analyst at the University of Miami. I spent nearly 20 years as a respiratory therapist before discovering the world of data science and its importance on healthcare. Attention to detail is as critical a skill in bedside care as it is in data analysis. 
+
+I've been fortunate to work with some great physicians and researchers in the field of pulmonary medicine. Since the COVID-19 pandemic, I have transitioned to the Department of Public Health Sciences at the University of Miami. Currently, we are developing machine learning algorithms to predict individual relapse in those affected by the opioid epidemic.
+
+I'm excited about data science and the potential it has to improve healthcare and outcomes. This website is a collection of my work: R packages & web applications that I've developed to improve my day-to-day processes and contribute to the open source community. Let's come together to grow the fields of data science and healthcare.
+:::
+

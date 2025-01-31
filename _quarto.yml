@@ -7,13 +7,15 @@ project:
 #   freeze: auto
 
 website:
-  title: "kyleGrealis.github.io"
+  title: "The Azimuth Project"
   favicon: /static/images/favicon.ico
 
   navbar:
     right:
       - href: index.qmd
         text: Home
+      - href: about/index.qmd
+        text: About
       - href: cran/index.qmd
         text: R Packages
       - href: apps/index.qmd
