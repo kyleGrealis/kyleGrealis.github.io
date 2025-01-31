@@ -16,7 +16,7 @@ website:
         text: Home
       - href: about/index.qmd
         text: About
-      - href: cran/index.qmd
+      - href: r-packages/index.qmd
         text: R Packages
       - href: apps/index.qmd
         text: Apps
