@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Kyle Grealis – kyleGrealis.github.io</title>
+<title>The Azimuth Project</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -34,6 +34,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
@@ -78,7 +79,7 @@ ul.task-list li input[type="checkbox"] {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="./index.html">
-    <span class="navbar-title">kyleGrealis.github.io</span>
+    <span class="navbar-title">The Azimuth Project</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -92,7 +93,11 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./cran/index.html"> 
+    <a class="nav-link" href="./about/index.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./cran/index.qmd"> 
 <span class="menu-text">R Packages</span></a>
   </li>  
   <li class="nav-item">
@@ -125,46 +130,28 @@ ul.task-list li input[type="checkbox"] {
 <!-- margin-sidebar -->
     
 <!-- main -->
-<div class="quarto-about-trestles">
-  <div class="about-entity">
-    <img src="/static/images/kyle.jpg" class="about-image
-  rounded " style="width: 15em;">
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Kyle Grealis</h1>
-</div>
-<div class="quarto-title-meta">
-  </div>
-</header>
-    <div class="about-links">
-  <a href="https://github.com/kyleGrealis/" class="about-link" rel="" target="_blank">
-    <i class="bi bi-github"></i>
-     <span class="about-link-text">GitHub</span>
-  </a>
-  <a href="https://www.linkedin.com/in/kyle-grealis-044030180/" class="about-link" rel="" target="_blank">
-    <i class="bi bi-linkedin"></i>
-     <span class="about-link-text">LinkedIn</span>
-  </a>
-  <a href="/static/files/KGrealis_cv.pdf" class="about-link" rel="" target="_blank">
-    <i class="bi bi-file-text"></i>
-     <span class="about-link-text">CV</span>
-  </a>
-</div>
-  </div>
-  <div class="about-contents"><main class="content" id="quarto-document-content">
-<div id="ppc">
-<section id="hey-there-im-kyle-grealis" class="level2">
-<h2 data-anchor-id="hey-there-im-kyle-grealis">Hey there! 👋 I’m Kyle Grealis…</h2>
-<p>I’m a Biostatistician and Lead Data Analyst at the University of Miami. I spent nearly 20 years as a respiratory therapist before discovering the world of data science and its importance on healthcare. Attention to detail is as critical a skill in bedside care as it is in data analysis.</p>
-<p>I’ve been fortunate to work with some great physicians and researchers in the field of pulmonary medicine, and I’ve recently transitioned to the Department of Public Health Sciences at the University of Miami. Currently, we are developing machine learning algorithms to predict individual relapse in those affected by the opioid epidemic.</p>
-<p>I’m excited about data science and the potential it has to improve healthcare and outcomes. This website is a collection of my work: web applications that I’ve developed to better our understanding of epidemiology and biostatistics, and a blog where I share what I’m learning along the way. Let’s come together to grow the fields of data science and healthcare.</p>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+
+
+
+
+<style>
+  body {
+    background-image: url("static/images/nord-background.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  h2, p { color: #d1d1d1 }
+</style>
+<section id="the-azimuth-project" class="level2">
+<h2 class="anchored" data-anchor-id="the-azimuth-project">The Azimuth Project</h2>
+<p>An azimuth is the angle of compass direction. An azimuth demands you know where you’re going, you have intentional movement in your journey. My journey in creating the Azimuth Project does not consist of one singular project. My career is the Azimuth Project. My direction is forward. Our pace may differ. Like entering into realms of uncharted territory, I cannot foresee how each step will feel or how sure-footed progress will be. I do anticipate setbacks, restarts, and – yeah – at times wanting to just go back as if I had never started.</p>
+<p>I just don’t want to stay in this one place. I want to learn. I want to challenge myself and be challenged too. Here and now is where I plot my course, set my way-points, and shoot my azimuth. Here is where I take those first steps.</p>
+
+
 </section>
-</div>
 
-
-</main></div>
-</div>
- <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -185,6 +172,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
   toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
   const isCodeAnnotation = (el) => {
     for (const clz of el.classList) {
       if (clz.startsWith('code-annotation-')) {                     
