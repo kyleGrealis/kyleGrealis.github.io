@@ -1,1 +1,1 @@
-Sitemap: https://azimuth-project.tech/sitemap.xml
+Sitemap: https://kyleGrealis.github.io/sitemap.xml
