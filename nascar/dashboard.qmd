@@ -1,0 +1,39 @@
+---
+title: NASCAR Performance Dashboard
+format:
+  dashboard:
+    logo: ../static/images/nascar-hex.svg
+    embed-resources: true
+    theme:
+      - default
+      - dashboard.scss
+    # nav-buttons: 
+    #   - icon: laptop
+    #     href: https://azimuth-project.tech/nascaR.data/
+    #   - icon: github
+    #     href: https://github.com/kyleGrealis/nascaR.data/
+    orientation: columns
+---
+
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+library(tidyverse)
+```
+
+# Cup
+
+</span style='font-weigt:bold'>COMING SOON!!</span>
+
+Thank you for your patience as this is being developed. A release candidate is 
+expected to be ready late-April 2025.
+
+<!-- ## Column
+
+## Column -->
+
+# Xfinity
+
+# Trucks
