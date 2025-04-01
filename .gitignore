@@ -8,4 +8,4 @@
 /docs/
 
 /blog/posts/blog_template.qmd
-/blog/posts/*.quarto_ipynb
+# /blog/posts/*.quarto_ipynb
