@@ -1,6 +1,9 @@
 project:
   type: website
   output-dir: docs
+  preview:
+    port: 7209
+    browser: true
 
 # this stops code from being executed on GitHub Actions when deploying. I want some code running right now though
 # execute:
@@ -9,21 +12,24 @@ project:
 website:
   title: "The Azimuth Project"
   favicon: /static/images/favicon.ico
+  site-url: https://azimuth-project.tech/
 
   navbar:
     right:
-      - href: index.qmd
-        text: Home
-      - href: about/index.qmd
-        text: About
-      - href: r-packages/index.qmd
-        text: R Packages
-      - href: apps/index.qmd
-        text: Apps
-      - href: blog/index.qmd
-        text: Blog
-      - href: https://kylegrealis.github.io/feaster-balise-lab/
-        text: Team
+      - text: Home
+        href: index.qmd
+      - text: About
+        href: about/index.qmd
+      - text: R Packages
+        href: r-packages/index.qmd
+      - text: Apps
+        href: apps/index.qmd
+      - text: NASCAR
+        href: nascar/dashboard.qmd
+      - text: Blog
+        href: blog/index.qmd
+      - text: UM Team
+        href: https://kylegrealis.github.io/feaster-balise-lab/
       - icon: github
         href: https://github.com/kyleGrealis/
         target: _blank
