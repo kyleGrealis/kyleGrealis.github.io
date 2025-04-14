@@ -1,0 +1,227 @@
+---
+title: "Automating a GitHub Actions status email"
+image: /static/images/posts/github-actions.png
+author: Kyle Grealis
+date: April 14, 2025
+categories:
+  - Data science
+  - R
+  - GitHub
+format: 
+  html:
+    embed-resources: true
+    code-fold: false
+    code-copy: true
+execute:
+  warning: false
+  message: false
+  include: false
+---
+
+<style>
+img {
+  border: 2px solid gray;
+  border-radius: 3px;
+  box-shadow: 2px 2px 2px #c9c9c9;
+  width: 400px;
+  display: block;
+  margin: auto;
+}
+</style>
+
+## Purpose
+
+Using automation with GitHub Actions is a great way to simplify project updates. This 
+example will demonstrate how to connect an iCloud account to your repository and receive 
+automated emails after a workflow job has completed.
+
+---
+
+## Requirements
+
+1. GitHub repository
+2. iCloud email account
+3. Enabling an app-specific password in iCloud
+4. A GitHub actions workflow file
+
+---
+
+## Steps
+
+> While this demonstration uses iCloud, adapting Ravgeet Dhillon’s 
+[blog post](https://www.ravsam.in/blog/send-email-notification-when-github-action-fails/){target="_blank"} 
+to suit your needs should be fairly easy.
+
+
+### Part 1: iCloud
+
+1. Login to your iCloud account and navigate to your icon in the upper right of the 
+screen. Select “Manage Apple Account” from the list of options:
+
+![](/blog/posts/images/gh-actions-email/manage-apple-account.png)
+
+2. Proceed to login and complete the two-factor authorization, if enabled.
+
+3. Select “App-Specific Passwords” from the tile options.
+
+![](/blog/posts/images/gh-actions-email/app-spec-pw.png)
+
+4. Select the plus symbol (`+`).
+
+![](/blog/posts/images/gh-actions-email/app-spec-pw-2.png)
+
+5. Add a name for your passowrd.
+
+![](/blog/posts/images/gh-actions-email/name-password.png)
+
+6. Complete the verification.
+
+![](/blog/posts/images/gh-actions-email/complete-verification.png)
+
+7. **Save and copy** this password immediately! You cannot recover or see it again once you select "Done".
+
+![](/blog/posts/images/gh-actions-email/the-app-spec-pw.png)
+
+
+### Part 2: GitHub
+
+1. Navigate to the repository where you will be adding the GitHub Action. From the top 
+bar, select “Settings”. On the left side, select “Secrets and variables” then “Actions”.
+
+![](/blog/posts/images/gh-actions-email/gh-1.png)
+
+2. Follow this format. Store the iCloud app-specific password you created above in a “New
+ repository secret” named `EMAIL_PASSWORD`. Add your iCloud email address to a “New 
+ repository secret” named `EMAIL_USERNAME`.
+
+ ![](/blog/posts/images/gh-actions-email/gh-2.png)
+
+> If you use different secret names, you will need to modify the YAML file provided below
+ to match.
+
+
+### Part 3: Workflow file
+
+1. Create a new file in your repository. As an example, the file is named` _build.yml` 
+and will be stored in this path from the root of your project `.github/workflows`. If 
+you don’t currently have those directories, you can enter the following command in your 
+terminal:
+
+```bash
+mkdir -p .github/workflows
+touch _build.yml
+```
+Using the `-p` flag, this will `m`a`k`e `dir`ectory or directories if they do not 
+currently exist and create (touch) the new file. Alternatively, you can use the GUI tools 
+if that’s easier.
+
+2. Open `_build.yml` and paste in this content:
+
+```yaml
+name: Build
+
+on:
+  push:
+    branches: main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Hello World
+        run: echo Hello, world!
+
+      - name: Send status email via iCloud
+        if: always()
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.mail.me.com
+          server_port: 587  # iCloud SMTP requires TLS (STARTTLS)
+          secure: false  # This must be false for STARTTLS to work
+          username: ${{ secrets.EMAIL_USERNAME }}
+          password: ${{ secrets.EMAIL_PASSWORD }}
+          subject: "${{ github.repository }} workflow: ${{ job.status }}"
+          # github.job will be lowercase of the `name` value in line 1. Here, "build".
+          # github.workflow will will match the `name` value in line 1
+          # github.repository is the repository name: kyleGrealis/my-repo-name
+          # job.status: "success" or "failure" 
+          body:  |
+            ${{ github.workflow }} of ${{ github.repository }}
+
+            Job: ${{ github.job }}
+            Status: ${{ job.status }}"
+          to: "kylegrealis@icloud.com"
+          from: "From my GitHub Actions Bot"
+```
+
+Though this file may initially appear as overwhelming or complicated, it uses a 
+relatively straight-forward `key:value` syntax:
+
+* Name the workflow “Build”. This will appear under the “Actions” tab and then the left 
+side of the screen for your GitHub repository.
+
+![](/blog/posts/images/gh-actions-email/gh-3.png)
+
+* The `on:` section states that this action will run on each project `push` on the `main` 
+branch. To add other branches, move `main` to the next line with one more indent and a dash:
+
+```yaml
+on:
+  push:
+    branches:
+      - main
+      - dev
+```
+
+* The `jobs` section declares what is to happen and how it is to happen. The explanations 
+are beyond the scope of this, so explore GitHub 
+[documentation](https://docs.github.com/en/actions) for more information.
+
+* There will be two main jobs that will run:
+
+1. Echo "Hello World" to the Actions console.
+
+2. Send a status email
+
+* The email with `always()` be sent, regardlesss if the job was a success or failure.
+
+* Be sure not to alter the `server` or `secure` lines or risk unexpected consequences or 
+workflow failure.
+
+* The `username` and `password` are self-explanatory. The secret names you provided in 
+Part 2 must match the names inside the braces (e.g., `secrets.EMAIL_USERNAME`) to 
+correctly provide those values. This format prevents leaking your personal information 
+to others, like the author is doing here.
+
+* The `subject` and `body` can be modfied with whatever information you desire. Use 
+`body: |` then indent to create a multiple line & custom structure to the email. A 
+successful run will return this with your own information included:
+
+![](/blog/posts/images/gh-actions-email/success-email.png)
+
+* Save, commit, add a message, and push this file to your repository. You should quickly 
+receive a status email if everything was done correctly. You can view the real-time 
+workflow by navigating to the “Actions” tab in your repository, select the name of your 
+action (i.e., “Build”), and select the commit message you gave. Using the image from 
+above (and repeated here), the commit message was “updated”. Selecting that will give 
+you an easy interface to select and check the logs. The logs provide a good amount of 
+detail to help the debugging process if something went wrong.
+
+![](/blog/posts/images/gh-actions-email/show-workflows.png)
+
+---
+
+## Conclusion
+
+GitHub Actions can really enhance your data science workflow by offloading manual tasks 
+to action-specific or chronological jobs. Integrating them is quite easy and only 
+requires about 30 minutes of reading and testing before you will be able to adapt this 
+simple example to meet your needs.
+
+Share your insights at [kylegrealis@icloud.com](mailto:kylegrealis@icloud.com). Together, we can make our R projects more robust, reproducible, and ready for collaboration!
+
+[Happy coding!]{style='font-size: 1.5rem;'}
+
+[~Kyle]{style='font-size: 1.5rem; font-weight: bold'}
