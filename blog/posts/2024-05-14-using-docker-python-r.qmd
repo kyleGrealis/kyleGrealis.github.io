@@ -19,7 +19,7 @@ execute:
   eval: false
 ---
 
-![](/static/images/posts/docker-logo.png)
+![](/static/images/posts/docker-logo.png){width='70%'}
 
 This guide will walk you through the process of setting up a Python or R project with Docker. This is particularly useful for data science projects where you need to ensure that your code runs in a consistent environment.
 
@@ -136,8 +136,8 @@ CMD ["Rscript", "your_script.R"]
 
 As with the Python example, if you have multiple R scripts that need to be run in a specific order, you can create a main R script that sources and runs your other scripts in the necessary order, and call that script in the `CMD` line.
 
-----
+Share your insights at [kylegrealis@icloud.com](mailto:kylegrealis@icloud.com). Together, we can make our R projects more robust, reproducible, and ready for collaboration!
 
-[Happy coding!]{style='font-size: 2rem;'}
+[Happy coding!]{style='font-size: 1.5rem;'}
 
-[~Kyle]{style='font-size: 2rem; font-weight: bold'}
+[~Kyle]{style='font-size: 1.5rem; font-weight: bold'}

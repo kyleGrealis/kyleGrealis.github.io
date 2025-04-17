@@ -290,6 +290,14 @@ editing.
 4. **Pushing broken code**: Always run `devtools::check()` before pushing to shared branches
 5. **Ambiguous commit messages**: Use clear messages that explain the "why" not just the "what"
 
+Share your insights at [kylegrealis@icloud.com](mailto:kylegrealis@icloud.com). Together, we can make our R projects more robust, reproducible, and ready for collaboration!
+
+[Happy coding!]{style='font-size: 1.5rem;'}
+
+[~Kyle]{style='font-size: 1.5rem; font-weight: bold'}
+
+---
+
 ## Additional Resources
 
 - [R Packages (2e) by Hadley Wickham & Jenny Bryan](https://r-pkgs.org/)

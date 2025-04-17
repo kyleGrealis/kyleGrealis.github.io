@@ -151,6 +151,8 @@ Thank you for your time and check back soon!
 
 ----
 
-[Happy coding!]{style='font-size: 2rem;'}
+Share your insights at [kylegrealis@icloud.com](mailto:kylegrealis@icloud.com). Together, we can make our R projects more robust, reproducible, and ready for collaboration!
 
-[~Kyle]{style='font-size: 2rem; font-weight: bold'}
+[Happy coding!]{style='font-size: 1.5rem;'}
+
+[~Kyle]{style='font-size: 1.5rem; font-weight: bold'}

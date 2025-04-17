@@ -256,3 +256,10 @@ plt.show()
 ```
 
 ![KNN testing set results](images/knn-testing.png)
+
+
+Share your insights at [kylegrealis@icloud.com](mailto:kylegrealis@icloud.com). Together, we can make our R projects more robust, reproducible, and ready for collaboration!
+
+[Happy coding!]{style='font-size: 1.5rem;'}
+
+[~Kyle]{style='font-size: 1.5rem; font-weight: bold'}
