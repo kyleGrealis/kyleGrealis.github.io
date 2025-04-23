@@ -1,0 +1,416 @@
+{
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "---\n",
+        "title: \"Machine Learning in Python - KNN\"\n",
+        "image: /static/images/posts/knn-gist.png\n",
+        "author: \"Kyle Grealis\"\n",
+        "date: April 19, 2024\n",
+        "categories:\n",
+        "  - Python\n",
+        "  - Quarto\n",
+        "  - Machine Learning\n",
+        "format: \n",
+        "  html:\n",
+        "    embed-resources: true\n",
+        "    code-fold: false\n",
+        "    code-copy: true\n",
+        "execute:\n",
+        "  warning: false\n",
+        "  message: false\n",
+        "  eval: false\n",
+        "---\n",
+        "\n",
+        "\n",
+        "## What is KNN? \n",
+        "\n",
+        "In this post, I'm sharing the code that was created from following Kirill Eremenko and the SuperDataScience Team's \"Machine Learning A-Z\" course on [Udemy](https://www.udemy.com/share/101Wci3@tAEY1lIEWWOQUxgTL4Ik8e59A6uu7QPTXm_rtWFphiUAplRw_mYHYKk1ACy8OBd_Kw==/). \n",
+        "\n",
+        "The prediction scenario is this: which demographic would social networking marketing ads affect best? We work for a car dealership and have data regarding consumers' age and estimated salary. To where should marketing efforts be aimed as we try to predict which consumers will purchase our newest & best SUV model? \n",
+        "\n",
+        "----\n",
+        "\n",
+        "\n",
+        "Euclidean Distance between two points: $\\sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}$\n",
+        "\n",
+        "*k*-Nearest Neighbors (KNN) is machine learning technique used to classify a new data point to a nearby cluster. We will set up our algorithm to calculate the Euclidean distances from our new data point to existing data points. Then, using the predetermined *k* number of nearest neighbors (we'll be using 5 neighbors), assign that new point to the closest cluster with at least three like $>k/2$ neighbors. \n",
+        "\n",
+        "To think of it in really simple terms, all of our existing customers (points) are scattered in the $(x, y)$ space. Our new customer has $x$ age and $y$ salary, so we'll plot this onto our existing grid. Then we draw circles around the new customer until we hit the closest existing point -- that's one \"neighbor\". We repeat the process until we have our chosen number of 5. How many of the neighbors purchased the SUV and how many did not? Whichever group has more, that's what we're going to predict the new customer would do too!\n",
+        "\n",
+        "![*Courtesy of [DataCamp](https://www.datacamp.com)*](images/knn-gist.png)\n",
+        "\n",
+        "----\n",
+        "\n",
+        "## Import libraries\n"
+      ],
+      "id": "ae514563"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "import numpy as np\n",
+        "import pandas as pd"
+      ],
+      "id": "bc4a4c79",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "## Import dataset\n"
+      ],
+      "id": "984041be"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "dataset = pd.read_csv('data/Social_Network_Ads.csv')\n",
+        "X = dataset.iloc[:, :-1].values\n",
+        "y = dataset.iloc[:, -1].values"
+      ],
+      "id": "72273bf9",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "----\n",
+        "\n",
+        "## Splitting the dataset to training & testing"
+      ],
+      "id": "760907dd"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "from sklearn.model_selection import train_test_split\n",
+        "X_train, X_test, y_train, y_test = train_test_split(\n",
+        "  X, y,\n",
+        "  test_size=0.25,\n",
+        "  random_state=0\n",
+        ")"
+      ],
+      "id": "a009ed3d",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "## Feature scaling\n"
+      ],
+      "id": "8a8544ee"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "from sklearn.preprocessing import StandardScaler\n",
+        "sc = StandardScaler()\n",
+        "X_train = sc.fit_transform(X_train)\n",
+        "X_test = sc.fit_transform(X_test)"
+      ],
+      "id": "e88cf516",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "````{markdown}\n",
+        "```\n",
+        "# array([[-1.455..., -0.784...],\n",
+        "#        [ 2.067...,  1.372...],\n",
+        "#        [-0.253..., -0.309...],\n",
+        "#        ...,\n",
+        "#        [-0.253..., -0.309...],\n",
+        "#        [ 2.067..., -1.113...],\n",
+        "#        [-1.455..., -0.309...]])\n",
+        "```\n",
+        "````\n",
+        "\n",
+        "\n",
+        "\n",
+        "----\n",
+        "\n",
+        "## Train & fit the KNN model\n",
+        "\n",
+        "::: {.callout-tip}\n",
+        "To learn the more technical details of `sklearn`'s classes and functions, checkout the [`sklearn` API Reference](https://scikit-learn.org/1.4/modules/classes.html).\n",
+        ":::\n"
+      ],
+      "id": "e55842d0"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "from sklearn.neighbors import KNeighborsClassifier\n",
+        "classifier = KNeighborsClassifier(\n",
+        "  n_neighbors=5,  # default\n",
+        "  p=2,            # euclidean distance; default \n",
+        "  metric='minkowski'\n",
+        ")"
+      ],
+      "id": "7193d783",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "classifier.fit(X_train, y_train)"
+      ],
+      "id": "e9ceeda6",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "![](images/knn-classifier.png)\n",
+        "\n",
+        "\n",
+        "----\n",
+        "\n",
+        "## Predicting a new result\n",
+        "\n",
+        "30y/o $87k/yr -- first observation of X_test\n"
+      ],
+      "id": "266c82ef"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "person = X_test[[0]]\n",
+        "single_pred = classifier.predict(person)\n",
+        "single_prob = classifier.predict_proba(person)\n",
+        "print('1=\"Yes\", 0=\"No\"\\n')\n",
+        "print(f'Single prediction for 30 y/o earning $87k/yr: {single_pred[0]} at a probability of {single_prob[0][0].round(3)}')"
+      ],
+      "id": "78855810",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "````{markdown}\n",
+        "```\n",
+        "# 1=\"Yes\", 0=\"No\"\n",
+        "#\n",
+        "# Single prediction for 30 y/o earning $87k/yr: 0 at a \n",
+        "# probability of 0.8\n",
+        "```\n",
+        "````\n",
+        "\n",
+        "\n",
+        "## Predicting the test set results\n"
+      ],
+      "id": "c56a89a7"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "y_pred = classifier.predict(X_test)"
+      ],
+      "id": "ea7406bf",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "----\n",
+        "\n",
+        "## Creating the confusion matrix\n"
+      ],
+      "id": "e36721e8"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "from sklearn.metrics import confusion_matrix, accuracy_score\n",
+        "print(confusion_matrix(y_test, y_pred))\n",
+        "print(f'Accuracy: {accuracy_score(y_test, y_pred)}')"
+      ],
+      "id": "976370dc",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "````{markdown}\n",
+        "```\n",
+        "# [[64  4]\n",
+        "#  [ 3 29]]\n",
+        "# Accuracy: 0.93\n",
+        "```\n",
+        "````\n",
+        "\n",
+        "\n",
+        "----\n",
+        "\n",
+        "## Visualizing the training set results\n",
+        "\n",
+        "::: {.callout-warning}\n",
+        "These next two code chunks will take a while. The KNN algorithm is already compute-expensive and we're adding to the heavy lifting by creating a grid of many values to be calculated. The final result is two plots with a visual mapping of our decision boundary **and** our training & predicted data points appearing as the dots within the field.\n",
+        ":::\n"
+      ],
+      "id": "36335f2c"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "import matplotlib.pyplot as plt\n",
+        "from matplotlib.colors import ListedColormap\n",
+        "\n",
+        "X_set, y_set = sc.inverse_transform(X_train), y_train\n",
+        "X1, X2 = np.meshgrid(\n",
+        "  np.arange(\n",
+        "    start = X_set[:, 0].min() - 10, \n",
+        "    stop = X_set[:, 0].max() + 10, \n",
+        "    step = 0.25\n",
+        "  ),\n",
+        "  np.arange(\n",
+        "    start = X_set[:, 1].min() - 1000, \n",
+        "    stop = X_set[:, 1].max() + 1000, \n",
+        "    step = 0.25\n",
+        "  )\n",
+        ")\n",
+        "plt.contourf(\n",
+        "  X1, X2, \n",
+        "  classifier.predict(\n",
+        "    sc.transform(np.array([X1.ravel(), X2.ravel()]).T)\n",
+        "  ).reshape(X1.shape),\n",
+        "  alpha = 0.75, \n",
+        "  cmap = ListedColormap(('red', 'green'))\n",
+        ")\n",
+        "\n",
+        "plt.xlim(X1.min(), X1.max())\n",
+        "plt.ylim(X2.min(), X2.max())\n",
+        "\n",
+        "for i, j in enumerate(np.unique(y_set)):\n",
+        "  plt.scatter(\n",
+        "    X_set[y_set == j, 0], \n",
+        "    X_set[y_set == j, 1], \n",
+        "    c = ListedColormap(('red', 'green'))(i), \n",
+        "    label = j\n",
+        "  )\n",
+        "\n",
+        "plt.title('KNN Regression (Training set)')\n",
+        "plt.xlabel('Age')\n",
+        "plt.ylabel('Estimated Salary')\n",
+        "plt.legend()\n",
+        "plt.show()"
+      ],
+      "id": "158c7a64",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "![KNN training set results](images/knn-training.png)\n",
+        "\n",
+        "## Visualizing the test set results\n"
+      ],
+      "id": "08a22a51"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "X_set, y_set = sc.inverse_transform(X_test), y_test\n",
+        "X1, X2 = np.meshgrid(\n",
+        "  np.arange(\n",
+        "    start = X_set[:, 0].min() - 10, \n",
+        "    stop = X_set[:, 0].max() + 10, \n",
+        "    step = 0.25\n",
+        "  ),\n",
+        "  np.arange(\n",
+        "    start = X_set[:, 1].min() - 1000, \n",
+        "    stop = X_set[:, 1].max() + 1000, \n",
+        "    step = 0.25\n",
+        "  )\n",
+        ")\n",
+        "plt.contourf(\n",
+        "  X1, X2, \n",
+        "  classifier.predict(\n",
+        "    sc.transform(np.array([X1.ravel(), X2.ravel()]).T)\n",
+        "  ).reshape(X1.shape),\n",
+        "  alpha = 0.75, \n",
+        "  cmap = ListedColormap(('red', 'green'))\n",
+        ")\n",
+        "\n",
+        "plt.xlim(X1.min(), X1.max())\n",
+        "plt.ylim(X2.min(), X2.max())\n",
+        "\n",
+        "for i, j in enumerate(np.unique(y_set)):\n",
+        "    plt.scatter(\n",
+        "      X_set[y_set == j, 0], \n",
+        "      X_set[y_set == j, 1], \n",
+        "      c = ListedColormap(('red', 'green'))(i), \n",
+        "      label = j\n",
+        "    )\n",
+        "\n",
+        "plt.title('KNN Regression (Test set)')\n",
+        "plt.xlabel('Age')\n",
+        "plt.ylabel('Estimated Salary')\n",
+        "plt.legend()\n",
+        "plt.show()"
+      ],
+      "id": "8893f256",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "![KNN testing set results](images/knn-testing.png)\n",
+        "\n",
+        "\n",
+        "Share your insights at [kylegrealis@icloud.com](mailto:kylegrealis@icloud.com). Together, we can make our R projects more robust, reproducible, and ready for collaboration!\n",
+        "\n",
+        "[Happy coding!]{style='font-size: 1.5rem;'}\n",
+        "\n",
+        "[~Kyle]{style='font-size: 1.5rem; font-weight: bold'}"
+      ],
+      "id": "5cfea5c9"
+    }
+  ],
+  "metadata": {
+    "kernelspec": {
+      "name": "python3",
+      "language": "python",
+      "display_name": "Python 3 (ipykernel)",
+      "path": "/usr/share/jupyter/kernels/python3"
+    }
+  },
+  "nbformat": 4,
+  "nbformat_minor": 5
+}

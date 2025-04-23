@@ -109,7 +109,7 @@
     "href": "blog/posts/2024-04-19-KNN-in-python.html#visualizing-the-test-set-results",
     "title": "Machine Learning in Python - KNN",
     "section": "Visualizing the test set results",
-    "text": "Visualizing the test set results\n\nX_set, y_set = sc.inverse_transform(X_test), y_test\nX1, X2 = np.meshgrid(\n  np.arange(\n    start = X_set[:, 0].min() - 10, \n    stop = X_set[:, 0].max() + 10, \n    step = 0.25\n  ),\n  np.arange(\n    start = X_set[:, 1].min() - 1000, \n    stop = X_set[:, 1].max() + 1000, \n    step = 0.25\n  )\n)\nplt.contourf(\n  X1, X2, \n  classifier.predict(\n    sc.transform(np.array([X1.ravel(), X2.ravel()]).T)\n  ).reshape(X1.shape),\n  alpha = 0.75, \n  cmap = ListedColormap(('red', 'green'))\n)\n\nplt.xlim(X1.min(), X1.max())\nplt.ylim(X2.min(), X2.max())\n\nfor i, j in enumerate(np.unique(y_set)):\n    plt.scatter(\n      X_set[y_set == j, 0], \n      X_set[y_set == j, 1], \n      c = ListedColormap(('red', 'green'))(i), \n      label = j\n    )\n\nplt.title('KNN Regression (Test set)')\nplt.xlabel('Age')\nplt.ylabel('Estimated Salary')\nplt.legend()\nplt.show()\n\n\n\n\nKNN testing set results"
+    "text": "Visualizing the test set results\n\nX_set, y_set = sc.inverse_transform(X_test), y_test\nX1, X2 = np.meshgrid(\n  np.arange(\n    start = X_set[:, 0].min() - 10, \n    stop = X_set[:, 0].max() + 10, \n    step = 0.25\n  ),\n  np.arange(\n    start = X_set[:, 1].min() - 1000, \n    stop = X_set[:, 1].max() + 1000, \n    step = 0.25\n  )\n)\nplt.contourf(\n  X1, X2, \n  classifier.predict(\n    sc.transform(np.array([X1.ravel(), X2.ravel()]).T)\n  ).reshape(X1.shape),\n  alpha = 0.75, \n  cmap = ListedColormap(('red', 'green'))\n)\n\nplt.xlim(X1.min(), X1.max())\nplt.ylim(X2.min(), X2.max())\n\nfor i, j in enumerate(np.unique(y_set)):\n    plt.scatter(\n      X_set[y_set == j, 0], \n      X_set[y_set == j, 1], \n      c = ListedColormap(('red', 'green'))(i), \n      label = j\n    )\n\nplt.title('KNN Regression (Test set)')\nplt.xlabel('Age')\nplt.ylabel('Estimated Salary')\nplt.legend()\nplt.show()\n\n\n\n\nKNN testing set results\n\n\nShare your insights at kylegrealis@icloud.com. Together, we can make our R projects more robust, reproducible, and ready for collaboration!\nHappy coding!\n~Kyle"
   },
   {
     "objectID": "blog/posts/2024-02-15-how-to-scrape-google-scholar.html",
@@ -144,7 +144,7 @@
     "href": "blog/index.html",
     "title": "My Blog",
     "section": "",
-    "text": "UPDATE: Collaborative Git Workflow\n\n\n\nData science\n\nR\n\nGitHub\n\n\n\n\n\n\n\nKyle Grealis\n\n\nApr 17, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nAutomating a GitHub Actions status email\n\n\n\nData science\n\nR\n\nGitHub\n\n\n\n\n\n\n\nKyle Grealis\n\n\nApr 14, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nrenv Project Setup and Sharing Guide\n\n\n\nData science\n\nR\n\nrenv\n\n\n\n\n\n\n\nKyle Grealis\n\n\nAug 19, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\nQuick git for beginners… yeah, that’s me!\n\n\n\nData science\n\nR\n\ngit\n\n\n\n\n\n\n\nKyle Grealis\n\n\nMay 22, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\nSetting Up a Python or R Project with Docker\n\n\n\nPython\n\nR\n\nDocker\n\nData science\n\n\n\n\n\n\n\nKyle Grealis\n\n\nMay 14, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\nMachine Learning in Python - KNN\n\n\n\nPython\n\nQuarto\n\nMachine Learning\n\n\n\n\n\n\n\nKyle Grealis\n\n\nApr 19, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\nCreating a Quarto website hero panel\n\n\n\nR\n\nQuarto\n\nSCSS\n\n\n\n\n\n\n\nKyle Grealis\n\n\nMar 4, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\nHow to scrape Google Scholar using {httr2}\n\n\n\nR\n\nhttr2\n\nwebscraping\n\n\n\n\n\n\n\nKyle Grealis\n\n\nFeb 15, 2024\n\n\n\n\n\n\nNo matching items"
+    "text": "Home Lab, part 1: Tailscale\n\n\n\nhomelab\n\n\nselfhosting\n\n\nlinux\n\n\n\n\n\n\n\nKyle Grealis\n\n\nApr 22, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHome Lab, part 0: The “Why”?\n\n\n\nhomelab\n\n\nselfhosting\n\n\nlinux\n\n\n\n\n\n\n\nKyle Grealis\n\n\nApr 22, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nUPDATE: Collaborative Git Workflow\n\n\n\nData science\n\n\nR\n\n\nGitHub\n\n\n\n\n\n\n\nKyle Grealis\n\n\nApr 17, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAutomating a GitHub Actions status email\n\n\n\nData science\n\n\nR\n\n\nGitHub\n\n\n\n\n\n\n\nKyle Grealis\n\n\nApr 14, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nrenv Project Setup and Sharing Guide\n\n\n\nData science\n\n\nR\n\n\nrenv\n\n\n\n\n\n\n\nKyle Grealis\n\n\nAug 19, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nQuick git for beginners… yeah, that’s me!\n\n\n\nData science\n\n\nR\n\n\ngit\n\n\n\n\n\n\n\nKyle Grealis\n\n\nMay 22, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSetting Up a Python or R Project with Docker\n\n\n\nPython\n\n\nR\n\n\nDocker\n\n\nData science\n\n\n\n\n\n\n\nKyle Grealis\n\n\nMay 14, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMachine Learning in Python - KNN\n\n\n\nPython\n\n\nQuarto\n\n\nMachine Learning\n\n\n\n\n\n\n\nKyle Grealis\n\n\nApr 19, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCreating a Quarto website hero panel\n\n\n\nR\n\n\nQuarto\n\n\nSCSS\n\n\n\n\n\n\n\nKyle Grealis\n\n\nMar 4, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHow to scrape Google Scholar using {httr2}\n\n\n\nR\n\n\nhttr2\n\n\nwebscraping\n\n\n\n\n\n\n\nKyle Grealis\n\n\nFeb 15, 2024\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "blog/posts/2024-03-04-creating-quarto-hero.html",
@@ -214,7 +214,7 @@
     "href": "blog/posts/2024-05-14-using-docker-python-r.html#step-6-if-building-a-project-in-r",
     "title": "Setting Up a Python or R Project with Docker",
     "section": "Step 6: If Building a project in R",
-    "text": "Step 6: If Building a project in R\n\nCreate a Dockerfile\n\nDocker Base Image: Instead of using a Python base image, you’d use an R base image. For example, you might use FROM r-base:4.1.0 to use R version 4.1.0.\nInstalling Packages: Instead of using a requirements.txt file and pip install, you’d install R packages using the install.packages() function in R. You can do this directly in your Dockerfile. For example:\n\nRUN R -e \"install.packages(c('dplyr', 'ggplot2'), repos='http://cran.rstudio.com/')\"\n\nRunning Your Script: Instead of running a Python script, you’d run an R script. For example:\n\nCMD [\"Rscript\", \"your_script.R\"]\nHere’s what a full Dockerfile might look like for an R project:\n# Use an official R runtime as a parent image\nFROM r-base:4.4.0\n\n# Set the working directory in the container to /app\nWORKDIR /app\n\n# Add the current directory contents into the container at /app\nADD . /app\n\n# Install any needed packages\nRUN R -e \"install.packages(c('dplyr', 'ggplot2'), repos='http://cran.rstudio.com/')\"\n\n# Run your_script.R when the container launches\nCMD [\"Rscript\", \"your_script.R\"]\nAs with the Python example, if you have multiple R scripts that need to be run in a specific order, you can create a main R script that sources and runs your other scripts in the necessary order, and call that script in the CMD line.\n\nHappy coding!\n~Kyle"
+    "text": "Step 6: If Building a project in R\n\nCreate a Dockerfile\n\nDocker Base Image: Instead of using a Python base image, you’d use an R base image. For example, you might use FROM r-base:4.1.0 to use R version 4.1.0.\nInstalling Packages: Instead of using a requirements.txt file and pip install, you’d install R packages using the install.packages() function in R. You can do this directly in your Dockerfile. For example:\n\nRUN R -e \"install.packages(c('dplyr', 'ggplot2'), repos='http://cran.rstudio.com/')\"\n\nRunning Your Script: Instead of running a Python script, you’d run an R script. For example:\n\nCMD [\"Rscript\", \"your_script.R\"]\nHere’s what a full Dockerfile might look like for an R project:\n# Use an official R runtime as a parent image\nFROM r-base:4.4.0\n\n# Set the working directory in the container to /app\nWORKDIR /app\n\n# Add the current directory contents into the container at /app\nADD . /app\n\n# Install any needed packages\nRUN R -e \"install.packages(c('dplyr', 'ggplot2'), repos='http://cran.rstudio.com/')\"\n\n# Run your_script.R when the container launches\nCMD [\"Rscript\", \"your_script.R\"]\nAs with the Python example, if you have multiple R scripts that need to be run in a specific order, you can create a main R script that sources and runs your other scripts in the necessary order, and call that script in the CMD line.\nShare your insights at kylegrealis@icloud.com. Together, we can make our R projects more robust, reproducible, and ready for collaboration!\nHappy coding!\n~Kyle"
   },
   {
     "objectID": "blog/posts/2024-08-19-renv-project-sharing-guide.html#how-this-guide-can-be-helpful",
@@ -362,5 +362,145 @@
     "title": "UPDATE: Collaborative Git Workflow",
     "section": "Additional Resources",
     "text": "Additional Resources\n\nR Packages (2e) by Hadley Wickham & Jenny Bryan\nHappy Git with R by Jenny Bryan\nGit for Teams by Emma Jane Hogbin Westby"
+  },
+  {
+    "objectID": "blog/posts/2025-04-22-tailscale.html#automatic-tailscale-exit-node-management-based-on-wi-fi-networks",
+    "href": "blog/posts/2025-04-22-tailscale.html#automatic-tailscale-exit-node-management-based-on-wi-fi-networks",
+    "title": "Home Lab, part 1: Tailscale",
+    "section": "Automatic Tailscale Exit Node Management Based on Wi-Fi Networks",
+    "text": "Automatic Tailscale Exit Node Management Based on Wi-Fi Networks\nThis documentation explains how to set up automatic switching of Tailscale exit node configurations based on which Wi-Fi network you’re connected to."
+  },
+  {
+    "objectID": "blog/posts/2025-04-22-tailscale.html#overview",
+    "href": "blog/posts/2025-04-22-tailscale.html#overview",
+    "title": "Home Lab, part 1: Tailscale",
+    "section": "Overview",
+    "text": "Overview\nWhen connecting to different Wi-Fi networks, you may want different Tailscale behaviors:\n\nOn trusted home networks: Disable Tailscale exit node (direct internet access)\nOn untrusted networks: Enable Tailscale exit node (route all traffic through your secure server)\n\nThis solution uses NetworkManager’s dispatcher scripts to automatically detect network changes and apply the appropriate Tailscale configuration."
+  },
+  {
+    "objectID": "blog/posts/2025-04-22-tailscale.html#component-1-tailscale-home-script",
+    "href": "blog/posts/2025-04-22-tailscale.html#component-1-tailscale-home-script",
+    "title": "Home Lab, part 1: Tailscale",
+    "section": "Component 1: Tailscale Home Script",
+    "text": "Component 1: Tailscale Home Script\nThe first component is a script that disables Tailscale exit node routing when on trusted networks:\n#!/usr/bin/env bash\n\n# tailscale-home.sh - Disable exit node routing\n# Usage: ./tailscale-home.sh\n\necho \"Disabling Tailscale exit node protection...\"\nsudo tailscale up --exit-node=\"\"\n\n# Verify the change\nSTATUS=$(tailscale status)\n\nif echo $STATUS | grep -q \"offers exit node\"; then\n    echo \"✅ Exit node protection disabled! Traffic now routes normally.\"\nelse\n    echo \"❌ Something went wrong. Please check tailscale status.\"\nfi\nThis script: 1. Runs the Tailscale command to disable exit node routing (--exit-node=\"\") 2. Checks if the change was successful 3. Provides feedback on the operation’s success"
+  },
+  {
+    "objectID": "blog/posts/2025-04-22-tailscale.html#component-2-tailscale-protect-script",
+    "href": "blog/posts/2025-04-22-tailscale.html#component-2-tailscale-protect-script",
+    "title": "Home Lab, part 1: Tailscale",
+    "section": "Component 2: Tailscale Protect Script",
+    "text": "Component 2: Tailscale Protect Script\nThe second component enables the exit node when on untrusted networks:\n#!/usr/bin/env bash\n\n# tailscale-protect.sh - Route all traffic through Pi5 exit node\n# Usage: ./tailscale-protect.sh\n\nPI5_IP=\"100.125.173.109\"\n\necho \"Enabling Tailscale exit node protection...\"\nsudo tailscale up --exit-node=$PI5_IP\n\n# Verify the change\nSTATUS=$(tailscale status)\n\nif echo $STATUS | grep -q \"; exit node;\"; then\n    echo \"✅ Exit node protection enabled! All traffic now routes through your Tailnet.\"\nelse\n    echo \"❌ Something went wrong. Please check tailscale status.\"\nfi\nThis script: 1. Sets the exit node to your Raspberry Pi 5’s Tailscale IP address 2. Verifies the change was successful 3. Provides feedback on the operation’s success"
+  },
+  {
+    "objectID": "blog/posts/2025-04-22-tailscale.html#component-3-networkmanager-dispatcher-script",
+    "href": "blog/posts/2025-04-22-tailscale.html#component-3-networkmanager-dispatcher-script",
+    "title": "Home Lab, part 1: Tailscale",
+    "section": "Component 3: NetworkManager Dispatcher Script",
+    "text": "Component 3: NetworkManager Dispatcher Script\nThe third component is a NetworkManager dispatcher script that automatically runs the appropriate script based on which network you’re connected to:\n#!/usr/bin/env bash\n# Save this as /etc/NetworkManager/dispatcher.d/99-tailscale-autoswitch\n\n# Make sure we have the required permissions\nif [ \"$(id -u)\" != \"0\" ]; then\n   echo \"This script must be run as root\" \n   exit 1\nfi\n\nINTERFACE=$1\nSTATUS=$2\n\n# Define known networks as array\nKNOWN_NETS=(\"Go_Canes\" \"Canes_guest\")\nHOME_SCRIPT=\"/home/kyle/tailscale-home.sh\"\nPROTECT_SCRIPT=\"/home/kyle/tailscale-protect.sh\"\nLOG_FILE=\"/var/log/tailscale-autoswitch.log\"\n\nlog() {\n    echo \"$(date): $*\" &gt;&gt; \"$LOG_FILE\"\n}\n\nlog \"Network change detected: Interface=$INTERFACE Status=$STATUS\"\n\n# Dynamically detect WiFi interface name\nWIFI_INTERFACE=$(nmcli -t -f DEVICE,TYPE device | grep \":wifi$\" | cut -d: -f1)\n\n# Only act on wifi connections that are activated\nif [ \"$STATUS\" = \"up\" ] && [ \"$INTERFACE\" = \"$WIFI_INTERFACE\" ]; then\n    # Get the current SSID\n    CURRENT_SSID=$(nmcli -t -f active,ssid dev wifi | grep '^yes' | cut -d: -f2)\n    log \"Connected to SSID: $CURRENT_SSID\"\n\n    # Initialize a flag to check if the network is known\n    KNOWN=false\n\n    for NETWORK in \"${KNOWN_NETS[@]}\"; do\n        if [ \"$CURRENT_SSID\" = \"$NETWORK\" ]; then\n            KNOWN=true\n            break\n        fi\n    done\n\n    if [ \"$KNOWN\" = true ]; then\n        log \"Home network detected: $CURRENT_SSID. Running home script...\"\n        bash \"$HOME_SCRIPT\" &gt;&gt; \"$LOG_FILE\" 2&gt;&1\n    else\n        log \"Unknown network detected: $CURRENT_SSID! Running protect script...\"\n        bash \"$PROTECT_SCRIPT\" &gt;&gt; \"$LOG_FILE\" 2&gt;&1\n    fi\nfi\n\nexit 0\n\nHow the Dispatcher Script Works\n\nPermissions Check: Makes sure the script runs as root\nNetwork Detection: Takes network interface and status from NetworkManager\nKnown Networks List: Maintains an array of trusted Wi-Fi SSIDs\nLogging Function: Creates a detailed log of all operations\nDynamic Interface Detection: Automatically finds the WiFi interface name rather than hardcoding it\nInterface Filtering: Only processes WiFi connections that are coming up\nSSID Extraction: Gets the SSID of the currently connected network\nNetwork Verification: Checks if the current network is in the trusted list\nScript Execution: Runs either the home script or protect script based on network trust\nLogging Results: Records the entire process for troubleshooting"
+  },
+  {
+    "objectID": "blog/posts/2025-04-22-tailscale.html#installation-steps",
+    "href": "blog/posts/2025-04-22-tailscale.html#installation-steps",
+    "title": "Home Lab, part 1: Tailscale",
+    "section": "Installation Steps",
+    "text": "Installation Steps\n\nCreate the home and protect scripts:\nnano ~/tailscale-home.sh\nnano ~/tailscale-protect.sh\nMake them executable:\nchmod +x ~/tailscale-home.sh\nchmod +x ~/tailscale-protect.sh\nCreate the NetworkManager dispatcher script:\nsudo nano /etc/NetworkManager/dispatcher.d/99-tailscale-autoswitch\nMake the dispatcher script executable:\nsudo chmod +x /etc/NetworkManager/dispatcher.d/99-tailscale-autoswitch\nCreate a log file:\nsudo touch /var/log/tailscale-autoswitch.log\nsudo chmod 666 /var/log/tailscale-autoswitch.log"
+  },
+  {
+    "objectID": "blog/posts/2025-04-22-tailscale.html#testing-and-monitoring",
+    "href": "blog/posts/2025-04-22-tailscale.html#testing-and-monitoring",
+    "title": "Home Lab, part 1: Tailscale",
+    "section": "Testing and Monitoring",
+    "text": "Testing and Monitoring\nYou can monitor the script’s operation by viewing the log file:\ntail -f /var/log/tailscale-autoswitch.log\nExample log output showing automatic switching between networks:\nMon Apr 21 22:58:43 CDT 2025: Network change detected: Interface=wlp0s20f3 Status=up\nMon Apr 21 22:58:43 CDT 2025: Connected to SSID: Go_Canes\nMon Apr 21 22:58:43 CDT 2025: Home network detected: Go_Canes. Running home script...\nDisabling Tailscale exit node protection...\n✅ Exit node protection disabled! Traffic now routes normally.\n\nMon Apr 21 23:03:34 CDT 2025: Network change detected: Interface=wlp0s20f3 Status=up\nMon Apr 21 23:03:34 CDT 2025: Connected to SSID: Alexa?s iPhone\nMon Apr 21 23:03:34 CDT 2025: Unknown network detected: Alexa?s iPhone! Running protect script...\nEnabling Tailscale exit node protection...\n✅ Exit node protection enabled! All traffic now routes through your Tailnet.\n\nMon Apr 21 23:04:00 CDT 2025: Network change detected: Interface=wlp0s20f3 Status=up\nMon Apr 21 23:04:00 CDT 2025: Connected to SSID: Go_Canes\nMon Apr 21 23:04:00 CDT 2025: Home network detected: Go_Canes. Running home script...\nDisabling Tailscale exit node protection...\n✅ Exit node protection disabled! Traffic now routes normally.\nThe log shows: - Network changes detected - Which SSID you’re connecting to - Whether the network is trusted or untrusted - Which script was executed - The result of the operation"
+  },
+  {
+    "objectID": "blog/posts/2025-04-22-tailscale.html#customization",
+    "href": "blog/posts/2025-04-22-tailscale.html#customization",
+    "title": "Home Lab, part 1: Tailscale",
+    "section": "Customization",
+    "text": "Customization\n\nAdd More Trusted Networks: Modify the KNOWN_NETS array to include additional trusted networks:\nKNOWN_NETS=(\"Go_Canes\" \"Canes_guest\" \"Work_WiFi\" \"Parents_Home\")\nLog Rotation: To prevent the log file from growing too large:\n# Add near the top of the script\nif [ -f \"$LOG_FILE\" ] && [ $(stat -c%s \"$LOG_FILE\") -gt 1048576 ]; then\n    mv \"$LOG_FILE\" \"$LOG_FILE.old\"\nfi\nExit Node Connectivity Check: Add to the protect script to check if your exit node is online:\n# Add to tailscale-protect.sh before enabling the exit node\nping -c 1 $PI5_IP &gt; /dev/null 2&gt;&1\nif [ $? -ne 0 ]; then\n    echo \"⚠️ Warning: Exit node appears to be offline!\"\nfi\nModify Log Location: Change the LOG_FILE variable to use a different log file location."
+  },
+  {
+    "objectID": "blog/posts/2025-04-22-tailscale.html#understanding-networkmanager-events",
+    "href": "blog/posts/2025-04-22-tailscale.html#understanding-networkmanager-events",
+    "title": "Home Lab, part 1: Tailscale",
+    "section": "Understanding NetworkManager Events",
+    "text": "Understanding NetworkManager Events\nNetworkManager triggers multiple events during a network connection:\n\nNetwork down event\nDHCP4 configuration (IPv4)\nInterface up event (this is when our script runs)\nDNS configuration\nDHCP6 configuration (IPv6)\n\nOur script specifically targets the “up” event to ensure the network is ready before applying Tailscale configurations."
+  },
+  {
+    "objectID": "blog/posts/2025-04-22-tailscale.html#why-dynamic-interface-detection-matters",
+    "href": "blog/posts/2025-04-22-tailscale.html#why-dynamic-interface-detection-matters",
+    "title": "Home Lab, part 1: Tailscale",
+    "section": "Why Dynamic Interface Detection Matters",
+    "text": "Why Dynamic Interface Detection Matters\nThe script uses dynamic interface detection instead of hardcoding the WiFi interface name. This future-proofs your setup because WiFi interface names can change when:\n\nYou replace or add network hardware\nYou upgrade your kernel or distribution\nYour system’s PCI enumeration changes\nYou connect an additional WiFi adapter (like a USB dongle)\n\nBy detecting the interface dynamically, the script will continue working even if these changes occur."
+  },
+  {
+    "objectID": "blog/posts/2025-04-22-tailscale.html#troubleshooting",
+    "href": "blog/posts/2025-04-22-tailscale.html#troubleshooting",
+    "title": "Home Lab, part 1: Tailscale",
+    "section": "Troubleshooting",
+    "text": "Troubleshooting\nIf the script isn’t working as expected:\n\nCheck the log file for errors:\ntail -f /var/log/tailscale-autoswitch.log\nVerify the script is executable:\nls -l /etc/NetworkManager/dispatcher.d/99-tailscale-autoswitch\nTest the scripts manually:\nsudo bash /home/kyle/tailscale-home.sh\nsudo bash /home/kyle/tailscale-protect.sh\nCheck your current WiFi interface name:\nnmcli device status | grep wifi\nTest interface detection:\nnmcli -t -f DEVICE,TYPE device | grep \":wifi$\" | cut -d: -f1\n\n\nShare your insights at kylegrealis@icloud.com. Together, we can make our R projects more robust, reproducible, and ready for collaboration!\nHappy coding!\n~Kyle"
+  },
+  {
+    "objectID": "blog/posts/2025-04-22-tailscale.html#additional-resources",
+    "href": "blog/posts/2025-04-22-tailscale.html#additional-resources",
+    "title": "Home Lab, part 1: Tailscale",
+    "section": "Additional Resources",
+    "text": "Additional Resources\n\ntailscale"
+  },
+  {
+    "objectID": "nascar/dashboard.html",
+    "href": "nascar/dashboard.html",
+    "title": "NASCAR Performance Dashboard",
+    "section": "",
+    "text": "Cup\nCOMING SOON!!\nThank you for your patience as this is being developed. A release candidate is expected to be ready late-April 2025.\n\n\n\nXfinity\n\n\nTrucks"
+  },
+  {
+    "objectID": "blog/posts/2025-04-22-tailscale.html",
+    "href": "blog/posts/2025-04-22-tailscale.html",
+    "title": "Home Lab, part 1: Tailscale",
+    "section": "",
+    "text": "Go check out The “Why?” to understand my intention of this whole self-hosting endeavor!"
+  },
+  {
+    "objectID": "blog/posts/2025-04-22-tailscale.html#purpose-of-my",
+    "href": "blog/posts/2025-04-22-tailscale.html#purpose-of-my",
+    "title": "Home Lab, part 1: Tailscale",
+    "section": "Purpose of my",
+    "text": "Purpose of my"
+  },
+  {
+    "objectID": "blog/posts/2025-04-22-tailscale.html#purpose-of-a-home-lab",
+    "href": "blog/posts/2025-04-22-tailscale.html#purpose-of-a-home-lab",
+    "title": "Home Lab, part 1: Tailscale",
+    "section": "Purpose of a Home Lab",
+    "text": "Purpose of a Home Lab"
+  },
+  {
+    "objectID": "blog/posts/2025-04-22-tailscale.html#purpose-of-my-home-lab",
+    "href": "blog/posts/2025-04-22-tailscale.html#purpose-of-my-home-lab",
+    "title": "Home Lab, part 1: Tailscale",
+    "section": "Purpose of my Home Lab",
+    "text": "Purpose of my Home Lab\nThe origin of this project is hopefully relatable to you, the reader: I just wanted to see if I was capable of deploying self-hosted services on my home network, and then access them from outside the home. There was (and still are) a lot of things I don’t normally do in my day-to-day as a data analyst in academic research. Networking? Never heard of her. Our team tends to operate more in GitHub collaborative projects (thus my potential over-posting of GitHub things here, here and especially here).\nThe main goals I established before undertaking this project were:\n\nLearn to remotely access devices on my home network\nShare files across devices\nSet-up a Raspberry Pi for self-hosted services\nLearn “WTH is Docker and how do I use it?”\nMake it so that only I can access these on a secure connection! No connection, no access.\nTest how much I can de-Google & de-Apple my life\n\nThe last part involved needing to find ways to self-host document & file management and photos. The cost of using cloud storage isn’t all that intrusive, but it does add up over time. One major hurdle would be leaving the comfort of known apps and have it all fitting easily into daily life.\nHappily, with the help of many r/selfhosted and other sub-Reddits, and some friendly feedback from YouTube, I’ve been able to tweak things just enough to make it work for me. I should have stated this towards the top, but I’ve made plenty of mistakes and had a few moments of “oh $h!t… did I just brick my system, lose my data, erase x, y, & z??”\nC’est la vie! Live and learn, but backup all your important things first!"
+  },
+  {
+    "objectID": "blog/posts/2025-04-22-the-why.html",
+    "href": "blog/posts/2025-04-22-the-why.html",
+    "title": "Home Lab, part 0: The “Why”?",
+    "section": "",
+    "text": "Steps not covered:"
+  },
+  {
+    "objectID": "blog/posts/2025-04-22-the-why.html#purpose-of-my-home-lab",
+    "href": "blog/posts/2025-04-22-the-why.html#purpose-of-my-home-lab",
+    "title": "Home Lab, part 0: The “Why”?",
+    "section": "Purpose of my Home Lab",
+    "text": "Purpose of my Home Lab\nThe origin of this project is hopefully relatable to you, the reader: I just wanted to see if I could just do it. This question though was: am I capable of deploying self-hosted services on my home network, and then safely & securely access them from outside the home?\nNetworking? Never heard of her, well not insofar as an academic data analyst. Our team tends to operate more in GitHub collaborative projects (thus my potential over-posting of GitHub things here, here and especially here). I just wanted to geek out, rsync my Timeshift backups and other files off my laptop to another device, and feel like one of the cool tech kids.\n\n\n\n\n\n\nUPDATE:\n\n\n\nI’m still not a cool kid, but got this working so there you go!\n\n\nThe main goals I established before undertaking this project were:\n\nLearn to remotely access devices on my home network\nShare files across devices\nSet-up a Raspberry Pi for self-hosted services\nLearn “WTH is Docker and how do I use it?”\nMake it so that only I can access these on a secure connection! No connection, no access.\nTest how much I can de-Google & de-Apple my life\n\nThe last part involved needing to find ways to self-host document & file management and photos. The cost of using cloud storage isn’t all that intrusive, but it does add up over time. One major hurdle would be leaving the comfort of known apps and have it all fitting easily into daily life.\nHappily, with help from r/selfhosted and some feedback from YouTube, I’ve been able to tweak things just enough to make it work for me. I should have stated this towards the top, but I’ve made plenty of mistakes and had a few moments of “oh $h!t… did I just brick my system, lose my data, erase x, y, & z??” but…\nLive, laugh, and backup all your important things first!\n\nShare your insights at kylegrealis@icloud.com. Together, we can make our R projects more robust, reproducible, and ready for collaboration!\nHappy coding!\n~Kyle"
+  },
+  {
+    "objectID": "blog/posts/2025-04-22-the-why.html#additional-resources",
+    "href": "blog/posts/2025-04-22-the-why.html#additional-resources",
+    "title": "Home Lab, part 0: The “Why”?",
+    "section": "Additional Resources",
+    "text": "Additional Resources\n\ntailscale"
   }
 ]

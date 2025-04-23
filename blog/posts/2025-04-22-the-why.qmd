@@ -1,0 +1,85 @@
+---
+title: "Home Lab, part 0: The \"Why\"?"
+image: /static/images/posts/the-why.png
+author: Kyle Grealis
+date: April 22, 2025
+categories:
+  - homelab
+  - selfhosting
+  - linux
+format: 
+  html:
+    embed-resources: true
+    code-fold: false
+    code-copy: true
+execute:
+  warning: false
+  message: false
+  include: false
+---
+
+![](/static/images/posts/the-why.png){width='70%' fig-align="center"}
+
+> This is multipart series where I elaborate on the details of configuring my homelab. 
+I've installed Ubuntu 25.04 ("Plucky Puffin") as the operating system on my Lenovo laptop 
+and am running Debian 12 ("bookworm") on my main 8GB Raspberry Pi 5. The Pi is the host 
+device for the other services listed throughout this series.
+
+Steps not covered: 
+
+* Installing Linux on your machine
+* Initial configuration a Raspberry Pi
+* Basics of SSH to remotely access devices on your home network
+
+---
+
+## Purpose of my Home Lab
+
+The origin of this project is hopefully relatable to you, the reader: I just wanted to see
+if I could just do it. This question though was: am I capable of deploying self-hosted 
+services on my home network, and then safely & securely access
+them from outside the home?
+
+Networking? Never heard of her, well not insofar as an academic data analyst.
+Our team tends to operate more in GitHub collaborative projects (thus my 
+potential over-posting of GitHub things [here](2024-05-22-beginner-git-team-workflow.qmd),
+[here](2025-04-14-github-actions-email.qmd) and especially [here](2025-04-17-github-teams.qmd)).
+I just wanted to geek out, `rsync` my [Timeshift](https://teejee2008.github.io/timeshift/)
+backups and other files off my laptop to another device, and feel like one of the cool
+tech kids.
+
+:::{.callout-important title="UPDATE:"}
+I'm still not a cool kid, but got this working so there you go!
+:::
+
+The main goals I established before undertaking this project were: 
+
+* Learn to remotely access devices on my home network
+* Share files across devices
+* Set-up a Raspberry Pi for self-hosted services
+* Learn "WTH is Docker and how do I use it?"
+* **Make it so that only *I* can access these on a secure connection!** No connection, no access.
+* Test how much I can de-Google & de-Apple my life
+
+The last part involved needing to find ways to self-host document & file management and
+photos. The cost of using cloud storage isn't all that intrusive, but it does add up over
+time. One major hurdle would be leaving the comfort of known apps and have it all fitting
+easily into daily life.
+
+Happily, with help from [`r/selfhosted`](https://www.reddit.com/r/selfhosted/) 
+and some feedback from YouTube, I've been able to tweak things just enough to 
+make it work for me. I should have stated this towards the top, but I've made plenty of 
+mistakes and had a few moments of "oh $h!t... did I just brick my system, lose my data, 
+erase *x, y, & z*??" but...
+
+Live, laugh, and backup all your important things first!
+
+---
+
+Share your insights at [kylegrealis@icloud.com](mailto:kylegrealis@icloud.com). Together, 
+we can make our R projects more robust, reproducible, and ready for collaboration!
+
+[Happy coding!]{style='font-size: 1.5rem;'}
+
+[~Kyle]{style='font-size: 1.5rem; font-weight: bold'}
+

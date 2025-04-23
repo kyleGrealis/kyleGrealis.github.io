@@ -1,0 +1,348 @@
+---
+title: "Home Lab, part 1: Tailscale"
+image: /static/images/posts/tailscale.png
+author: Kyle Grealis
+date: April 22, 2025
+categories:
+  - homelab
+  - selfhosting
+  - linux
+format: 
+  html:
+    embed-resources: true
+    code-fold: false
+    code-copy: true
+execute:
+  warning: false
+  message: false
+  include: false
+---
+
+![](/static/images/posts/tailscale.png){width='70%' fig-align="center"}
+
+> This is multipart series where I elaborate on the details of configuring my homelab. 
+I've installed Ubuntu 25.04 ("Plucky Puffin") as the operating system on my Lenovo laptop 
+and am running Debian 12 ("bookworm") on my main 8GB Raspberry Pi 5. The Pi is the host 
+device for the other services listed throughout this series.
+
+Go check out [The "Why?"](2025-04-22-the-why.qmd) to understand my intention of this 
+whole self-hosting endeavor!
+
+---
+
+
+## Automatic Tailscale Exit Node Management Based on Wi-Fi Networks
+
+This documentation explains how to set up automatic switching of Tailscale exit node 
+configurations based on which Wi-Fi network you're connected to.
+
+## Overview
+
+When connecting to different Wi-Fi networks, you may want different Tailscale behaviors:
+
+- On trusted home networks: Disable Tailscale exit node (direct internet access)
+- On untrusted networks: Enable Tailscale exit node (route all traffic through your secure server)
+
+This solution uses NetworkManager's dispatcher scripts to automatically detect network 
+changes and apply the appropriate Tailscale configuration.
+
+## Component 1: Tailscale Home Script
+
+The first component is a script that disables Tailscale exit node routing when on trusted 
+networks:
+
+```bash
+#!/usr/bin/env bash
+
+# tailscale-home.sh - Disable exit node routing
+# Usage: ./tailscale-home.sh
+
+echo "Disabling Tailscale exit node protection..."
+sudo tailscale up --exit-node=""
+
+# Verify the change
+STATUS=$(tailscale status)
+
+if echo $STATUS | grep -q "offers exit node"; then
+    echo "✅ Exit node protection disabled! Traffic now routes normally."
+else
+    echo "❌ Something went wrong. Please check tailscale status."
+fi
+```
+
+This script:
+1. Runs the Tailscale command to disable exit node routing (`--exit-node=""`)
+2. Checks if the change was successful
+3. Provides feedback on the operation's success
+
+## Component 2: Tailscale Protect Script
+
+The second component enables the exit node when on untrusted networks:
+
+```bash
+#!/usr/bin/env bash
+
+# tailscale-protect.sh - Route all traffic through Pi5 exit node
+# Usage: ./tailscale-protect.sh
+
+PI5_IP="100.125.173.109"
+
+echo "Enabling Tailscale exit node protection..."
+sudo tailscale up --exit-node=$PI5_IP
+
+# Verify the change
+STATUS=$(tailscale status)
+
+if echo $STATUS | grep -q "; exit node;"; then
+    echo "✅ Exit node protection enabled! All traffic now routes through your Tailnet."
+else
+    echo "❌ Something went wrong. Please check tailscale status."
+fi
+```
+
+This script:
+1. Sets the exit node to your Raspberry Pi 5's Tailscale IP address
+2. Verifies the change was successful
+3. Provides feedback on the operation's success
+
+## Component 3: NetworkManager Dispatcher Script
+
+The third component is a NetworkManager dispatcher script that automatically runs the 
+appropriate script based on which network you're connected to:
+
+```bash
+#!/usr/bin/env bash
+# Save this as /etc/NetworkManager/dispatcher.d/99-tailscale-autoswitch
+
+# Make sure we have the required permissions
+if [ "$(id -u)" != "0" ]; then
+   echo "This script must be run as root" 
+   exit 1
+fi
+
+INTERFACE=$1
+STATUS=$2
+
+# Define known networks as array
+KNOWN_NETS=("Go_Canes" "Canes_guest")
+HOME_SCRIPT="/home/kyle/tailscale-home.sh"
+PROTECT_SCRIPT="/home/kyle/tailscale-protect.sh"
+LOG_FILE="/var/log/tailscale-autoswitch.log"
+
+log() {
+    echo "$(date): $*" >> "$LOG_FILE"
+}
+
+log "Network change detected: Interface=$INTERFACE Status=$STATUS"
+
+# Dynamically detect WiFi interface name
+WIFI_INTERFACE=$(nmcli -t -f DEVICE,TYPE device | grep ":wifi$" | cut -d: -f1)
+
+# Only act on wifi connections that are activated
+if [ "$STATUS" = "up" ] && [ "$INTERFACE" = "$WIFI_INTERFACE" ]; then
+    # Get the current SSID
+    CURRENT_SSID=$(nmcli -t -f active,ssid dev wifi | grep '^yes' | cut -d: -f2)
+    log "Connected to SSID: $CURRENT_SSID"
+
+    # Initialize a flag to check if the network is known
+    KNOWN=false
+
+    for NETWORK in "${KNOWN_NETS[@]}"; do
+        if [ "$CURRENT_SSID" = "$NETWORK" ]; then
+            KNOWN=true
+            break
+        fi
+    done
+
+    if [ "$KNOWN" = true ]; then
+        log "Home network detected: $CURRENT_SSID. Running home script..."
+        bash "$HOME_SCRIPT" >> "$LOG_FILE" 2>&1
+    else
+        log "Unknown network detected: $CURRENT_SSID! Running protect script..."
+        bash "$PROTECT_SCRIPT" >> "$LOG_FILE" 2>&1
+    fi
+fi
+
+exit 0
+```
+
+### How the Dispatcher Script Works
+
+1. **Permissions Check**: Makes sure the script runs as root
+2. **Network Detection**: Takes network interface and status from NetworkManager
+3. **Known Networks List**: Maintains an array of trusted Wi-Fi SSIDs
+4. **Logging Function**: Creates a detailed log of all operations
+5. **Dynamic Interface Detection**: Automatically finds the WiFi interface name rather than hardcoding it
+6. **Interface Filtering**: Only processes WiFi connections that are coming up
+7. **SSID Extraction**: Gets the SSID of the currently connected network
+8. **Network Verification**: Checks if the current network is in the trusted list
+9. **Script Execution**: Runs either the home script or protect script based on network trust
+10. **Logging Results**: Records the entire process for troubleshooting
+
+## Installation Steps
+
+1. Create the home and protect scripts:
+   ```bash
+   nano ~/tailscale-home.sh
+   nano ~/tailscale-protect.sh
+   ```
+
+2. Make them executable:
+   ```bash
+   chmod +x ~/tailscale-home.sh
+   chmod +x ~/tailscale-protect.sh
+   ```
+
+3. Create the NetworkManager dispatcher script:
+   ```bash
+   sudo nano /etc/NetworkManager/dispatcher.d/99-tailscale-autoswitch
+   ```
+
+4. Make the dispatcher script executable:
+   ```bash
+   sudo chmod +x /etc/NetworkManager/dispatcher.d/99-tailscale-autoswitch
+   ```
+
+5. Create a log file:
+   ```bash
+   sudo touch /var/log/tailscale-autoswitch.log
+   sudo chmod 666 /var/log/tailscale-autoswitch.log
+   ```
+
+## Testing and Monitoring
+
+You can monitor the script's operation by viewing the log file:
+
+```bash
+tail -f /var/log/tailscale-autoswitch.log
+```
+
+Example log output showing automatic switching between networks:
+
+```
+Mon Apr 21 22:58:43 CDT 2025: Network change detected: Interface=wlp0s20f3 Status=up
+Mon Apr 21 22:58:43 CDT 2025: Connected to SSID: Go_Canes
+Mon Apr 21 22:58:43 CDT 2025: Home network detected: Go_Canes. Running home script...
+Disabling Tailscale exit node protection...
+✅ Exit node protection disabled! Traffic now routes normally.
+
+Mon Apr 21 23:03:34 CDT 2025: Network change detected: Interface=wlp0s20f3 Status=up
+Mon Apr 21 23:03:34 CDT 2025: Connected to SSID: Alexa?s iPhone
+Mon Apr 21 23:03:34 CDT 2025: Unknown network detected: Alexa?s iPhone! Running protect script...
+Enabling Tailscale exit node protection...
+✅ Exit node protection enabled! All traffic now routes through your Tailnet.
+
+Mon Apr 21 23:04:00 CDT 2025: Network change detected: Interface=wlp0s20f3 Status=up
+Mon Apr 21 23:04:00 CDT 2025: Connected to SSID: Go_Canes
+Mon Apr 21 23:04:00 CDT 2025: Home network detected: Go_Canes. Running home script...
+Disabling Tailscale exit node protection...
+✅ Exit node protection disabled! Traffic now routes normally.
+```
+
+The log shows:
+- Network changes detected
+- Which SSID you're connecting to
+- Whether the network is trusted or untrusted
+- Which script was executed
+- The result of the operation
+
+## Customization
+
+1. **Add More Trusted Networks**:
+   Modify the `KNOWN_NETS` array to include additional trusted networks:
+   ```bash
+   KNOWN_NETS=("Go_Canes" "Canes_guest" "Work_WiFi" "Parents_Home")
+   ```
+
+2. **Log Rotation**:
+   To prevent the log file from growing too large:
+   ```bash
+   # Add near the top of the script
+   if [ -f "$LOG_FILE" ] && [ $(stat -c%s "$LOG_FILE") -gt 1048576 ]; then
+       mv "$LOG_FILE" "$LOG_FILE.old"
+   fi
+   ```
+
+3. **Exit Node Connectivity Check**:
+   Add to the protect script to check if your exit node is online:
+   ```bash
+   # Add to tailscale-protect.sh before enabling the exit node
+   ping -c 1 $PI5_IP > /dev/null 2>&1
+   if [ $? -ne 0 ]; then
+       echo "⚠️ Warning: Exit node appears to be offline!"
+   fi
+   ```
+
+4. **Modify Log Location**:
+   Change the `LOG_FILE` variable to use a different log file location.
+
+## Understanding NetworkManager Events
+
+NetworkManager triggers multiple events during a network connection:
+
+1. Network down event
+2. DHCP4 configuration (IPv4)
+3. Interface up event (this is when our script runs)
+4. DNS configuration
+5. DHCP6 configuration (IPv6)
+
+Our script specifically targets the "up" event to ensure the network is ready before 
+applying Tailscale configurations.
+
+## Why Dynamic Interface Detection Matters
+
+The script uses dynamic interface detection instead of hardcoding the WiFi interface name. 
+This future-proofs your setup because WiFi interface names can change when:
+
+- You replace or add network hardware
+- You upgrade your kernel or distribution
+- Your system's PCI enumeration changes
+- You connect an additional WiFi adapter (like a USB dongle)
+
+By detecting the interface dynamically, the script will continue working even if these 
+changes occur.
+
+## Troubleshooting
+
+If the script isn't working as expected:
+
+1. Check the log file for errors:
+   ```bash
+   tail -f /var/log/tailscale-autoswitch.log
+   ```
+
+2. Verify the script is executable:
+   ```bash
+   ls -l /etc/NetworkManager/dispatcher.d/99-tailscale-autoswitch
+   ```
+
+3. Test the scripts manually:
+   ```bash
+   sudo bash /home/kyle/tailscale-home.sh
+   sudo bash /home/kyle/tailscale-protect.sh
+   ```
+
+4. Check your current WiFi interface name:
+   ```bash
+   nmcli device status | grep wifi
+   ```
+
+5. Test interface detection:
+   ```bash
+   nmcli -t -f DEVICE,TYPE device | grep ":wifi$" | cut -d: -f1
+   ```
+
+---
+
+Share your insights at [kylegrealis@icloud.com](mailto:kylegrealis@icloud.com). Together, 
+we can make our R projects more robust, reproducible, and ready for collaboration!
+
+[Happy coding!]{style='font-size: 1.5rem;'}
+
+[~Kyle]{style='font-size: 1.5rem; font-weight: bold'}
+
+---
+
+## Additional Resources
+
+- [tailscale](https://tailscale.com/kb)
