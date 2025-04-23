@@ -4856,7 +4856,7 @@ vertical-align: -.125em;
   <li><a href="#how-the-dispatcher-script-works" id="toc-how-the-dispatcher-script-works" class="nav-link" data-scroll-target="#how-the-dispatcher-script-works">How the Dispatcher Script Works</a></li>
   </ul></li>
   <li><a href="#installation-steps" id="toc-installation-steps" class="nav-link" data-scroll-target="#installation-steps">Installation Steps</a></li>
-  <li><a href="#testing-and-monitoring" id="toc-testing-and-monitoring" class="nav-link" data-scroll-target="#testing-and-monitoring">Testing and Monitoring</a></li>
+  <li><a href="#testing" id="toc-testing" class="nav-link" data-scroll-target="#testing">Testing and Monitoring</a></li>
   <li><a href="#customization" id="toc-customization" class="nav-link" data-scroll-target="#customization">Customization</a></li>
   <li><a href="#understanding-networkmanager-events" id="toc-understanding-networkmanager-events" class="nav-link" data-scroll-target="#understanding-networkmanager-events">Understanding NetworkManager Events</a></li>
   <li><a href="#why-dynamic-interface-detection-matters" id="toc-why-dynamic-interface-detection-matters" class="nav-link" data-scroll-target="#why-dynamic-interface-detection-matters">Why Dynamic Interface Detection Matters</a></li>
@@ -4884,7 +4884,7 @@ vertical-align: -.125em;
 <hr>
 <section id="automatic-tailscale-exit-node-management-based-on-wi-fi-networks" class="level2">
 <h2 class="anchored" data-anchor-id="automatic-tailscale-exit-node-management-based-on-wi-fi-networks">Automatic Tailscale Exit Node Management Based on Wi-Fi Networks</h2>
-<p>This documentation explains how to set up automatic switching of Tailscale exit node configurations based on which Wi-Fi network you’re connected to.</p>
+<p>This documentation explains how to set up automatic switching of <a href="https://tailscale.com/kb/1103/exit-nodes">Tailscale exit node</a> configurations based on which Wi-Fi network you’re connected to. On untrusted public networks (coffee shops, airports, hotels), routing all traffic through your secure exit node creates an encrypted tunnel that prevents local eavesdropping and protects your data from potential attackers on the same network. However, this protection comes with trade-offs - all traffic must travel to your exit node first before reaching its destination, which can increase latency and effectively double your data’s journey across the internet. On trusted home networks where security concerns are minimal, disabling exit node routing allows for direct internet access with lower latency and better performance for bandwidth-intensive applications. This automation solution gives you the best of both worlds: automatic protection when you need it and direct connections when you don’t, without requiring manual intervention every time you change networks.</p>
 </section>
 <section id="overview" class="level2">
 <h2 class="anchored" data-anchor-id="overview">Overview</h2>
@@ -4894,10 +4894,23 @@ vertical-align: -.125em;
 <li>On untrusted networks: Enable Tailscale exit node (route all traffic through your secure server)</li>
 </ul>
 <p>This solution uses NetworkManager’s dispatcher scripts to automatically detect network changes and apply the appropriate Tailscale configuration.</p>
+<div class="callout callout-style-default callout-note callout-titled" title="Linux-tested">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Linux-tested
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The solution I’ve described is specifically designed for Linux systems using NetworkManager, so it won’t work directly on macOS or Windows without significant modifications. The core concept (detecting network changes and toggling Tailscale settings) is transferable, but the implementation details, commands, and file locations would be completely different on each operating system. Each would require its own platform-specific implementation of the same idea.</p>
+</div>
+</div>
 </section>
 <section id="component-1-tailscale-home-script" class="level2">
 <h2 class="anchored" data-anchor-id="component-1-tailscale-home-script">Component 1: Tailscale Home Script</h2>
-<p>The first component is a script that disables Tailscale exit node routing when on trusted networks:</p>
+<p>The first component is a script that disables Tailscale exit node routing when on trusted networks (i.e., home):</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">#!/usr/bin/env bash</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># tailscale-home.sh - Disable exit node routing</span></span>
@@ -4918,30 +4931,31 @@ vertical-align: -.125em;
 </section>
 <section id="component-2-tailscale-protect-script" class="level2">
 <h2 class="anchored" data-anchor-id="component-2-tailscale-protect-script">Component 2: Tailscale Protect Script</h2>
-<p>The second component enables the exit node when on untrusted networks:</p>
+<p>The second component enables the exit node when on untrusted networks (i.e., coffee shop, hotel, public Wi-Fi).:</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">#!/usr/bin/env bash</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co"># tailscale-protect.sh - Route all traffic through Pi5 exit node</span></span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Usage: ./tailscale-protect.sh</span></span>
 <span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="va">PI5_IP</span><span class="op">=</span><span class="st">&quot;100.125.173.109&quot;</span></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;Enabling Tailscale exit node protection...&quot;</span></span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> tailscale up <span class="at">--exit-node</span><span class="op">=</span><span class="va">$PI5_IP</span></span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Verify the change</span></span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="va">STATUS</span><span class="op">=</span><span class="va">$(</span><span class="ex">tailscale</span> status<span class="va">)</span></span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="bu">echo</span> <span class="va">$STATUS</span> <span class="kw">|</span> <span class="fu">grep</span> <span class="at">-q</span> <span class="st">&quot;; exit node;&quot;</span><span class="kw">;</span> <span class="cf">then</span></span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">&quot;✅ Exit node protection enabled! All traffic now routes through your Tailnet.&quot;</span></span>
-<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span></span>
-<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">&quot;❌ Something went wrong. Please check tailscale status.&quot;</span></span>
-<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a><span class="cf">fi</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>This script: 1. Sets the exit node to your Raspberry Pi 5’s Tailscale IP address 2. Verifies the change was successful 3. Provides feedback on the operation’s success</p>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Set the HOST_IP to match your exit node&#39;s Tailscale IP</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="va">HOST_IP</span><span class="op">=</span><span class="st">&quot;100.xxx.xxx.xxx&quot;</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;Enabling Tailscale exit node protection...&quot;</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> tailscale up <span class="at">--exit-node</span><span class="op">=</span><span class="va">$HOST_IP</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Verify the change</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="va">STATUS</span><span class="op">=</span><span class="va">$(</span><span class="ex">tailscale</span> status<span class="va">)</span></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="bu">echo</span> <span class="va">$STATUS</span> <span class="kw">|</span> <span class="fu">grep</span> <span class="at">-q</span> <span class="st">&quot;; exit node;&quot;</span><span class="kw">;</span> <span class="cf">then</span></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">&quot;✅ Exit node protection enabled! All traffic now routes through your Tailnet.&quot;</span></span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span></span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">&quot;❌ Something went wrong. Please check tailscale status.&quot;</span></span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a><span class="cf">fi</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>This script: 1. Sets the exit node to your host’s Tailscale IP address 2. Verifies the change was successful 3. Provides feedback on the operation’s success</p>
 </section>
 <section id="component-3-networkmanager-dispatcher-script" class="level2">
 <h2 class="anchored" data-anchor-id="component-3-networkmanager-dispatcher-script">Component 3: NetworkManager Dispatcher Script</h2>
-<p>The third component is a NetworkManager dispatcher script that automatically runs the appropriate script based on which network you’re connected to:</p>
+<p>The third component is a NetworkManager dispatcher script that automatically runs the appropriate script based on which network you’re connected to. A log is created and saved, and you can watch it update in <a href="#testing">real time</a>. I was able to test this by alternating between my home’s “Go_Canes” secure Wi-Fi and a mobile hotspot. Just be sure to update the <code>KNOWN_NETS</code> line below specific to your case:</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">#!/usr/bin/env bash</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Save this as /etc/NetworkManager/dispatcher.d/99-tailscale-autoswitch</span></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -4954,10 +4968,10 @@ vertical-align: -.125em;
 <span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="va">INTERFACE</span><span class="op">=</span><span class="va">$1</span></span>
 <span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="va">STATUS</span><span class="op">=</span><span class="va">$2</span></span>
 <span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Define known networks as array</span></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Define known networks as array: Change listed names as appropriate</span></span>
 <span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a><span class="va">KNOWN_NETS</span><span class="op">=</span><span class="va">(</span><span class="st">&quot;Go_Canes&quot;</span> <span class="st">&quot;Canes_guest&quot;</span><span class="va">)</span></span>
-<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a><span class="va">HOME_SCRIPT</span><span class="op">=</span><span class="st">&quot;/home/kyle/tailscale-home.sh&quot;</span></span>
-<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a><span class="va">PROTECT_SCRIPT</span><span class="op">=</span><span class="st">&quot;/home/kyle/tailscale-protect.sh&quot;</span></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a><span class="va">HOME_SCRIPT</span><span class="op">=</span><span class="st">&quot;</span><span class="va">$HOME</span><span class="st">/tailscale-home.sh&quot;</span></span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a><span class="va">PROTECT_SCRIPT</span><span class="op">=</span><span class="st">&quot;</span><span class="va">$HOME</span><span class="st">/tailscale-protect.sh&quot;</span></span>
 <span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a><span class="va">LOG_FILE</span><span class="op">=</span><span class="st">&quot;/var/log/tailscale-autoswitch.log&quot;</span></span>
 <span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a><span class="fu">log()</span> <span class="kw">{</span></span>
@@ -5029,8 +5043,8 @@ vertical-align: -.125em;
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> chmod 666 /var/log/tailscale-autoswitch.log</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
 </ol>
 </section>
-<section id="testing-and-monitoring" class="level2">
-<h2 class="anchored" data-anchor-id="testing-and-monitoring">Testing and Monitoring</h2>
+<section id="testing" class="level2">
+<h2 class="anchored" data-anchor-id="testing">Testing and Monitoring</h2>
 <p>You can monitor the script’s operation by viewing the log file:</p>
 <div class="sourceCode" id="cb9"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tail</span> <span class="at">-f</span> /var/log/tailscale-autoswitch.log</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Example log output showing automatic switching between networks:</p>
@@ -5051,7 +5065,14 @@ Mon Apr 21 23:04:00 CDT 2025: Connected to SSID: Go_Canes
 Mon Apr 21 23:04:00 CDT 2025: Home network detected: Go_Canes. Running home script...
 Disabling Tailscale exit node protection...
 ✅ Exit node protection disabled! Traffic now routes normally.</code></pre>
-<p>The log shows: - Network changes detected - Which SSID you’re connecting to - Whether the network is trusted or untrusted - Which script was executed - The result of the operation</p>
+<p>The log shows:</p>
+<ul>
+<li>Network changes detected</li>
+<li>Which SSID you’re connecting to</li>
+<li>Whether the network is trusted or untrusted</li>
+<li>Which script was executed</li>
+<li>The result of the operation</li>
+</ul>
 </section>
 <section id="customization" class="level2">
 <h2 class="anchored" data-anchor-id="customization">Customization</h2>
@@ -5104,15 +5125,17 @@ Disabling Tailscale exit node protection...
 <li><p>Verify the script is executable:</p>
 <div class="sourceCode" id="cb15"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span> <span class="at">-l</span> /etc/NetworkManager/dispatcher.d/99-tailscale-autoswitch</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
 <li><p>Test the scripts manually:</p>
-<div class="sourceCode" id="cb16"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> bash /home/kyle/tailscale-home.sh</span>
-<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> bash /home/kyle/tailscale-protect.sh</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<div class="sourceCode" id="cb16"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> bash <span class="va">$HOME</span>/tailscale-home.sh</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> bash <span class="va">$HOME</span>/tailscale-protect.sh</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
 <li><p>Check your current WiFi interface name:</p>
 <div class="sourceCode" id="cb17"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="ex">nmcli</span> device status <span class="kw">|</span> <span class="fu">grep</span> wifi</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
 <li><p>Test interface detection:</p>
 <div class="sourceCode" id="cb18"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="ex">nmcli</span> <span class="at">-t</span> <span class="at">-f</span> DEVICE,TYPE device <span class="kw">|</span> <span class="fu">grep</span> <span class="st">&quot;:wifi$&quot;</span> <span class="kw">|</span> <span class="fu">cut</span> <span class="at">-d:</span> <span class="at">-f1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
 </ol>
 <hr>
-<p>Share your insights at <a href="mailto:kylegrealis@icloud.com">kylegrealis@icloud.com</a>. Together, we can make our R projects more robust, reproducible, and ready for collaboration!</p>
+<p>This automation brings peace of mind to your network security journey. With Tailscale now intelligently routing your traffic based on your trusted network list, you’ve created a system that protects you automatically without requiring constant manual intervention. Now that your secure self-hosted network intelligently adapts to your environment, it’s time to expand its capabilities by adding services that fulfill the core <a href="../../blog/posts/2025-04-22-the-why.html">goals</a> of this project. The foundation is solid—let’s build something amazing on top of it!</p>
+<hr>
+<p>Share your insights at <a href="mailto:kylegrealis@icloud.com">kylegrealis@icloud.com</a>. Together, we can make our R (and self-hosted) projects more robust, reproducible, and ready for collaboration!</p>
 <p><span style="font-size: 1.5rem;">Happy coding!</span></p>
 <p><span style="font-size: 1.5rem; font-weight: bold">~Kyle</span></p>
 <hr>

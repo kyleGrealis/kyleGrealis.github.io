@@ -33,8 +33,19 @@ whole self-hosting endeavor!
 
 ## Automatic Tailscale Exit Node Management Based on Wi-Fi Networks
 
-This documentation explains how to set up automatic switching of Tailscale exit node 
-configurations based on which Wi-Fi network you're connected to.
+This documentation explains how to set up automatic switching of 
+[Tailscale exit node](https://tailscale.com/kb/1103/exit-nodes) 
+configurations based on which Wi-Fi network you're connected to. On untrusted public 
+networks (coffee shops, airports, hotels), routing all traffic through your secure exit 
+node creates an encrypted tunnel that prevents local eavesdropping and protects your data 
+from potential attackers on the same network. However, this protection comes with 
+trade-offs - all traffic must travel to your exit node first before reaching its 
+destination, which can increase latency and effectively double your data's journey 
+across the internet. On trusted home networks where security concerns are minimal, 
+disabling exit node routing allows for direct internet access with lower latency and 
+better performance for bandwidth-intensive applications. This automation solution gives 
+you the best of both worlds: automatic protection when you need it and direct connections 
+when you don't, without requiring manual intervention every time you change networks.
 
 ## Overview
 
@@ -46,10 +57,19 @@ When connecting to different Wi-Fi networks, you may want different Tailscale be
 This solution uses NetworkManager's dispatcher scripts to automatically detect network 
 changes and apply the appropriate Tailscale configuration.
 
+:::{.callout-note title="Linux-tested"}
+The solution I've described is specifically designed for Linux systems using 
+NetworkManager, so it won't work directly on macOS or Windows without significant 
+modifications. The core concept (detecting network changes and toggling Tailscale settings) 
+is transferable, but the implementation details, commands, and file locations would be 
+completely different on each operating system. Each would require its own platform-specific 
+implementation of the same idea.
+:::
+
 ## Component 1: Tailscale Home Script
 
 The first component is a script that disables Tailscale exit node routing when on trusted 
-networks:
+networks (i.e., home):
 
 ```bash
 #!/usr/bin/env bash
@@ -77,7 +97,8 @@ This script:
 
 ## Component 2: Tailscale Protect Script
 
-The second component enables the exit node when on untrusted networks:
+The second component enables the exit node when on untrusted networks (i.e., coffee shop,
+hotel, public Wi-Fi).:
 
 ```bash
 #!/usr/bin/env bash
@@ -85,10 +106,11 @@ The second component enables the exit node when on untrusted networks:
 # tailscale-protect.sh - Route all traffic through Pi5 exit node
 # Usage: ./tailscale-protect.sh
 
-PI5_IP="100.125.173.109"
+# Set the HOST_IP to match your exit node's Tailscale IP
+HOST_IP="100.xxx.xxx.xxx"
 
 echo "Enabling Tailscale exit node protection..."
-sudo tailscale up --exit-node=$PI5_IP
+sudo tailscale up --exit-node=$HOST_IP
 
 # Verify the change
 STATUS=$(tailscale status)
@@ -101,14 +123,17 @@ fi
 ```
 
 This script:
-1. Sets the exit node to your Raspberry Pi 5's Tailscale IP address
+1. Sets the exit node to your host's Tailscale IP address
 2. Verifies the change was successful
 3. Provides feedback on the operation's success
 
 ## Component 3: NetworkManager Dispatcher Script
 
 The third component is a NetworkManager dispatcher script that automatically runs the 
-appropriate script based on which network you're connected to:
+appropriate script based on which network you're connected to. A log is created and saved, 
+and you can watch it update in [real time](#testing). I was able to test this by 
+alternating between my home's "Go_Canes" secure Wi-Fi and a mobile hotspot. Just be sure 
+to update the `KNOWN_NETS` line below specific to your case:
 
 ```bash
 #!/usr/bin/env bash
@@ -123,10 +148,10 @@ fi
 INTERFACE=$1
 STATUS=$2
 
-# Define known networks as array
+# Define known networks as array: Change listed names as appropriate
 KNOWN_NETS=("Go_Canes" "Canes_guest")
-HOME_SCRIPT="/home/kyle/tailscale-home.sh"
-PROTECT_SCRIPT="/home/kyle/tailscale-protect.sh"
+HOME_SCRIPT="$HOME/tailscale-home.sh"
+PROTECT_SCRIPT="$HOME/tailscale-protect.sh"
 LOG_FILE="/var/log/tailscale-autoswitch.log"
 
 log() {
@@ -209,7 +234,7 @@ exit 0
    sudo chmod 666 /var/log/tailscale-autoswitch.log
    ```
 
-## Testing and Monitoring
+## Testing and Monitoring {#testing}
 
 You can monitor the script's operation by viewing the log file:
 
@@ -240,6 +265,7 @@ Disabling Tailscale exit node protection...
 ```
 
 The log shows:
+
 - Network changes detected
 - Which SSID you're connecting to
 - Whether the network is trusted or untrusted
@@ -318,8 +344,8 @@ If the script isn't working as expected:
 
 3. Test the scripts manually:
    ```bash
-   sudo bash /home/kyle/tailscale-home.sh
-   sudo bash /home/kyle/tailscale-protect.sh
+   sudo bash $HOME/tailscale-home.sh
+   sudo bash $HOME/tailscale-protect.sh
    ```
 
 4. Check your current WiFi interface name:
@@ -334,8 +360,18 @@ If the script isn't working as expected:
 
 ---
 
+This automation brings peace of mind to your network security journey. With Tailscale now 
+intelligently routing your traffic based on your trusted network list, you've created a 
+system that protects you automatically without requiring constant manual intervention. 
+Now that your secure self-hosted network intelligently adapts to your environment, it's 
+time to expand its capabilities by adding services that fulfill the core 
+[goals](2025-04-22-the-why.qmd) of this project. The foundation is solid—let's build 
+something amazing on top of it!
+
+---
+
 Share your insights at [kylegrealis@icloud.com](mailto:kylegrealis@icloud.com). Together, 
-we can make our R projects more robust, reproducible, and ready for collaboration!
+we can make our R (and self-hosted) projects more robust, reproducible, and ready for collaboration!
 
 [Happy coding!]{style='font-size: 1.5rem;'}
 

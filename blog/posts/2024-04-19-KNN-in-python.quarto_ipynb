@@ -46,7 +46,7 @@
         "\n",
         "## Import libraries\n"
       ],
-      "id": "ae514563"
+      "id": "4402a35f"
     },
     {
       "cell_type": "code",
@@ -55,7 +55,7 @@
         "import numpy as np\n",
         "import pandas as pd"
       ],
-      "id": "bc4a4c79",
+      "id": "6752d6e2",
       "execution_count": null,
       "outputs": []
     },
@@ -65,7 +65,7 @@
       "source": [
         "## Import dataset\n"
       ],
-      "id": "984041be"
+      "id": "5f07fcae"
     },
     {
       "cell_type": "code",
@@ -75,7 +75,7 @@
         "X = dataset.iloc[:, :-1].values\n",
         "y = dataset.iloc[:, -1].values"
       ],
-      "id": "72273bf9",
+      "id": "7949c274",
       "execution_count": null,
       "outputs": []
     },
@@ -87,7 +87,7 @@
         "\n",
         "## Splitting the dataset to training & testing"
       ],
-      "id": "760907dd"
+      "id": "022fe1f3"
     },
     {
       "cell_type": "code",
@@ -100,7 +100,7 @@
         "  random_state=0\n",
         ")"
       ],
-      "id": "a009ed3d",
+      "id": "80a453bb",
       "execution_count": null,
       "outputs": []
     },
@@ -110,7 +110,7 @@
       "source": [
         "## Feature scaling\n"
       ],
-      "id": "8a8544ee"
+      "id": "f4bacd22"
     },
     {
       "cell_type": "code",
@@ -121,7 +121,7 @@
         "X_train = sc.fit_transform(X_train)\n",
         "X_test = sc.fit_transform(X_test)"
       ],
-      "id": "e88cf516",
+      "id": "c8769ef6",
       "execution_count": null,
       "outputs": []
     },
@@ -151,7 +151,7 @@
         "To learn the more technical details of `sklearn`'s classes and functions, checkout the [`sklearn` API Reference](https://scikit-learn.org/1.4/modules/classes.html).\n",
         ":::\n"
       ],
-      "id": "e55842d0"
+      "id": "481c32ac"
     },
     {
       "cell_type": "code",
@@ -164,7 +164,7 @@
         "  metric='minkowski'\n",
         ")"
       ],
-      "id": "7193d783",
+      "id": "d9eb7da0",
       "execution_count": null,
       "outputs": []
     },
@@ -174,7 +174,7 @@
       "source": [
         "classifier.fit(X_train, y_train)"
       ],
-      "id": "e9ceeda6",
+      "id": "6829fb49",
       "execution_count": null,
       "outputs": []
     },
@@ -191,7 +191,7 @@
         "\n",
         "30y/o $87k/yr -- first observation of X_test\n"
       ],
-      "id": "266c82ef"
+      "id": "b99a26c0"
     },
     {
       "cell_type": "code",
@@ -203,7 +203,7 @@
         "print('1=\"Yes\", 0=\"No\"\\n')\n",
         "print(f'Single prediction for 30 y/o earning $87k/yr: {single_pred[0]} at a probability of {single_prob[0][0].round(3)}')"
       ],
-      "id": "78855810",
+      "id": "ae269ac3",
       "execution_count": null,
       "outputs": []
     },
@@ -223,7 +223,7 @@
         "\n",
         "## Predicting the test set results\n"
       ],
-      "id": "c56a89a7"
+      "id": "440d09ec"
     },
     {
       "cell_type": "code",
@@ -231,7 +231,7 @@
       "source": [
         "y_pred = classifier.predict(X_test)"
       ],
-      "id": "ea7406bf",
+      "id": "74ec7397",
       "execution_count": null,
       "outputs": []
     },
@@ -243,7 +243,7 @@
         "\n",
         "## Creating the confusion matrix\n"
       ],
-      "id": "e36721e8"
+      "id": "4bcfb8a7"
     },
     {
       "cell_type": "code",
@@ -253,7 +253,7 @@
         "print(confusion_matrix(y_test, y_pred))\n",
         "print(f'Accuracy: {accuracy_score(y_test, y_pred)}')"
       ],
-      "id": "976370dc",
+      "id": "b0727ef4",
       "execution_count": null,
       "outputs": []
     },
@@ -278,7 +278,7 @@
         "These next two code chunks will take a while. The KNN algorithm is already compute-expensive and we're adding to the heavy lifting by creating a grid of many values to be calculated. The final result is two plots with a visual mapping of our decision boundary **and** our training & predicted data points appearing as the dots within the field.\n",
         ":::\n"
       ],
-      "id": "36335f2c"
+      "id": "42e9a34a"
     },
     {
       "cell_type": "code",
@@ -326,7 +326,7 @@
         "plt.legend()\n",
         "plt.show()"
       ],
-      "id": "158c7a64",
+      "id": "f1fbea89",
       "execution_count": null,
       "outputs": []
     },
@@ -338,7 +338,7 @@
         "\n",
         "## Visualizing the test set results\n"
       ],
-      "id": "08a22a51"
+      "id": "b80ca86f"
     },
     {
       "cell_type": "code",
@@ -383,7 +383,7 @@
         "plt.legend()\n",
         "plt.show()"
       ],
-      "id": "8893f256",
+      "id": "a7fd7d4b",
       "execution_count": null,
       "outputs": []
     },
@@ -400,7 +400,7 @@
         "\n",
         "[~Kyle]{style='font-size: 1.5rem; font-weight: bold'}"
       ],
-      "id": "5cfea5c9"
+      "id": "d13309ba"
     }
   ],
   "metadata": {

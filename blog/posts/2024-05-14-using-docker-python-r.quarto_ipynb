@@ -43,7 +43,7 @@
         "\n",
         "Create a main script that imports and runs the functions from your other scripts in the necessary order. For example:\n"
       ],
-      "id": "583694e7"
+      "id": "9ef71f9a"
     },
     {
       "cell_type": "code",
@@ -67,7 +67,7 @@
         "if __name__ == \"__main__\":\n",
         "    main()"
       ],
-      "id": "2db51899",
+      "id": "68d51cc1",
       "execution_count": null,
       "outputs": []
     },
@@ -171,7 +171,7 @@
         "\n",
         "[~Kyle]{style='font-size: 1.5rem; font-weight: bold'}"
       ],
-      "id": "bced1b73"
+      "id": "a92e564f"
     }
   ],
   "metadata": {
