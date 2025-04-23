@@ -1,94 +1,31 @@
 [
   {
-    "objectID": "apps/index.html",
-    "href": "apps/index.html",
-    "title": "Web Applications",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "The Azimuth Project",
     "section": "",
-    "text": "PowerViz\nIntroducing PowerViz, an engaging Shiny app designed to bring power calculations to life! Originally crafted as a handy tool for a clinical trials class presentation, it has evolved into a comprehensive web application due to overwhelming positive feedback.\nPowerViz was born out of a need to illustrate the impact of sample size and effect size on power calculations. It’s a testament to the adage that necessity is the mother of invention. Built on the robust pwr R package, PowerViz offers an interactive platform where users can manipulate variables such as significance level, effect size, and sample size or proportion.\nBut PowerViz is more than just a tool; it’s an immersive learning experience. As you interact with the plots and adjust the inputs, you receive real-time feedback, providing valuable insights into the dynamics of power calculations. Whether you’re looking to enhance your learning or in the throes of designing a study, PowerViz is your go-to resource. Dive in and experience the fun side of statistics!\n\nTry it!\n\n\n\n\n\n\n\n\n\nEpiMatch\nEpiMatch is your indispensable partner for case-control matching and it’s now available as a Shiny web application. This tool is designed to streamline the matching process, strategically minimizing biases and saving you precious time. Case-control matching is a critical technique used in epidemiological studies to identify and analyze factors that may contribute to a medical condition or disease.\nEpiMatch empowers you to upload your own data and engage with a sophisticated matching algorithm, tailored to your specific criteria. While the tool comes with comprehensive instructions on its main page, it does require a touch of preprocessing before use.\nAfter running through five matching iterations, EpiMatch presents you with the results from the iteration that yielded the highest number of matched cases to controls. And the best part? Every table is downloadable, ensuring no data is lost, even for those individuals (cases and controls) that were not successfully matched.\nSo why wait? Dive into EpiMatch and experience the future of case-control matching!\n\nTry it!"
+    "text": "An azimuth is the angle of compass direction. An azimuth demands you know where you’re going, you have intentional movement in your journey. My journey in creating the Azimuth Project is not one singular project. My career is the Azimuth Project. My direction is forward. Our paces may differ. Like entering into realms of uncharted territory, I cannot foresee how each step will feel or how sure-footed progress will be. I do anticipate setbacks, restarts, and – yeah – at times questioning if it’s worth the effort.\nThose feelings are natural and I am here to challenge myself and to be challenged. Here and now is where I plot my course, set my way-points, and shoot my azimuth. Here is where I document those steps."
   },
   {
-    "objectID": "blog/posts/2024-04-19-KNN-in-python.html",
-    "href": "blog/posts/2024-04-19-KNN-in-python.html",
-    "title": "Machine Learning in Python - KNN",
+    "objectID": "index.html#the-azimuth-project",
+    "href": "index.html#the-azimuth-project",
+    "title": "The Azimuth Project",
     "section": "",
-    "text": "In this post, I’m sharing the code that was created from following Kirill Eremenko and the SuperDataScience Team’s “Machine Learning A-Z” course on Udemy.\nThe prediction scenario is this: which demographic would social networking marketing ads affect best? We work for a car dealership and have data regarding consumers’ age and estimated salary. To where should marketing efforts be aimed as we try to predict which consumers will purchase our newest & best SUV model?\n\nEuclidean Distance between two points: \\(\\sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}\\)\nk-Nearest Neighbors (KNN) is machine learning technique used to classify a new data point to a nearby cluster. We will set up our algorithm to calculate the Euclidean distances from our new data point to existing data points. Then, using the predetermined k number of nearest neighbors (we’ll be using 5 neighbors), assign that new point to the closest cluster with at least three like \\(&gt;k/2\\) neighbors.\nTo think of it in really simple terms, all of our existing customers (points) are scattered in the \\((x, y)\\) space. Our new customer has \\(x\\) age and \\(y\\) salary, so we’ll plot this onto our existing grid. Then we draw circles around the new customer until we hit the closest existing point – that’s one “neighbor”. We repeat the process until we have our chosen number of 5. How many of the neighbors purchased the SUV and how many did not? Whichever group has more, that’s what we’re going to predict the new customer would do too!\n\n\n\nCourtesy of DataCamp"
+    "text": "An azimuth is the angle of compass direction. An azimuth demands you know where you’re going, you have intentional movement in your journey. My journey in creating the Azimuth Project is not one singular project. My career is the Azimuth Project. My direction is forward. Our paces may differ. Like entering into realms of uncharted territory, I cannot foresee how each step will feel or how sure-footed progress will be. I do anticipate setbacks, restarts, and – yeah – at times questioning if it’s worth the effort.\nThose feelings are natural and I am here to challenge myself and to be challenged. Here and now is where I plot my course, set my way-points, and shoot my azimuth. Here is where I document those steps."
   },
   {
-    "objectID": "blog/posts/2024-04-19-KNN-in-python.html#what-is-knn",
-    "href": "blog/posts/2024-04-19-KNN-in-python.html#what-is-knn",
-    "title": "Machine Learning in Python - KNN",
+    "objectID": "blog/posts/2025-04-22-the-why.html",
+    "href": "blog/posts/2025-04-22-the-why.html",
+    "title": "Home Lab, part 0: The “Why”?",
     "section": "",
-    "text": "In this post, I’m sharing the code that was created from following Kirill Eremenko and the SuperDataScience Team’s “Machine Learning A-Z” course on Udemy.\nThe prediction scenario is this: which demographic would social networking marketing ads affect best? We work for a car dealership and have data regarding consumers’ age and estimated salary. To where should marketing efforts be aimed as we try to predict which consumers will purchase our newest & best SUV model?\n\nEuclidean Distance between two points: \\(\\sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}\\)\nk-Nearest Neighbors (KNN) is machine learning technique used to classify a new data point to a nearby cluster. We will set up our algorithm to calculate the Euclidean distances from our new data point to existing data points. Then, using the predetermined k number of nearest neighbors (we’ll be using 5 neighbors), assign that new point to the closest cluster with at least three like \\(&gt;k/2\\) neighbors.\nTo think of it in really simple terms, all of our existing customers (points) are scattered in the \\((x, y)\\) space. Our new customer has \\(x\\) age and \\(y\\) salary, so we’ll plot this onto our existing grid. Then we draw circles around the new customer until we hit the closest existing point – that’s one “neighbor”. We repeat the process until we have our chosen number of 5. How many of the neighbors purchased the SUV and how many did not? Whichever group has more, that’s what we’re going to predict the new customer would do too!\n\n\n\nCourtesy of DataCamp"
+    "text": "Steps not covered:"
   },
   {
-    "objectID": "blog/posts/2024-04-19-KNN-in-python.html#import-libraries",
-    "href": "blog/posts/2024-04-19-KNN-in-python.html#import-libraries",
-    "title": "Machine Learning in Python - KNN",
-    "section": "Import libraries",
-    "text": "Import libraries\n\nimport numpy as np\nimport pandas as pd"
-  },
-  {
-    "objectID": "blog/posts/2024-04-19-KNN-in-python.html#import-dataset",
-    "href": "blog/posts/2024-04-19-KNN-in-python.html#import-dataset",
-    "title": "Machine Learning in Python - KNN",
-    "section": "Import dataset",
-    "text": "Import dataset\n\ndataset = pd.read_csv('data/Social_Network_Ads.csv')\nX = dataset.iloc[:, :-1].values\ny = dataset.iloc[:, -1].values"
-  },
-  {
-    "objectID": "blog/posts/2024-04-19-KNN-in-python.html#splitting-the-dataset-to-training-testing",
-    "href": "blog/posts/2024-04-19-KNN-in-python.html#splitting-the-dataset-to-training-testing",
-    "title": "Machine Learning in Python - KNN",
-    "section": "Splitting the dataset to training & testing",
-    "text": "Splitting the dataset to training & testing\n\nfrom sklearn.model_selection import train_test_split\nX_train, X_test, y_train, y_test = train_test_split(\n  X, y,\n  test_size=0.25,\n  random_state=0\n)"
-  },
-  {
-    "objectID": "blog/posts/2024-04-19-KNN-in-python.html#feature-scaling",
-    "href": "blog/posts/2024-04-19-KNN-in-python.html#feature-scaling",
-    "title": "Machine Learning in Python - KNN",
-    "section": "Feature scaling",
-    "text": "Feature scaling\n\nfrom sklearn.preprocessing import StandardScaler\nsc = StandardScaler()\nX_train = sc.fit_transform(X_train)\nX_test = sc.fit_transform(X_test)\n\n```\n# array([[-1.455..., -0.784...],\n#        [ 2.067...,  1.372...],\n#        [-0.253..., -0.309...],\n#        ...,\n#        [-0.253..., -0.309...],\n#        [ 2.067..., -1.113...],\n#        [-1.455..., -0.309...]])\n```"
-  },
-  {
-    "objectID": "blog/posts/2024-04-19-KNN-in-python.html#train-fit-the-knn-model",
-    "href": "blog/posts/2024-04-19-KNN-in-python.html#train-fit-the-knn-model",
-    "title": "Machine Learning in Python - KNN",
-    "section": "Train & fit the KNN model",
-    "text": "Train & fit the KNN model\n\n\n\n\n\n\nTip\n\n\n\nTo learn the more technical details of sklearn’s classes and functions, checkout the sklearn API Reference.\n\n\n\nfrom sklearn.neighbors import KNeighborsClassifier\nclassifier = KNeighborsClassifier(\n  n_neighbors=5,  # default\n  p=2,            # euclidean distance; default \n  metric='minkowski'\n)\n\n\nclassifier.fit(X_train, y_train)"
-  },
-  {
-    "objectID": "blog/posts/2024-04-19-KNN-in-python.html#predicting-a-new-result",
-    "href": "blog/posts/2024-04-19-KNN-in-python.html#predicting-a-new-result",
-    "title": "Machine Learning in Python - KNN",
-    "section": "Predicting a new result",
-    "text": "Predicting a new result\n30y/o $87k/yr – first observation of X_test\n\nperson = X_test[[0]]\nsingle_pred = classifier.predict(person)\nsingle_prob = classifier.predict_proba(person)\nprint('1=\"Yes\", 0=\"No\"\\n')\nprint(f'Single prediction for 30 y/o earning $87k/yr: {single_pred[0]} at a probability of {single_prob[0][0].round(3)}')\n\n```\n# 1=\"Yes\", 0=\"No\"\n#\n# Single prediction for 30 y/o earning $87k/yr: 0 at a \n# probability of 0.8\n```"
-  },
-  {
-    "objectID": "blog/posts/2024-04-19-KNN-in-python.html#predicting-the-test-set-results",
-    "href": "blog/posts/2024-04-19-KNN-in-python.html#predicting-the-test-set-results",
-    "title": "Machine Learning in Python - KNN",
-    "section": "Predicting the test set results",
-    "text": "Predicting the test set results\n\ny_pred = classifier.predict(X_test)"
-  },
-  {
-    "objectID": "blog/posts/2024-04-19-KNN-in-python.html#creating-the-confusion-matrix",
-    "href": "blog/posts/2024-04-19-KNN-in-python.html#creating-the-confusion-matrix",
-    "title": "Machine Learning in Python - KNN",
-    "section": "Creating the confusion matrix",
-    "text": "Creating the confusion matrix\n\nfrom sklearn.metrics import confusion_matrix, accuracy_score\nprint(confusion_matrix(y_test, y_pred))\nprint(f'Accuracy: {accuracy_score(y_test, y_pred)}')\n\n```\n# [[64  4]\n#  [ 3 29]]\n# Accuracy: 0.93\n```"
-  },
-  {
-    "objectID": "blog/posts/2024-04-19-KNN-in-python.html#visualizing-the-training-set-results",
-    "href": "blog/posts/2024-04-19-KNN-in-python.html#visualizing-the-training-set-results",
-    "title": "Machine Learning in Python - KNN",
-    "section": "Visualizing the training set results",
-    "text": "Visualizing the training set results\n\n\n\n\n\n\nWarning\n\n\n\nThese next two code chunks will take a while. The KNN algorithm is already compute-expensive and we’re adding to the heavy lifting by creating a grid of many values to be calculated. The final result is two plots with a visual mapping of our decision boundary and our training & predicted data points appearing as the dots within the field.\n\n\n\nimport matplotlib.pyplot as plt\nfrom matplotlib.colors import ListedColormap\n\nX_set, y_set = sc.inverse_transform(X_train), y_train\nX1, X2 = np.meshgrid(\n  np.arange(\n    start = X_set[:, 0].min() - 10, \n    stop = X_set[:, 0].max() + 10, \n    step = 0.25\n  ),\n  np.arange(\n    start = X_set[:, 1].min() - 1000, \n    stop = X_set[:, 1].max() + 1000, \n    step = 0.25\n  )\n)\nplt.contourf(\n  X1, X2, \n  classifier.predict(\n    sc.transform(np.array([X1.ravel(), X2.ravel()]).T)\n  ).reshape(X1.shape),\n  alpha = 0.75, \n  cmap = ListedColormap(('red', 'green'))\n)\n\nplt.xlim(X1.min(), X1.max())\nplt.ylim(X2.min(), X2.max())\n\nfor i, j in enumerate(np.unique(y_set)):\n  plt.scatter(\n    X_set[y_set == j, 0], \n    X_set[y_set == j, 1], \n    c = ListedColormap(('red', 'green'))(i), \n    label = j\n  )\n\nplt.title('KNN Regression (Training set)')\nplt.xlabel('Age')\nplt.ylabel('Estimated Salary')\nplt.legend()\nplt.show()\n\n\n\n\nKNN training set results"
-  },
-  {
-    "objectID": "blog/posts/2024-04-19-KNN-in-python.html#visualizing-the-test-set-results",
-    "href": "blog/posts/2024-04-19-KNN-in-python.html#visualizing-the-test-set-results",
-    "title": "Machine Learning in Python - KNN",
-    "section": "Visualizing the test set results",
-    "text": "Visualizing the test set results\n\nX_set, y_set = sc.inverse_transform(X_test), y_test\nX1, X2 = np.meshgrid(\n  np.arange(\n    start = X_set[:, 0].min() - 10, \n    stop = X_set[:, 0].max() + 10, \n    step = 0.25\n  ),\n  np.arange(\n    start = X_set[:, 1].min() - 1000, \n    stop = X_set[:, 1].max() + 1000, \n    step = 0.25\n  )\n)\nplt.contourf(\n  X1, X2, \n  classifier.predict(\n    sc.transform(np.array([X1.ravel(), X2.ravel()]).T)\n  ).reshape(X1.shape),\n  alpha = 0.75, \n  cmap = ListedColormap(('red', 'green'))\n)\n\nplt.xlim(X1.min(), X1.max())\nplt.ylim(X2.min(), X2.max())\n\nfor i, j in enumerate(np.unique(y_set)):\n    plt.scatter(\n      X_set[y_set == j, 0], \n      X_set[y_set == j, 1], \n      c = ListedColormap(('red', 'green'))(i), \n      label = j\n    )\n\nplt.title('KNN Regression (Test set)')\nplt.xlabel('Age')\nplt.ylabel('Estimated Salary')\nplt.legend()\nplt.show()\n\n\n\n\nKNN testing set results\n\n\nShare your insights at kylegrealis@icloud.com. Together, we can make our R projects more robust, reproducible, and ready for collaboration!\nHappy coding!\n~Kyle"
+    "objectID": "blog/posts/2025-04-22-the-why.html#purpose-of-my-home-lab",
+    "href": "blog/posts/2025-04-22-the-why.html#purpose-of-my-home-lab",
+    "title": "Home Lab, part 0: The “Why”?",
+    "section": "Purpose of my Home Lab",
+    "text": "Purpose of my Home Lab\nThe origin of this project is hopefully relatable to you, the reader: I just wanted to see if I could just do it. This question though was: am I capable of deploying self-hosted services on my home network, and then safely & securely access them from outside the home?\nNetworking? Never heard of her, well not insofar as an academic data analyst. Our team tends to operate more in GitHub collaborative projects (thus my potential over-posting of GitHub things here, here and especially here). I just wanted to geek out, rsync my Timeshift backups and other files off my laptop to another device, and feel like one of the cool tech kids.\n\n\n\n\n\n\nUPDATE:\n\n\n\nI’m still not a cool kid, but got this working so there you go!\n\n\nThe main goals I established before undertaking this project were:\n\nLearn to remotely access devices on my home network\nShare files across devices\nSet-up a Raspberry Pi for self-hosted services\nLearn “WTH is Docker and how do I use it?”\nMake it so that only I can access these on a secure connection! No connection, no access.\nTest how much I can de-Google & de-Apple my life\n\nThe last part involved needing to find ways to self-host document & file management and photos. The cost of using cloud storage isn’t all that intrusive, but it does add up over time. One major hurdle would be leaving the comfort of known apps and have it all fitting easily into daily life.\nHappily, with help from r/selfhosted and some feedback from YouTube, I’ve been able to tweak things just enough to make it work for me. I should have stated this towards the top, but I’ve made plenty of mistakes and had a few moments of “oh $h!t… did I just brick my system, lose my data, erase x, y, & z??” but…\nLive, laugh, and backup all your important things first!\n\nShare your insights at kylegrealis@icloud.com. Together, we can make our R projects more robust, reproducible, and ready for collaboration!\nHappy coding!\n~Kyle"
   },
   {
     "objectID": "blog/posts/2024-05-22-beginner-git-team-workflow.html#using-a-collaborative-git-workflow",
@@ -175,6 +112,97 @@
     "text": "Additional Resources\n\nR Packages (2e) by Hadley Wickham & Jenny Bryan\nHappy Git with R by Jenny Bryan\nGit for Teams by Emma Jane Hogbin Westby"
   },
   {
+    "objectID": "blog/posts/2024-08-19-renv-project-sharing-guide.html#how-this-guide-can-be-helpful",
+    "href": "blog/posts/2024-08-19-renv-project-sharing-guide.html#how-this-guide-can-be-helpful",
+    "title": "renv Project Setup and Sharing Guide",
+    "section": "How this guide can be helpful",
+    "text": "How this guide can be helpful\n\n\n\n\n\n\nWhile this guide was initially crafted for my team working on machine learning projects, the principles and steps outlined here are broadly applicable to any R-based data science project. Whether you’re using RStudio, Positron, or another IDE, you may need to slightly adapt these instructions to fit your specific setup. The core concepts, however, remain the same across environments. 😊\n\n\n\n\nIn the ever-evolving landscape of data science and machine learning, maintaining reproducible environments is crucial yet often overlooked. This renv project guide aims to streamline collaboration and ensure consistency across different systems and team members. It’s not an exhaustive technical manual, nor does it delve into every possible scenario you might encounter. Instead, consider this a practical starting point, peppered with real-world tips I’ve gathered from navigating the choppy waters of project management and collaboration. My goal? To help you focus on what truly matters: unleashing your data science superpowers without getting bogged down by environment inconsistencies! Whether you’re a solo data explorer or part of a larger team, these steps will set you on the path to smoother, more reproducible R projects."
+  },
+  {
+    "objectID": "blog/posts/2024-08-19-renv-project-sharing-guide.html#project-structure",
+    "href": "blog/posts/2024-08-19-renv-project-sharing-guide.html#project-structure",
+    "title": "renv Project Setup and Sharing Guide",
+    "section": "Project Structure",
+    "text": "Project Structure\nproject_root/\n├── .Rproj.user/\n├── renv/\n│   ├── activate.R\n│   ├── library/\n│   ├── settings.json\n│   └── .gitignore\n├── scripts/\n│   ├── script1.R\n│   ├── script2.R\n│   ├── script3.R\n│   ├── script4.R\n│   └── script5.R\n├── .Rprofile\n├── .gitignore\n├── project_name.Rproj\n└── renv.lock"
+  },
+  {
+    "objectID": "blog/posts/2024-08-19-renv-project-sharing-guide.html#for-the-project-creator",
+    "href": "blog/posts/2024-08-19-renv-project-sharing-guide.html#for-the-project-creator",
+    "title": "renv Project Setup and Sharing Guide",
+    "section": "For the Project Creator",
+    "text": "For the Project Creator\n\nInitialize the project:\n\nCreate a new R project or navigate to an existing project directory.\nOpen the project in RStudio or Positron.\n\nSet up renv:\n\nRun install.packages(\"renv\") if not already installed.\nInitialize renv by running:\nrenv::init()\n\nDevelop your project:\n\nCreate your R scripts (in this case, 5 main scripts).\nUse renv::install(\"package_name\") to add new packages as needed.\n\nCapture the project state:\n\nAfter finalizing your scripts, run:\nrenv::snapshot()\nThis creates/updates the renv.lock file with your project’s dependencies.\n\nReview the lockfile:\n\nOpen renv.lock and ensure all necessary packages are included.\nIf any are missing, install them with renv::install() and run renv::snapshot() again.\n\nPrepare for sharing:\n\nEnsure your project directory contains:\n\nAll R scripts\n.Rproj file (not included if the project was created within Positron, so not needed)\nrenv.lock file\n.Rprofile file (if present)\nrenv/ directory\n\n\nShare the project:\n\nCompress the entire project directory.\nSend the compressed file to your collaborator.\n\n\n\nAlternative option\nIf you have been working on non-renv activated project while conducting exploratory data analysis (EDA) or just tinkering with machine learning preprocessing recipes and modeling types, you can activate renv after your project is in a steady state.\n\nSet up renv:\n\nRun install.packages(\"renv\") if not already installed.\nInitialize renv by running:\nrenv::init()\nThis will analyze your existing project and create an initial lockfile based on your current package usage. It examines the scripts you’ve written for the presence of any library() or require() calls and adds those packages.\n\nCapture the project state:\n\nAfter finalizing your scripts, run:\nrenv::snapshot()\n\nReview the lockfile:\n\nOpen renv.lock and ensure all necessary packages are included.\nNOTE: Using the package::function() method may cause renv::snapshot() to miss these packages.\nIf any are missing, install them with renv::install() and run renv::snapshot() again.\n\n\nProceed to share your project in its working, ready-to-share state."
+  },
+  {
+    "objectID": "blog/posts/2024-08-19-renv-project-sharing-guide.html#for-the-new-user",
+    "href": "blog/posts/2024-08-19-renv-project-sharing-guide.html#for-the-new-user",
+    "title": "renv Project Setup and Sharing Guide",
+    "section": "For the New User",
+    "text": "For the New User\n\nReceive and extract the project:\n\nReceive the compressed project directory from the creator.\nExtract it to a desired location on your machine.\n\nSet up R environment:\n\nInstall R and RStudio if not already installed.\nInstall renv by opening R/RStudio and running:\ninstall.packages(\"renv\")\n\nOpen the project:\n\nNavigate to the extracted project directory.\nDouble-click the .Rproj file to open the project in RStudio.\n\nRestore the project environment:\n\nIn the R console, run:\nrenv::restore()\nThis will install all necessary packages as specified in the renv.lock file.\n\nVerify the setup:\n\nTry running one of the scripts to ensure everything is working correctly.\n\nStart working:\n\nYou now have an exact replica of the original project environment.\nIf you need to add new packages, use renv::install() followed by renv::snapshot()."
+  },
+  {
+    "objectID": "blog/posts/2024-08-19-renv-project-sharing-guide.html#notes",
+    "href": "blog/posts/2024-08-19-renv-project-sharing-guide.html#notes",
+    "title": "renv Project Setup and Sharing Guide",
+    "section": "Notes",
+    "text": "Notes\n\nAlways use renv::install() instead of install.packages() when adding new packages to an renv project.\nRun renv::status() periodically to check if your lockfile is in sync with your current project state.\nIf you encounter issues, try running renv::repair() to fix inconsistencies.\n\nBy following these steps, both the project creator and the new user ensure a consistent, reproducible environment for the R project.\n\nI hope this renv project guide proves valuable in streamlining your R project workflows and enhancing collaboration within your team. As someone who’s grappled with dependency management headaches, I’ve found that testing these renv practices on personal projects before introducing them to the team can save a lot of collective frustration. Remember, using renv isn’t just about managing packages - it’s about creating a shared, reproducible environment that speaks to the core of collaborative data science.\nWhen working with renv, think of your renv.lock file as a crucial piece of documentation: it tells the story of your project’s exact environment. Just as you’d write clear git commit messages (not just “updated stuff” but “feat: added tidymodels for ML pipeline”), be intentional about when and why you update your lockfile. A well-maintained renv setup can be as informative as well-commented code!\nThis guide is, of course, a work in progress. As I explore more advanced renv features or discover new best practices in R project management, I’ll update this post accordingly. If you’ve found clever ways to use renv in your data science projects or have tips for smoother collaboration using these tools, I’m all ears!\nShare your insights at kylegrealis@icloud.com. Together, we can make our R projects more robust, reproducible, and ready for collaboration!\nHappy coding!\n~Kyle"
+  },
+  {
+    "objectID": "blog/posts/2024-02-15-how-to-scrape-google-scholar.html",
+    "href": "blog/posts/2024-02-15-how-to-scrape-google-scholar.html",
+    "title": "How to scrape Google Scholar using {httr2}",
+    "section": "",
+    "text": "Intro\nThis is a walkthrough on webscraping Google Scholar using SerpApi. This guide will show how to obtain a free API key allowing you to gather author publications and other information from Google Scholar. We’ll also go over how to securely store the API key in a .env file and how to access the key from the .env file.\n\n\n\nPrerequisites\nNavigate to the SerpApi website and register for a free account. You can sign in using your email or GitHub. After you register and confirm your email address, you will receive a secret key located towards the bottom of the screen.\n\n\n\nSerpApi key\n\n\nCreate a .env file in your project repo. You’ll want to immediately add that to your .gitignore file before you even commit the .env file to your repo. You do not want to make the mistake of scripting your secret key into your files or forget to do it later. In the .env file, add the following line:\n# my google scholar api key\nGOOGLE_KEY=\"&lt;your_secret_key_provided_when_you_registered&gt;\"\n\n\n\n\n\n\n\nNote\n\n\n\nEnd your .env file with a newline. This will save you a minor warning later on.\n\n\nNow you should save the file and commit it to your project repo.\n\n** Stay tuned… coming back with more! **"
+  },
+  {
+    "objectID": "apps/index.html",
+    "href": "apps/index.html",
+    "title": "Web Applications",
+    "section": "",
+    "text": "PowerViz\nIntroducing PowerViz, an engaging Shiny app designed to bring power calculations to life! Originally crafted as a handy tool for a clinical trials class presentation, it has evolved into a comprehensive web application due to overwhelming positive feedback.\nPowerViz was born out of a need to illustrate the impact of sample size and effect size on power calculations. It’s a testament to the adage that necessity is the mother of invention. Built on the robust pwr R package, PowerViz offers an interactive platform where users can manipulate variables such as significance level, effect size, and sample size or proportion.\nBut PowerViz is more than just a tool; it’s an immersive learning experience. As you interact with the plots and adjust the inputs, you receive real-time feedback, providing valuable insights into the dynamics of power calculations. Whether you’re looking to enhance your learning or in the throes of designing a study, PowerViz is your go-to resource. Dive in and experience the fun side of statistics!\n\nTry it!\n\n\n\n\n\n\n\n\n\nEpiMatch\nEpiMatch is your indispensable partner for case-control matching and it’s now available as a Shiny web application. This tool is designed to streamline the matching process, strategically minimizing biases and saving you precious time. Case-control matching is a critical technique used in epidemiological studies to identify and analyze factors that may contribute to a medical condition or disease.\nEpiMatch empowers you to upload your own data and engage with a sophisticated matching algorithm, tailored to your specific criteria. While the tool comes with comprehensive instructions on its main page, it does require a touch of preprocessing before use.\nAfter running through five matching iterations, EpiMatch presents you with the results from the iteration that yielded the highest number of matched cases to controls. And the best part? Every table is downloadable, ensuring no data is lost, even for those individuals (cases and controls) that were not successfully matched.\nSo why wait? Dive into EpiMatch and experience the future of case-control matching!\n\nTry it!"
+  },
+  {
+    "objectID": "about/index.html",
+    "href": "about/index.html",
+    "title": "Kyle Grealis",
+    "section": "",
+    "text": "I’m a Biostatistician and Lead Data Analyst at the University of Miami. I spent nearly 20 years as a respiratory therapist before discovering the world of data science and its importance on healthcare. Attention to detail is as critical a skill in bedside care as it is in data analysis.\nI’ve been fortunate to work with some great physicians and researchers in the field of pulmonary medicine. Since the COVID-19 pandemic, I have transitioned to the Department of Public Health Sciences at the University of Miami. Currently, we are developing machine learning algorithms to predict individual relapse in those affected by the opioid epidemic.\nI’m excited about data science and the potential it has to improve healthcare and outcomes. This website is a collection of my work: R packages & web applications that I’ve developed to improve my day-to-day processes and contribute to the open source community. Let’s come together to grow the fields of data science and healthcare."
+  },
+  {
+    "objectID": "about/index.html#hey-there-im-kyle-grealis",
+    "href": "about/index.html#hey-there-im-kyle-grealis",
+    "title": "Kyle Grealis",
+    "section": "",
+    "text": "I’m a Biostatistician and Lead Data Analyst at the University of Miami. I spent nearly 20 years as a respiratory therapist before discovering the world of data science and its importance on healthcare. Attention to detail is as critical a skill in bedside care as it is in data analysis.\nI’ve been fortunate to work with some great physicians and researchers in the field of pulmonary medicine. Since the COVID-19 pandemic, I have transitioned to the Department of Public Health Sciences at the University of Miami. Currently, we are developing machine learning algorithms to predict individual relapse in those affected by the opioid epidemic.\nI’m excited about data science and the potential it has to improve healthcare and outcomes. This website is a collection of my work: R packages & web applications that I’ve developed to improve my day-to-day processes and contribute to the open source community. Let’s come together to grow the fields of data science and healthcare."
+  },
+  {
+    "objectID": "r-packages/index.html",
+    "href": "r-packages/index.html",
+    "title": "R Packages",
+    "section": "",
+    "text": "froggeR\nfroggeR is an R package designed to streamline the creation and management of Quarto projects. It provides a suite of tools to automate setup, ensure consistency, and enhance collaboration in data science workflows.\n\nLeap ahead in your data science journey with froggeR! Streamline Quarto workflows, create structured projects, and enhance collaboration with ease. 🐸\n\nfroggeR simplifies project setup so you can focus on what matters:\n\nEfficiency: Minimize setup time, maximize analysis time\nConsistency: Uniform styling and structure across all your projects\nReliability: Prevent common setup issues before they occur\nSecurity: Robust .gitignore settings for enhanced data protection\nCollaboration: Structured documentation for seamless team onboarding\nCustomization: Easy-to-use tools for tailoring project aesthetics\nReproducibility: Ensure consistent environments across team members\n\n\nGet it now!\n\n\n\n\n\n\n\n\n\nnascaR.data\nnascaR.data provides historical race results from NASCAR’s top three series: Cup (1949-present), Xfinity (1982-present), and Trucks (1995-present). Explore driver, team, and manufacturer performance in a race-by-race, season, or career format. This data has been expertly curated and scraped with permission from DriverAverages.com.\n\nGet it now!\n\n\n\n\n\n\n\n\n\nrUM\nThis is a collection of R things from your friends at UM (The University of Miami).\nrUM includes:\n\nA research project template. It creates a new RStudio project that has your choice of an analysis.qmd Quarto file or analysis.Rmd R markdown file with tidyverse and conflicted.\nQuarto and R Markdown templates which include they YAML header and start up blocks that load the tidyverse and conflicted packages.\n💥 NEW in Version 2.0.0 (Overproof Rum) 💥 rUM now can make a package project that includes a paper outline as a vignette. rUM can now add an example table and figure to it’s paper shell.\n\n\nGet it now!"
+  },
+  {
+    "objectID": "blog/posts/2024-03-04-creating-quarto-hero.html",
+    "href": "blog/posts/2024-03-04-creating-quarto-hero.html",
+    "title": "Creating a Quarto website hero panel",
+    "section": "",
+    "text": "Let’s explore creating a hero panel in Quarto using some raw HTML code and SCSS styling tweaks."
+  },
+  {
+    "objectID": "blog/posts/2024-03-04-creating-quarto-hero.html#what-is-a-hero-panel",
+    "href": "blog/posts/2024-03-04-creating-quarto-hero.html#what-is-a-hero-panel",
+    "title": "Creating a Quarto website hero panel",
+    "section": "What is a hero panel?",
+    "text": "What is a hero panel?\nWe’ve all seen them, but may not have known what to call them. They’re the image that sits usually at the top of a home page. They’re designed to immediately draw your eyes to purpose and main message of the site. Hero panels, also referred to as “hero sections” or “hero images”, have evolved from the newspaper printing concept of “above the fold”. When you see a newspaper, you’re immediately drawn to what the editors intended for you to see first: a bold headline and image. The hope is that it compels you to pick it up and read on.\nIn web design, the hero panel is situated “above the fold”, but instead, this format requires our content to be visible without scrolling. We’re going to create a hero panel in a Quarto HTML document. We’ll also use some simple HTML create the initial layout, and then write some SCSS to style our panel and place the text where we want.\n\n\n\n\n\n\nIf you’re interested in learning more about HTML and CSS, a resource that I used and still often reference is W3 Schools. They have free content consisting of bite-sized tutorials to quickly get your feet wet."
+  },
+  {
+    "objectID": "blog/posts/2024-03-04-creating-quarto-hero.html#lets-build",
+    "href": "blog/posts/2024-03-04-creating-quarto-hero.html#lets-build",
+    "title": "Creating a Quarto website hero panel",
+    "section": "Let’s build!",
+    "text": "Let’s build!\n\nThis is the hero panel that we will be recreating. Now, I have to give the disclaimer that this is but one of a multitude of ways to achieve the same goal. For me, this was the easiest as it uses minimal HTML and CSS. I’m going to assume that you know what HTML elements and tags are. If you don’t, the short and sweet: elements are the Lego blocks used to build your site or document and tags are the instructions for the browser to know what the element is and where to put it. Tags are identified by their &lt;&gt; brackets surrounding things like &lt;h1&gt; or &lt;img&gt;.\n\nOne small package\nUsing the lorem package can quickly render content to help visualize your layout. Later, you can go back and add what will ultimately be final version. As you can see, it’s that Latin text that is composing the paragraphs below the hero panel. Let’s download it now:\n\ninstall.packages('lorem')\n\n\n\nTime for Quarto\nYou need to have Quarto installed. Download the latest version here if you need it. In RStudio, click File &gt;&gt; New File &gt;&gt; Quarto Document to create a new Quarto file. Select HTML, leave the document untitled, uncheck Editor: Use visual markdown editor, and lastly Create Empty Document.\n\n\n\nModify the YAML header\nLet’s make a few changes in the YAML header. To reproduce our example image, let’s remove the title so that we can place the hero image directly at the top of the document. If you’re using this tutorial for adding hero panel to your Quarto website, leave the title as that area will be occupied by the navigation bar. Adding embed-resources: true creates a standalone HTML file that incorporates necessary images, stylesheets, and JavaScript without relying on external files. This can increase accessibility of the file. Finally, we’re going to create layout-styles.scss for styling and positioning HTML elements, so let’s add that here.\n---\ntitle: \"\"\nformat: \n  html:\n    embed-resources: true\ntheme: layout-styles.scss\n---\n\n\nAdding raw HTML to Quarto\nAgain, for me, this was the simplest method to create a hero panel. Under the YAML, add in this HTML:\n---\ntitle: \"\"\nformat: \n  html:\n    embed-resources: true\ntheme: layout-styles.scss\n---\n\n&lt;!----- start hero panel --------&gt;\n\n```{=html}\n&lt;div class=\"hero-panel column-screen\"&gt;\n  &lt;img class=\"banner\" src=\"banner.jpg\" alt=\"Banner Image\"&gt;\n  &lt;div class=\"banner-text\"&gt;\n    &lt;h1&gt;Learning Quarto Layout Tricks&lt;/h1&gt;\n    &lt;h3&gt;This is the hero panel&lt;/h3&gt;\n  &lt;/div&gt;\n&lt;/div&gt;\n```\n\n&lt;!----- end hero panel ----------&gt;\n\n\nBreaking this down, a div element is a container that holds something. Adding one or more classes to a div helps to “find” this element when we add some styles to it. The div class=\"hero-panel column-screen\" is our main container. Within that div, you can see our img and another div holding our text in the h1 and h3 elements. A cool trick that I learned was setting class=\"column-screen\" in Quarto allows the div to occupy the entire viewport! That’s great because it helps make our styling that much easier.\n\n\nStyle it out\nWe just modified the YAML header by pointing to our stylesheet, layout-styles.scss. We’re going to use a SCSS file as opposed to CSS because it will give you a little more freedom later on in your project to write your styling to be more readable, if nothing else.\nCreate layout-styles.scss and let’s add some content. When we write the styles, we can format it in much the same way that we described the aspect of container: we can format the SCSS so that it gives the appearance that our styles are “contained” within other parts of the code. Here, let me show you what I mean:\n// Set up the hero panel\n.hero-panel {\n  // This is required. Think of it like a family unit where they are \"relative\"s\n  position: relative;\n  \n  img.banner {\n    width: 100%;\n    height: 350px;\n  }\n  \n  .banner-text {\n    position: absolute;\n    left: 5%;\n    bottom: 20%;\n    color: white;\n    font-weight: bold;\n  }\n}\nOur main container for our hero panel’s content lives inside the container that we gave the class hero-panel when we wrote the raw HTML. Now if you look at the SCSS that we added, img.banner is written inside of the {} braces for .hero-panel. This is “nesting” where one element’s CSS code can be read by human eyes as existing within another element. In our case, you’ll notice that both img.banner and banner-text are nested inside of .hero-panel.\n\n\n\n\n\n\nTwo quick things: you can identify a class that was written in HTML within the SCSS (or CSS) code because they’ll start with a . like in .hero-panel. Also, img.banner is an image (img) with the class of banner… put it together and you have img.banner for the SCSS.\n\n\n\nThe most difficult concept for me to initially grasp was this idea of position: relative; versus position: absolute;. I bet there will be much more technical and better ways of explaining this talking about the document flow and whatnot, but our main container, .hero-panel has “child” elements inside that we’re using as well. To be less technical about it, what we’re concerned with is that its elements are “related” to it, so we’ll give .hero-panel the position: relative.\nThere are only a few children within our parent container: the image and some text. Referring back to the HTML that we wrote and armed with the understanding that using proper indentation can help visually group elements for readability, our text container was given the class banner-text. Adding the . for our SCSS now, we’re going to give .banner-text the position: absolute. Why? Changing its position to absolute can be thought of this way: a parent can pick up a child and absolutely put that child where they want. For us, we want parent (hero-panel) to move its child (banner-text) where it wants to put it…ugh, where we want to put it. Gosh, I hope that made sense.\nWe’re going to move all of the text inside banner-text starting from the left and moving to the middle 5%. I recommend using percentages as opposed to pixels (px) because this could help when your page is rendered on different size screens. I’m sure now you can guess that bottom: 20%; moves the position of the text elements up 20% from the bottom. You can also use right and top for positioning elements absolutely too, but we just don’t use them that way in our example.\nThe final part is that we want our text to have the color: white; and we want it to stand out a little more, so let’s make font-weight: bold;.\n\n\nIs that it?!\nYou can complete the look by adding a H2 header (using two ## in Quarto) for “Words in Latin…”. Then add a r code block with lorem::ipsum(paragraphs = 3) to fill in the rest of the space.\nViola! That should do it. But be sure to look for other ways to add more styling to your text or image for the hero panel. You can add shadowing effects to the text, you can make the image appear a little darker, or you can even blur the background image if that fits the idea you have. There are endless possibilities and I’m constantly learning and improving.\nTo be honest, I hope that I reread this post in a few months and immediately want to rewrite this to be even clearer or explained better. For now, this is where I am and I hope I was able to share something with you.\nThank you for your time and check back soon!\n\nShare your insights at kylegrealis@icloud.com. Together, we can make our R projects more robust, reproducible, and ready for collaboration!\nHappy coding!\n~Kyle"
+  },
+  {
     "objectID": "blog/posts/2025-04-14-github-actions-email.html",
     "href": "blog/posts/2025-04-14-github-actions-email.html",
     "title": "Automating a GitHub Actions status email",
@@ -208,41 +236,6 @@
     "title": "Automating a GitHub Actions status email",
     "section": "Conclusion",
     "text": "Conclusion\nGitHub Actions can really enhance your data science workflow by offloading manual tasks to action-specific or chronological jobs. Integrating them is quite easy and only requires about 30 minutes of reading and testing before you will be able to adapt this simple example to meet your needs.\nShare your insights at kylegrealis@icloud.com. Together, we can make our R projects more robust, reproducible, and ready for collaboration!\nHappy coding!\n~Kyle"
-  },
-  {
-    "objectID": "blog/index.html",
-    "href": "blog/index.html",
-    "title": "My Blog",
-    "section": "",
-    "text": "UPDATE: Collaborative Git Workflow\n\n\n\nData science\n\n\nR\n\n\nGitHub\n\n\n\n\n\n\n\nKyle Grealis\n\n\nApr 17, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAutomating a GitHub Actions status email\n\n\n\nData science\n\n\nR\n\n\nGitHub\n\n\n\n\n\n\n\nKyle Grealis\n\n\nApr 14, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nrenv Project Setup and Sharing Guide\n\n\n\nData science\n\n\nR\n\n\nrenv\n\n\n\n\n\n\n\nKyle Grealis\n\n\nAug 19, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nQuick git for beginners… yeah, that’s me!\n\n\n\nData science\n\n\nR\n\n\ngit\n\n\n\n\n\n\n\nKyle Grealis\n\n\nMay 22, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSetting Up a Python or R Project with Docker\n\n\n\nPython\n\n\nR\n\n\nDocker\n\n\nData science\n\n\n\n\n\n\n\nKyle Grealis\n\n\nMay 14, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMachine Learning in Python - KNN\n\n\n\nPython\n\n\nQuarto\n\n\nMachine Learning\n\n\n\n\n\n\n\nKyle Grealis\n\n\nApr 19, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCreating a Quarto website hero panel\n\n\n\nR\n\n\nQuarto\n\n\nSCSS\n\n\n\n\n\n\n\nKyle Grealis\n\n\nMar 4, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHow to scrape Google Scholar using {httr2}\n\n\n\nR\n\n\nhttr2\n\n\nwebscraping\n\n\n\n\n\n\n\nKyle Grealis\n\n\nFeb 15, 2024\n\n\n\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "about/index.html",
-    "href": "about/index.html",
-    "title": "Kyle Grealis",
-    "section": "",
-    "text": "I’m a Biostatistician and Lead Data Analyst at the University of Miami. I spent nearly 20 years as a respiratory therapist before discovering the world of data science and its importance on healthcare. Attention to detail is as critical a skill in bedside care as it is in data analysis.\nI’ve been fortunate to work with some great physicians and researchers in the field of pulmonary medicine. Since the COVID-19 pandemic, I have transitioned to the Department of Public Health Sciences at the University of Miami. Currently, we are developing machine learning algorithms to predict individual relapse in those affected by the opioid epidemic.\nI’m excited about data science and the potential it has to improve healthcare and outcomes. This website is a collection of my work: R packages & web applications that I’ve developed to improve my day-to-day processes and contribute to the open source community. Let’s come together to grow the fields of data science and healthcare."
-  },
-  {
-    "objectID": "about/index.html#hey-there-im-kyle-grealis",
-    "href": "about/index.html#hey-there-im-kyle-grealis",
-    "title": "Kyle Grealis",
-    "section": "",
-    "text": "I’m a Biostatistician and Lead Data Analyst at the University of Miami. I spent nearly 20 years as a respiratory therapist before discovering the world of data science and its importance on healthcare. Attention to detail is as critical a skill in bedside care as it is in data analysis.\nI’ve been fortunate to work with some great physicians and researchers in the field of pulmonary medicine. Since the COVID-19 pandemic, I have transitioned to the Department of Public Health Sciences at the University of Miami. Currently, we are developing machine learning algorithms to predict individual relapse in those affected by the opioid epidemic.\nI’m excited about data science and the potential it has to improve healthcare and outcomes. This website is a collection of my work: R packages & web applications that I’ve developed to improve my day-to-day processes and contribute to the open source community. Let’s come together to grow the fields of data science and healthcare."
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "The Azimuth Project",
-    "section": "",
-    "text": "An azimuth is the angle of compass direction. An azimuth demands you know where you’re going, you have intentional movement in your journey. My journey in creating the Azimuth Project is not one singular project. My career is the Azimuth Project. My direction is forward. Our paces may differ. Like entering into realms of uncharted territory, I cannot foresee how each step will feel or how sure-footed progress will be. I do anticipate setbacks, restarts, and – yeah – at times questioning if it’s worth the effort.\nThose feelings are natural and I am here to challenge myself and to be challenged. Here and now is where I plot my course, set my way-points, and shoot my azimuth. Here is where I document those steps."
-  },
-  {
-    "objectID": "index.html#the-azimuth-project",
-    "href": "index.html#the-azimuth-project",
-    "title": "The Azimuth Project",
-    "section": "",
-    "text": "An azimuth is the angle of compass direction. An azimuth demands you know where you’re going, you have intentional movement in your journey. My journey in creating the Azimuth Project is not one singular project. My career is the Azimuth Project. My direction is forward. Our paces may differ. Like entering into realms of uncharted territory, I cannot foresee how each step will feel or how sure-footed progress will be. I do anticipate setbacks, restarts, and – yeah – at times questioning if it’s worth the effort.\nThose feelings are natural and I am here to challenge myself and to be challenged. Here and now is where I plot my course, set my way-points, and shoot my azimuth. Here is where I document those steps."
   },
   {
     "objectID": "blog/posts/2024-05-14-using-docker-python-r.html",
@@ -294,73 +287,185 @@
     "text": "Step 6: If Building a project in R\n\nCreate a Dockerfile\n\nDocker Base Image: Instead of using a Python base image, you’d use an R base image. For example, you might use FROM r-base:4.1.0 to use R version 4.1.0.\nInstalling Packages: Instead of using a requirements.txt file and pip install, you’d install R packages using the install.packages() function in R. You can do this directly in your Dockerfile. For example:\n\nRUN R -e \"install.packages(c('dplyr', 'ggplot2'), repos='http://cran.rstudio.com/')\"\n\nRunning Your Script: Instead of running a Python script, you’d run an R script. For example:\n\nCMD [\"Rscript\", \"your_script.R\"]\nHere’s what a full Dockerfile might look like for an R project:\n# Use an official R runtime as a parent image\nFROM r-base:4.4.0\n\n# Set the working directory in the container to /app\nWORKDIR /app\n\n# Add the current directory contents into the container at /app\nADD . /app\n\n# Install any needed packages\nRUN R -e \"install.packages(c('dplyr', 'ggplot2'), repos='http://cran.rstudio.com/')\"\n\n# Run your_script.R when the container launches\nCMD [\"Rscript\", \"your_script.R\"]\nAs with the Python example, if you have multiple R scripts that need to be run in a specific order, you can create a main R script that sources and runs your other scripts in the necessary order, and call that script in the CMD line.\nShare your insights at kylegrealis@icloud.com. Together, we can make our R projects more robust, reproducible, and ready for collaboration!\nHappy coding!\n~Kyle"
   },
   {
-    "objectID": "blog/posts/2024-08-19-renv-project-sharing-guide.html#how-this-guide-can-be-helpful",
-    "href": "blog/posts/2024-08-19-renv-project-sharing-guide.html#how-this-guide-can-be-helpful",
-    "title": "renv Project Setup and Sharing Guide",
-    "section": "How this guide can be helpful",
-    "text": "How this guide can be helpful\n\n\n\n\n\n\nWhile this guide was initially crafted for my team working on machine learning projects, the principles and steps outlined here are broadly applicable to any R-based data science project. Whether you’re using RStudio, Positron, or another IDE, you may need to slightly adapt these instructions to fit your specific setup. The core concepts, however, remain the same across environments. 😊\n\n\n\n\nIn the ever-evolving landscape of data science and machine learning, maintaining reproducible environments is crucial yet often overlooked. This renv project guide aims to streamline collaboration and ensure consistency across different systems and team members. It’s not an exhaustive technical manual, nor does it delve into every possible scenario you might encounter. Instead, consider this a practical starting point, peppered with real-world tips I’ve gathered from navigating the choppy waters of project management and collaboration. My goal? To help you focus on what truly matters: unleashing your data science superpowers without getting bogged down by environment inconsistencies! Whether you’re a solo data explorer or part of a larger team, these steps will set you on the path to smoother, more reproducible R projects."
-  },
-  {
-    "objectID": "blog/posts/2024-08-19-renv-project-sharing-guide.html#project-structure",
-    "href": "blog/posts/2024-08-19-renv-project-sharing-guide.html#project-structure",
-    "title": "renv Project Setup and Sharing Guide",
-    "section": "Project Structure",
-    "text": "Project Structure\nproject_root/\n├── .Rproj.user/\n├── renv/\n│   ├── activate.R\n│   ├── library/\n│   ├── settings.json\n│   └── .gitignore\n├── scripts/\n│   ├── script1.R\n│   ├── script2.R\n│   ├── script3.R\n│   ├── script4.R\n│   └── script5.R\n├── .Rprofile\n├── .gitignore\n├── project_name.Rproj\n└── renv.lock"
-  },
-  {
-    "objectID": "blog/posts/2024-08-19-renv-project-sharing-guide.html#for-the-project-creator",
-    "href": "blog/posts/2024-08-19-renv-project-sharing-guide.html#for-the-project-creator",
-    "title": "renv Project Setup and Sharing Guide",
-    "section": "For the Project Creator",
-    "text": "For the Project Creator\n\nInitialize the project:\n\nCreate a new R project or navigate to an existing project directory.\nOpen the project in RStudio or Positron.\n\nSet up renv:\n\nRun install.packages(\"renv\") if not already installed.\nInitialize renv by running:\nrenv::init()\n\nDevelop your project:\n\nCreate your R scripts (in this case, 5 main scripts).\nUse renv::install(\"package_name\") to add new packages as needed.\n\nCapture the project state:\n\nAfter finalizing your scripts, run:\nrenv::snapshot()\nThis creates/updates the renv.lock file with your project’s dependencies.\n\nReview the lockfile:\n\nOpen renv.lock and ensure all necessary packages are included.\nIf any are missing, install them with renv::install() and run renv::snapshot() again.\n\nPrepare for sharing:\n\nEnsure your project directory contains:\n\nAll R scripts\n.Rproj file (not included if the project was created within Positron, so not needed)\nrenv.lock file\n.Rprofile file (if present)\nrenv/ directory\n\n\nShare the project:\n\nCompress the entire project directory.\nSend the compressed file to your collaborator.\n\n\n\nAlternative option\nIf you have been working on non-renv activated project while conducting exploratory data analysis (EDA) or just tinkering with machine learning preprocessing recipes and modeling types, you can activate renv after your project is in a steady state.\n\nSet up renv:\n\nRun install.packages(\"renv\") if not already installed.\nInitialize renv by running:\nrenv::init()\nThis will analyze your existing project and create an initial lockfile based on your current package usage. It examines the scripts you’ve written for the presence of any library() or require() calls and adds those packages.\n\nCapture the project state:\n\nAfter finalizing your scripts, run:\nrenv::snapshot()\n\nReview the lockfile:\n\nOpen renv.lock and ensure all necessary packages are included.\nNOTE: Using the package::function() method may cause renv::snapshot() to miss these packages.\nIf any are missing, install them with renv::install() and run renv::snapshot() again.\n\n\nProceed to share your project in its working, ready-to-share state."
-  },
-  {
-    "objectID": "blog/posts/2024-08-19-renv-project-sharing-guide.html#for-the-new-user",
-    "href": "blog/posts/2024-08-19-renv-project-sharing-guide.html#for-the-new-user",
-    "title": "renv Project Setup and Sharing Guide",
-    "section": "For the New User",
-    "text": "For the New User\n\nReceive and extract the project:\n\nReceive the compressed project directory from the creator.\nExtract it to a desired location on your machine.\n\nSet up R environment:\n\nInstall R and RStudio if not already installed.\nInstall renv by opening R/RStudio and running:\ninstall.packages(\"renv\")\n\nOpen the project:\n\nNavigate to the extracted project directory.\nDouble-click the .Rproj file to open the project in RStudio.\n\nRestore the project environment:\n\nIn the R console, run:\nrenv::restore()\nThis will install all necessary packages as specified in the renv.lock file.\n\nVerify the setup:\n\nTry running one of the scripts to ensure everything is working correctly.\n\nStart working:\n\nYou now have an exact replica of the original project environment.\nIf you need to add new packages, use renv::install() followed by renv::snapshot()."
-  },
-  {
-    "objectID": "blog/posts/2024-08-19-renv-project-sharing-guide.html#notes",
-    "href": "blog/posts/2024-08-19-renv-project-sharing-guide.html#notes",
-    "title": "renv Project Setup and Sharing Guide",
-    "section": "Notes",
-    "text": "Notes\n\nAlways use renv::install() instead of install.packages() when adding new packages to an renv project.\nRun renv::status() periodically to check if your lockfile is in sync with your current project state.\nIf you encounter issues, try running renv::repair() to fix inconsistencies.\n\nBy following these steps, both the project creator and the new user ensure a consistent, reproducible environment for the R project.\n\nI hope this renv project guide proves valuable in streamlining your R project workflows and enhancing collaboration within your team. As someone who’s grappled with dependency management headaches, I’ve found that testing these renv practices on personal projects before introducing them to the team can save a lot of collective frustration. Remember, using renv isn’t just about managing packages - it’s about creating a shared, reproducible environment that speaks to the core of collaborative data science.\nWhen working with renv, think of your renv.lock file as a crucial piece of documentation: it tells the story of your project’s exact environment. Just as you’d write clear git commit messages (not just “updated stuff” but “feat: added tidymodels for ML pipeline”), be intentional about when and why you update your lockfile. A well-maintained renv setup can be as informative as well-commented code!\nThis guide is, of course, a work in progress. As I explore more advanced renv features or discover new best practices in R project management, I’ll update this post accordingly. If you’ve found clever ways to use renv in your data science projects or have tips for smoother collaboration using these tools, I’m all ears!\nShare your insights at kylegrealis@icloud.com. Together, we can make our R projects more robust, reproducible, and ready for collaboration!\nHappy coding!\n~Kyle"
-  },
-  {
-    "objectID": "blog/posts/2024-02-15-how-to-scrape-google-scholar.html",
-    "href": "blog/posts/2024-02-15-how-to-scrape-google-scholar.html",
-    "title": "How to scrape Google Scholar using {httr2}",
+    "objectID": "blog/posts/2025-04-22-tailscale.html",
+    "href": "blog/posts/2025-04-22-tailscale.html",
+    "title": "Home Lab, part 1: Tailscale",
     "section": "",
-    "text": "Intro\nThis is a walkthrough on webscraping Google Scholar using SerpApi. This guide will show how to obtain a free API key allowing you to gather author publications and other information from Google Scholar. We’ll also go over how to securely store the API key in a .env file and how to access the key from the .env file.\n\n\n\nPrerequisites\nNavigate to the SerpApi website and register for a free account. You can sign in using your email or GitHub. After you register and confirm your email address, you will receive a secret key located towards the bottom of the screen.\n\n\n\nSerpApi key\n\n\nCreate a .env file in your project repo. You’ll want to immediately add that to your .gitignore file before you even commit the .env file to your repo. You do not want to make the mistake of scripting your secret key into your files or forget to do it later. In the .env file, add the following line:\n# my google scholar api key\nGOOGLE_KEY=\"&lt;your_secret_key_provided_when_you_registered&gt;\"\n\n\n\n\n\n\n\nNote\n\n\n\nEnd your .env file with a newline. This will save you a minor warning later on.\n\n\nNow you should save the file and commit it to your project repo.\n\n** Stay tuned… coming back with more! **"
+    "text": "Go check out The “Why?” to understand my intention of this whole self-hosting endeavor!"
   },
   {
-    "objectID": "blog/posts/2024-03-04-creating-quarto-hero.html",
-    "href": "blog/posts/2024-03-04-creating-quarto-hero.html",
-    "title": "Creating a Quarto website hero panel",
+    "objectID": "blog/posts/2025-04-22-tailscale.html#automatic-tailscale-exit-node-management-based-on-wi-fi-networks",
+    "href": "blog/posts/2025-04-22-tailscale.html#automatic-tailscale-exit-node-management-based-on-wi-fi-networks",
+    "title": "Home Lab, part 1: Tailscale",
+    "section": "Automatic Tailscale Exit Node Management Based on Wi-Fi Networks",
+    "text": "Automatic Tailscale Exit Node Management Based on Wi-Fi Networks\nThis documentation explains how to set up automatic switching of Tailscale exit node configurations based on which Wi-Fi network you’re connected to."
+  },
+  {
+    "objectID": "blog/posts/2025-04-22-tailscale.html#overview",
+    "href": "blog/posts/2025-04-22-tailscale.html#overview",
+    "title": "Home Lab, part 1: Tailscale",
+    "section": "Overview",
+    "text": "Overview\nWhen connecting to different Wi-Fi networks, you may want different Tailscale behaviors:\n\nOn trusted home networks: Disable Tailscale exit node (direct internet access)\nOn untrusted networks: Enable Tailscale exit node (route all traffic through your secure server)\n\nThis solution uses NetworkManager’s dispatcher scripts to automatically detect network changes and apply the appropriate Tailscale configuration."
+  },
+  {
+    "objectID": "blog/posts/2025-04-22-tailscale.html#component-1-tailscale-home-script",
+    "href": "blog/posts/2025-04-22-tailscale.html#component-1-tailscale-home-script",
+    "title": "Home Lab, part 1: Tailscale",
+    "section": "Component 1: Tailscale Home Script",
+    "text": "Component 1: Tailscale Home Script\nThe first component is a script that disables Tailscale exit node routing when on trusted networks:\n#!/usr/bin/env bash\n\n# tailscale-home.sh - Disable exit node routing\n# Usage: ./tailscale-home.sh\n\necho \"Disabling Tailscale exit node protection...\"\nsudo tailscale up --exit-node=\"\"\n\n# Verify the change\nSTATUS=$(tailscale status)\n\nif echo $STATUS | grep -q \"offers exit node\"; then\n    echo \"✅ Exit node protection disabled! Traffic now routes normally.\"\nelse\n    echo \"❌ Something went wrong. Please check tailscale status.\"\nfi\nThis script: 1. Runs the Tailscale command to disable exit node routing (--exit-node=\"\") 2. Checks if the change was successful 3. Provides feedback on the operation’s success"
+  },
+  {
+    "objectID": "blog/posts/2025-04-22-tailscale.html#component-2-tailscale-protect-script",
+    "href": "blog/posts/2025-04-22-tailscale.html#component-2-tailscale-protect-script",
+    "title": "Home Lab, part 1: Tailscale",
+    "section": "Component 2: Tailscale Protect Script",
+    "text": "Component 2: Tailscale Protect Script\nThe second component enables the exit node when on untrusted networks:\n#!/usr/bin/env bash\n\n# tailscale-protect.sh - Route all traffic through Pi5 exit node\n# Usage: ./tailscale-protect.sh\n\nPI5_IP=\"100.125.173.109\"\n\necho \"Enabling Tailscale exit node protection...\"\nsudo tailscale up --exit-node=$PI5_IP\n\n# Verify the change\nSTATUS=$(tailscale status)\n\nif echo $STATUS | grep -q \"; exit node;\"; then\n    echo \"✅ Exit node protection enabled! All traffic now routes through your Tailnet.\"\nelse\n    echo \"❌ Something went wrong. Please check tailscale status.\"\nfi\nThis script: 1. Sets the exit node to your Raspberry Pi 5’s Tailscale IP address 2. Verifies the change was successful 3. Provides feedback on the operation’s success"
+  },
+  {
+    "objectID": "blog/posts/2025-04-22-tailscale.html#component-3-networkmanager-dispatcher-script",
+    "href": "blog/posts/2025-04-22-tailscale.html#component-3-networkmanager-dispatcher-script",
+    "title": "Home Lab, part 1: Tailscale",
+    "section": "Component 3: NetworkManager Dispatcher Script",
+    "text": "Component 3: NetworkManager Dispatcher Script\nThe third component is a NetworkManager dispatcher script that automatically runs the appropriate script based on which network you’re connected to:\n#!/usr/bin/env bash\n# Save this as /etc/NetworkManager/dispatcher.d/99-tailscale-autoswitch\n\n# Make sure we have the required permissions\nif [ \"$(id -u)\" != \"0\" ]; then\n   echo \"This script must be run as root\" \n   exit 1\nfi\n\nINTERFACE=$1\nSTATUS=$2\n\n# Define known networks as array\nKNOWN_NETS=(\"Go_Canes\" \"Canes_guest\")\nHOME_SCRIPT=\"/home/kyle/tailscale-home.sh\"\nPROTECT_SCRIPT=\"/home/kyle/tailscale-protect.sh\"\nLOG_FILE=\"/var/log/tailscale-autoswitch.log\"\n\nlog() {\n    echo \"$(date): $*\" &gt;&gt; \"$LOG_FILE\"\n}\n\nlog \"Network change detected: Interface=$INTERFACE Status=$STATUS\"\n\n# Dynamically detect WiFi interface name\nWIFI_INTERFACE=$(nmcli -t -f DEVICE,TYPE device | grep \":wifi$\" | cut -d: -f1)\n\n# Only act on wifi connections that are activated\nif [ \"$STATUS\" = \"up\" ] && [ \"$INTERFACE\" = \"$WIFI_INTERFACE\" ]; then\n    # Get the current SSID\n    CURRENT_SSID=$(nmcli -t -f active,ssid dev wifi | grep '^yes' | cut -d: -f2)\n    log \"Connected to SSID: $CURRENT_SSID\"\n\n    # Initialize a flag to check if the network is known\n    KNOWN=false\n\n    for NETWORK in \"${KNOWN_NETS[@]}\"; do\n        if [ \"$CURRENT_SSID\" = \"$NETWORK\" ]; then\n            KNOWN=true\n            break\n        fi\n    done\n\n    if [ \"$KNOWN\" = true ]; then\n        log \"Home network detected: $CURRENT_SSID. Running home script...\"\n        bash \"$HOME_SCRIPT\" &gt;&gt; \"$LOG_FILE\" 2&gt;&1\n    else\n        log \"Unknown network detected: $CURRENT_SSID! Running protect script...\"\n        bash \"$PROTECT_SCRIPT\" &gt;&gt; \"$LOG_FILE\" 2&gt;&1\n    fi\nfi\n\nexit 0\n\nHow the Dispatcher Script Works\n\nPermissions Check: Makes sure the script runs as root\nNetwork Detection: Takes network interface and status from NetworkManager\nKnown Networks List: Maintains an array of trusted Wi-Fi SSIDs\nLogging Function: Creates a detailed log of all operations\nDynamic Interface Detection: Automatically finds the WiFi interface name rather than hardcoding it\nInterface Filtering: Only processes WiFi connections that are coming up\nSSID Extraction: Gets the SSID of the currently connected network\nNetwork Verification: Checks if the current network is in the trusted list\nScript Execution: Runs either the home script or protect script based on network trust\nLogging Results: Records the entire process for troubleshooting"
+  },
+  {
+    "objectID": "blog/posts/2025-04-22-tailscale.html#installation-steps",
+    "href": "blog/posts/2025-04-22-tailscale.html#installation-steps",
+    "title": "Home Lab, part 1: Tailscale",
+    "section": "Installation Steps",
+    "text": "Installation Steps\n\nCreate the home and protect scripts:\nnano ~/tailscale-home.sh\nnano ~/tailscale-protect.sh\nMake them executable:\nchmod +x ~/tailscale-home.sh\nchmod +x ~/tailscale-protect.sh\nCreate the NetworkManager dispatcher script:\nsudo nano /etc/NetworkManager/dispatcher.d/99-tailscale-autoswitch\nMake the dispatcher script executable:\nsudo chmod +x /etc/NetworkManager/dispatcher.d/99-tailscale-autoswitch\nCreate a log file:\nsudo touch /var/log/tailscale-autoswitch.log\nsudo chmod 666 /var/log/tailscale-autoswitch.log"
+  },
+  {
+    "objectID": "blog/posts/2025-04-22-tailscale.html#testing-and-monitoring",
+    "href": "blog/posts/2025-04-22-tailscale.html#testing-and-monitoring",
+    "title": "Home Lab, part 1: Tailscale",
+    "section": "Testing and Monitoring",
+    "text": "Testing and Monitoring\nYou can monitor the script’s operation by viewing the log file:\ntail -f /var/log/tailscale-autoswitch.log\nExample log output showing automatic switching between networks:\nMon Apr 21 22:58:43 CDT 2025: Network change detected: Interface=wlp0s20f3 Status=up\nMon Apr 21 22:58:43 CDT 2025: Connected to SSID: Go_Canes\nMon Apr 21 22:58:43 CDT 2025: Home network detected: Go_Canes. Running home script...\nDisabling Tailscale exit node protection...\n✅ Exit node protection disabled! Traffic now routes normally.\n\nMon Apr 21 23:03:34 CDT 2025: Network change detected: Interface=wlp0s20f3 Status=up\nMon Apr 21 23:03:34 CDT 2025: Connected to SSID: Alexa?s iPhone\nMon Apr 21 23:03:34 CDT 2025: Unknown network detected: Alexa?s iPhone! Running protect script...\nEnabling Tailscale exit node protection...\n✅ Exit node protection enabled! All traffic now routes through your Tailnet.\n\nMon Apr 21 23:04:00 CDT 2025: Network change detected: Interface=wlp0s20f3 Status=up\nMon Apr 21 23:04:00 CDT 2025: Connected to SSID: Go_Canes\nMon Apr 21 23:04:00 CDT 2025: Home network detected: Go_Canes. Running home script...\nDisabling Tailscale exit node protection...\n✅ Exit node protection disabled! Traffic now routes normally.\nThe log shows: - Network changes detected - Which SSID you’re connecting to - Whether the network is trusted or untrusted - Which script was executed - The result of the operation"
+  },
+  {
+    "objectID": "blog/posts/2025-04-22-tailscale.html#customization",
+    "href": "blog/posts/2025-04-22-tailscale.html#customization",
+    "title": "Home Lab, part 1: Tailscale",
+    "section": "Customization",
+    "text": "Customization\n\nAdd More Trusted Networks: Modify the KNOWN_NETS array to include additional trusted networks:\nKNOWN_NETS=(\"Go_Canes\" \"Canes_guest\" \"Work_WiFi\" \"Parents_Home\")\nLog Rotation: To prevent the log file from growing too large:\n# Add near the top of the script\nif [ -f \"$LOG_FILE\" ] && [ $(stat -c%s \"$LOG_FILE\") -gt 1048576 ]; then\n    mv \"$LOG_FILE\" \"$LOG_FILE.old\"\nfi\nExit Node Connectivity Check: Add to the protect script to check if your exit node is online:\n# Add to tailscale-protect.sh before enabling the exit node\nping -c 1 $PI5_IP &gt; /dev/null 2&gt;&1\nif [ $? -ne 0 ]; then\n    echo \"⚠️ Warning: Exit node appears to be offline!\"\nfi\nModify Log Location: Change the LOG_FILE variable to use a different log file location."
+  },
+  {
+    "objectID": "blog/posts/2025-04-22-tailscale.html#understanding-networkmanager-events",
+    "href": "blog/posts/2025-04-22-tailscale.html#understanding-networkmanager-events",
+    "title": "Home Lab, part 1: Tailscale",
+    "section": "Understanding NetworkManager Events",
+    "text": "Understanding NetworkManager Events\nNetworkManager triggers multiple events during a network connection:\n\nNetwork down event\nDHCP4 configuration (IPv4)\nInterface up event (this is when our script runs)\nDNS configuration\nDHCP6 configuration (IPv6)\n\nOur script specifically targets the “up” event to ensure the network is ready before applying Tailscale configurations."
+  },
+  {
+    "objectID": "blog/posts/2025-04-22-tailscale.html#why-dynamic-interface-detection-matters",
+    "href": "blog/posts/2025-04-22-tailscale.html#why-dynamic-interface-detection-matters",
+    "title": "Home Lab, part 1: Tailscale",
+    "section": "Why Dynamic Interface Detection Matters",
+    "text": "Why Dynamic Interface Detection Matters\nThe script uses dynamic interface detection instead of hardcoding the WiFi interface name. This future-proofs your setup because WiFi interface names can change when:\n\nYou replace or add network hardware\nYou upgrade your kernel or distribution\nYour system’s PCI enumeration changes\nYou connect an additional WiFi adapter (like a USB dongle)\n\nBy detecting the interface dynamically, the script will continue working even if these changes occur."
+  },
+  {
+    "objectID": "blog/posts/2025-04-22-tailscale.html#troubleshooting",
+    "href": "blog/posts/2025-04-22-tailscale.html#troubleshooting",
+    "title": "Home Lab, part 1: Tailscale",
+    "section": "Troubleshooting",
+    "text": "Troubleshooting\nIf the script isn’t working as expected:\n\nCheck the log file for errors:\ntail -f /var/log/tailscale-autoswitch.log\nVerify the script is executable:\nls -l /etc/NetworkManager/dispatcher.d/99-tailscale-autoswitch\nTest the scripts manually:\nsudo bash /home/kyle/tailscale-home.sh\nsudo bash /home/kyle/tailscale-protect.sh\nCheck your current WiFi interface name:\nnmcli device status | grep wifi\nTest interface detection:\nnmcli -t -f DEVICE,TYPE device | grep \":wifi$\" | cut -d: -f1\n\n\nShare your insights at kylegrealis@icloud.com. Together, we can make our R projects more robust, reproducible, and ready for collaboration!\nHappy coding!\n~Kyle"
+  },
+  {
+    "objectID": "blog/posts/2025-04-22-tailscale.html#additional-resources",
+    "href": "blog/posts/2025-04-22-tailscale.html#additional-resources",
+    "title": "Home Lab, part 1: Tailscale",
+    "section": "Additional Resources",
+    "text": "Additional Resources\n\ntailscale"
+  },
+  {
+    "objectID": "blog/posts/2024-04-19-KNN-in-python.html",
+    "href": "blog/posts/2024-04-19-KNN-in-python.html",
+    "title": "Machine Learning in Python - KNN",
     "section": "",
-    "text": "Let’s explore creating a hero panel in Quarto using some raw HTML code and SCSS styling tweaks."
+    "text": "In this post, I’m sharing the code that was created from following Kirill Eremenko and the SuperDataScience Team’s “Machine Learning A-Z” course on Udemy.\nThe prediction scenario is this: which demographic would social networking marketing ads affect best? We work for a car dealership and have data regarding consumers’ age and estimated salary. To where should marketing efforts be aimed as we try to predict which consumers will purchase our newest & best SUV model?\n\nEuclidean Distance between two points: \\(\\sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}\\)\nk-Nearest Neighbors (KNN) is machine learning technique used to classify a new data point to a nearby cluster. We will set up our algorithm to calculate the Euclidean distances from our new data point to existing data points. Then, using the predetermined k number of nearest neighbors (we’ll be using 5 neighbors), assign that new point to the closest cluster with at least three like \\(&gt;k/2\\) neighbors.\nTo think of it in really simple terms, all of our existing customers (points) are scattered in the \\((x, y)\\) space. Our new customer has \\(x\\) age and \\(y\\) salary, so we’ll plot this onto our existing grid. Then we draw circles around the new customer until we hit the closest existing point – that’s one “neighbor”. We repeat the process until we have our chosen number of 5. How many of the neighbors purchased the SUV and how many did not? Whichever group has more, that’s what we’re going to predict the new customer would do too!\n\n\n\nCourtesy of DataCamp"
   },
   {
-    "objectID": "blog/posts/2024-03-04-creating-quarto-hero.html#what-is-a-hero-panel",
-    "href": "blog/posts/2024-03-04-creating-quarto-hero.html#what-is-a-hero-panel",
-    "title": "Creating a Quarto website hero panel",
-    "section": "What is a hero panel?",
-    "text": "What is a hero panel?\nWe’ve all seen them, but may not have known what to call them. They’re the image that sits usually at the top of a home page. They’re designed to immediately draw your eyes to purpose and main message of the site. Hero panels, also referred to as “hero sections” or “hero images”, have evolved from the newspaper printing concept of “above the fold”. When you see a newspaper, you’re immediately drawn to what the editors intended for you to see first: a bold headline and image. The hope is that it compels you to pick it up and read on.\nIn web design, the hero panel is situated “above the fold”, but instead, this format requires our content to be visible without scrolling. We’re going to create a hero panel in a Quarto HTML document. We’ll also use some simple HTML create the initial layout, and then write some SCSS to style our panel and place the text where we want.\n\n\n\n\n\n\nIf you’re interested in learning more about HTML and CSS, a resource that I used and still often reference is W3 Schools. They have free content consisting of bite-sized tutorials to quickly get your feet wet."
-  },
-  {
-    "objectID": "blog/posts/2024-03-04-creating-quarto-hero.html#lets-build",
-    "href": "blog/posts/2024-03-04-creating-quarto-hero.html#lets-build",
-    "title": "Creating a Quarto website hero panel",
-    "section": "Let’s build!",
-    "text": "Let’s build!\n\nThis is the hero panel that we will be recreating. Now, I have to give the disclaimer that this is but one of a multitude of ways to achieve the same goal. For me, this was the easiest as it uses minimal HTML and CSS. I’m going to assume that you know what HTML elements and tags are. If you don’t, the short and sweet: elements are the Lego blocks used to build your site or document and tags are the instructions for the browser to know what the element is and where to put it. Tags are identified by their &lt;&gt; brackets surrounding things like &lt;h1&gt; or &lt;img&gt;.\n\nOne small package\nUsing the lorem package can quickly render content to help visualize your layout. Later, you can go back and add what will ultimately be final version. As you can see, it’s that Latin text that is composing the paragraphs below the hero panel. Let’s download it now:\n\ninstall.packages('lorem')\n\n\n\nTime for Quarto\nYou need to have Quarto installed. Download the latest version here if you need it. In RStudio, click File &gt;&gt; New File &gt;&gt; Quarto Document to create a new Quarto file. Select HTML, leave the document untitled, uncheck Editor: Use visual markdown editor, and lastly Create Empty Document.\n\n\n\nModify the YAML header\nLet’s make a few changes in the YAML header. To reproduce our example image, let’s remove the title so that we can place the hero image directly at the top of the document. If you’re using this tutorial for adding hero panel to your Quarto website, leave the title as that area will be occupied by the navigation bar. Adding embed-resources: true creates a standalone HTML file that incorporates necessary images, stylesheets, and JavaScript without relying on external files. This can increase accessibility of the file. Finally, we’re going to create layout-styles.scss for styling and positioning HTML elements, so let’s add that here.\n---\ntitle: \"\"\nformat: \n  html:\n    embed-resources: true\ntheme: layout-styles.scss\n---\n\n\nAdding raw HTML to Quarto\nAgain, for me, this was the simplest method to create a hero panel. Under the YAML, add in this HTML:\n---\ntitle: \"\"\nformat: \n  html:\n    embed-resources: true\ntheme: layout-styles.scss\n---\n\n&lt;!----- start hero panel --------&gt;\n\n```{=html}\n&lt;div class=\"hero-panel column-screen\"&gt;\n  &lt;img class=\"banner\" src=\"banner.jpg\" alt=\"Banner Image\"&gt;\n  &lt;div class=\"banner-text\"&gt;\n    &lt;h1&gt;Learning Quarto Layout Tricks&lt;/h1&gt;\n    &lt;h3&gt;This is the hero panel&lt;/h3&gt;\n  &lt;/div&gt;\n&lt;/div&gt;\n```\n\n&lt;!----- end hero panel ----------&gt;\n\n\nBreaking this down, a div element is a container that holds something. Adding one or more classes to a div helps to “find” this element when we add some styles to it. The div class=\"hero-panel column-screen\" is our main container. Within that div, you can see our img and another div holding our text in the h1 and h3 elements. A cool trick that I learned was setting class=\"column-screen\" in Quarto allows the div to occupy the entire viewport! That’s great because it helps make our styling that much easier.\n\n\nStyle it out\nWe just modified the YAML header by pointing to our stylesheet, layout-styles.scss. We’re going to use a SCSS file as opposed to CSS because it will give you a little more freedom later on in your project to write your styling to be more readable, if nothing else.\nCreate layout-styles.scss and let’s add some content. When we write the styles, we can format it in much the same way that we described the aspect of container: we can format the SCSS so that it gives the appearance that our styles are “contained” within other parts of the code. Here, let me show you what I mean:\n// Set up the hero panel\n.hero-panel {\n  // This is required. Think of it like a family unit where they are \"relative\"s\n  position: relative;\n  \n  img.banner {\n    width: 100%;\n    height: 350px;\n  }\n  \n  .banner-text {\n    position: absolute;\n    left: 5%;\n    bottom: 20%;\n    color: white;\n    font-weight: bold;\n  }\n}\nOur main container for our hero panel’s content lives inside the container that we gave the class hero-panel when we wrote the raw HTML. Now if you look at the SCSS that we added, img.banner is written inside of the {} braces for .hero-panel. This is “nesting” where one element’s CSS code can be read by human eyes as existing within another element. In our case, you’ll notice that both img.banner and banner-text are nested inside of .hero-panel.\n\n\n\n\n\n\nTwo quick things: you can identify a class that was written in HTML within the SCSS (or CSS) code because they’ll start with a . like in .hero-panel. Also, img.banner is an image (img) with the class of banner… put it together and you have img.banner for the SCSS.\n\n\n\nThe most difficult concept for me to initially grasp was this idea of position: relative; versus position: absolute;. I bet there will be much more technical and better ways of explaining this talking about the document flow and whatnot, but our main container, .hero-panel has “child” elements inside that we’re using as well. To be less technical about it, what we’re concerned with is that its elements are “related” to it, so we’ll give .hero-panel the position: relative.\nThere are only a few children within our parent container: the image and some text. Referring back to the HTML that we wrote and armed with the understanding that using proper indentation can help visually group elements for readability, our text container was given the class banner-text. Adding the . for our SCSS now, we’re going to give .banner-text the position: absolute. Why? Changing its position to absolute can be thought of this way: a parent can pick up a child and absolutely put that child where they want. For us, we want parent (hero-panel) to move its child (banner-text) where it wants to put it…ugh, where we want to put it. Gosh, I hope that made sense.\nWe’re going to move all of the text inside banner-text starting from the left and moving to the middle 5%. I recommend using percentages as opposed to pixels (px) because this could help when your page is rendered on different size screens. I’m sure now you can guess that bottom: 20%; moves the position of the text elements up 20% from the bottom. You can also use right and top for positioning elements absolutely too, but we just don’t use them that way in our example.\nThe final part is that we want our text to have the color: white; and we want it to stand out a little more, so let’s make font-weight: bold;.\n\n\nIs that it?!\nYou can complete the look by adding a H2 header (using two ## in Quarto) for “Words in Latin…”. Then add a r code block with lorem::ipsum(paragraphs = 3) to fill in the rest of the space.\nViola! That should do it. But be sure to look for other ways to add more styling to your text or image for the hero panel. You can add shadowing effects to the text, you can make the image appear a little darker, or you can even blur the background image if that fits the idea you have. There are endless possibilities and I’m constantly learning and improving.\nTo be honest, I hope that I reread this post in a few months and immediately want to rewrite this to be even clearer or explained better. For now, this is where I am and I hope I was able to share something with you.\nThank you for your time and check back soon!\n\nShare your insights at kylegrealis@icloud.com. Together, we can make our R projects more robust, reproducible, and ready for collaboration!\nHappy coding!\n~Kyle"
-  },
-  {
-    "objectID": "r-packages/index.html",
-    "href": "r-packages/index.html",
-    "title": "R Packages",
+    "objectID": "blog/posts/2024-04-19-KNN-in-python.html#what-is-knn",
+    "href": "blog/posts/2024-04-19-KNN-in-python.html#what-is-knn",
+    "title": "Machine Learning in Python - KNN",
     "section": "",
-    "text": "froggeR\nfroggeR is an R package designed to streamline the creation and management of Quarto projects. It provides a suite of tools to automate setup, ensure consistency, and enhance collaboration in data science workflows.\n\nLeap ahead in your data science journey with froggeR! Streamline Quarto workflows, create structured projects, and enhance collaboration with ease. 🐸\n\nfroggeR simplifies project setup so you can focus on what matters:\n\nEfficiency: Minimize setup time, maximize analysis time\nConsistency: Uniform styling and structure across all your projects\nReliability: Prevent common setup issues before they occur\nSecurity: Robust .gitignore settings for enhanced data protection\nCollaboration: Structured documentation for seamless team onboarding\nCustomization: Easy-to-use tools for tailoring project aesthetics\nReproducibility: Ensure consistent environments across team members\n\n\nGet it now!\n\n\n\n\n\n\n\n\n\nnascaR.data\nnascaR.data provides historical race results from NASCAR’s top three series: Cup (1949-present), Xfinity (1982-present), and Trucks (1995-present). Explore driver, team, and manufacturer performance in a race-by-race, season, or career format. This data has been expertly curated and scraped with permission from DriverAverages.com.\n\nGet it now!\n\n\n\n\n\n\n\n\n\nrUM\nThis is a collection of R things from your friends at UM (The University of Miami).\nrUM includes:\n\nA research project template. It creates a new RStudio project that has your choice of an analysis.qmd Quarto file or analysis.Rmd R markdown file with tidyverse and conflicted.\nQuarto and R Markdown templates which include they YAML header and start up blocks that load the tidyverse and conflicted packages.\n💥 NEW in Version 2.0.0 (Overproof Rum) 💥 rUM now can make a package project that includes a paper outline as a vignette. rUM can now add an example table and figure to it’s paper shell.\n\n\nGet it now!"
+    "text": "In this post, I’m sharing the code that was created from following Kirill Eremenko and the SuperDataScience Team’s “Machine Learning A-Z” course on Udemy.\nThe prediction scenario is this: which demographic would social networking marketing ads affect best? We work for a car dealership and have data regarding consumers’ age and estimated salary. To where should marketing efforts be aimed as we try to predict which consumers will purchase our newest & best SUV model?\n\nEuclidean Distance between two points: \\(\\sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}\\)\nk-Nearest Neighbors (KNN) is machine learning technique used to classify a new data point to a nearby cluster. We will set up our algorithm to calculate the Euclidean distances from our new data point to existing data points. Then, using the predetermined k number of nearest neighbors (we’ll be using 5 neighbors), assign that new point to the closest cluster with at least three like \\(&gt;k/2\\) neighbors.\nTo think of it in really simple terms, all of our existing customers (points) are scattered in the \\((x, y)\\) space. Our new customer has \\(x\\) age and \\(y\\) salary, so we’ll plot this onto our existing grid. Then we draw circles around the new customer until we hit the closest existing point – that’s one “neighbor”. We repeat the process until we have our chosen number of 5. How many of the neighbors purchased the SUV and how many did not? Whichever group has more, that’s what we’re going to predict the new customer would do too!\n\n\n\nCourtesy of DataCamp"
+  },
+  {
+    "objectID": "blog/posts/2024-04-19-KNN-in-python.html#import-libraries",
+    "href": "blog/posts/2024-04-19-KNN-in-python.html#import-libraries",
+    "title": "Machine Learning in Python - KNN",
+    "section": "Import libraries",
+    "text": "Import libraries\n\nimport numpy as np\nimport pandas as pd"
+  },
+  {
+    "objectID": "blog/posts/2024-04-19-KNN-in-python.html#import-dataset",
+    "href": "blog/posts/2024-04-19-KNN-in-python.html#import-dataset",
+    "title": "Machine Learning in Python - KNN",
+    "section": "Import dataset",
+    "text": "Import dataset\n\ndataset = pd.read_csv('data/Social_Network_Ads.csv')\nX = dataset.iloc[:, :-1].values\ny = dataset.iloc[:, -1].values"
+  },
+  {
+    "objectID": "blog/posts/2024-04-19-KNN-in-python.html#splitting-the-dataset-to-training-testing",
+    "href": "blog/posts/2024-04-19-KNN-in-python.html#splitting-the-dataset-to-training-testing",
+    "title": "Machine Learning in Python - KNN",
+    "section": "Splitting the dataset to training & testing",
+    "text": "Splitting the dataset to training & testing\n\nfrom sklearn.model_selection import train_test_split\nX_train, X_test, y_train, y_test = train_test_split(\n  X, y,\n  test_size=0.25,\n  random_state=0\n)"
+  },
+  {
+    "objectID": "blog/posts/2024-04-19-KNN-in-python.html#feature-scaling",
+    "href": "blog/posts/2024-04-19-KNN-in-python.html#feature-scaling",
+    "title": "Machine Learning in Python - KNN",
+    "section": "Feature scaling",
+    "text": "Feature scaling\n\nfrom sklearn.preprocessing import StandardScaler\nsc = StandardScaler()\nX_train = sc.fit_transform(X_train)\nX_test = sc.fit_transform(X_test)\n\n```\n# array([[-1.455..., -0.784...],\n#        [ 2.067...,  1.372...],\n#        [-0.253..., -0.309...],\n#        ...,\n#        [-0.253..., -0.309...],\n#        [ 2.067..., -1.113...],\n#        [-1.455..., -0.309...]])\n```"
+  },
+  {
+    "objectID": "blog/posts/2024-04-19-KNN-in-python.html#train-fit-the-knn-model",
+    "href": "blog/posts/2024-04-19-KNN-in-python.html#train-fit-the-knn-model",
+    "title": "Machine Learning in Python - KNN",
+    "section": "Train & fit the KNN model",
+    "text": "Train & fit the KNN model\n\n\n\n\n\n\nTip\n\n\n\nTo learn the more technical details of sklearn’s classes and functions, checkout the sklearn API Reference.\n\n\n\nfrom sklearn.neighbors import KNeighborsClassifier\nclassifier = KNeighborsClassifier(\n  n_neighbors=5,  # default\n  p=2,            # euclidean distance; default \n  metric='minkowski'\n)\n\n\nclassifier.fit(X_train, y_train)"
+  },
+  {
+    "objectID": "blog/posts/2024-04-19-KNN-in-python.html#predicting-a-new-result",
+    "href": "blog/posts/2024-04-19-KNN-in-python.html#predicting-a-new-result",
+    "title": "Machine Learning in Python - KNN",
+    "section": "Predicting a new result",
+    "text": "Predicting a new result\n30y/o $87k/yr – first observation of X_test\n\nperson = X_test[[0]]\nsingle_pred = classifier.predict(person)\nsingle_prob = classifier.predict_proba(person)\nprint('1=\"Yes\", 0=\"No\"\\n')\nprint(f'Single prediction for 30 y/o earning $87k/yr: {single_pred[0]} at a probability of {single_prob[0][0].round(3)}')\n\n```\n# 1=\"Yes\", 0=\"No\"\n#\n# Single prediction for 30 y/o earning $87k/yr: 0 at a \n# probability of 0.8\n```"
+  },
+  {
+    "objectID": "blog/posts/2024-04-19-KNN-in-python.html#predicting-the-test-set-results",
+    "href": "blog/posts/2024-04-19-KNN-in-python.html#predicting-the-test-set-results",
+    "title": "Machine Learning in Python - KNN",
+    "section": "Predicting the test set results",
+    "text": "Predicting the test set results\n\ny_pred = classifier.predict(X_test)"
+  },
+  {
+    "objectID": "blog/posts/2024-04-19-KNN-in-python.html#creating-the-confusion-matrix",
+    "href": "blog/posts/2024-04-19-KNN-in-python.html#creating-the-confusion-matrix",
+    "title": "Machine Learning in Python - KNN",
+    "section": "Creating the confusion matrix",
+    "text": "Creating the confusion matrix\n\nfrom sklearn.metrics import confusion_matrix, accuracy_score\nprint(confusion_matrix(y_test, y_pred))\nprint(f'Accuracy: {accuracy_score(y_test, y_pred)}')\n\n```\n# [[64  4]\n#  [ 3 29]]\n# Accuracy: 0.93\n```"
+  },
+  {
+    "objectID": "blog/posts/2024-04-19-KNN-in-python.html#visualizing-the-training-set-results",
+    "href": "blog/posts/2024-04-19-KNN-in-python.html#visualizing-the-training-set-results",
+    "title": "Machine Learning in Python - KNN",
+    "section": "Visualizing the training set results",
+    "text": "Visualizing the training set results\n\n\n\n\n\n\nWarning\n\n\n\nThese next two code chunks will take a while. The KNN algorithm is already compute-expensive and we’re adding to the heavy lifting by creating a grid of many values to be calculated. The final result is two plots with a visual mapping of our decision boundary and our training & predicted data points appearing as the dots within the field.\n\n\n\nimport matplotlib.pyplot as plt\nfrom matplotlib.colors import ListedColormap\n\nX_set, y_set = sc.inverse_transform(X_train), y_train\nX1, X2 = np.meshgrid(\n  np.arange(\n    start = X_set[:, 0].min() - 10, \n    stop = X_set[:, 0].max() + 10, \n    step = 0.25\n  ),\n  np.arange(\n    start = X_set[:, 1].min() - 1000, \n    stop = X_set[:, 1].max() + 1000, \n    step = 0.25\n  )\n)\nplt.contourf(\n  X1, X2, \n  classifier.predict(\n    sc.transform(np.array([X1.ravel(), X2.ravel()]).T)\n  ).reshape(X1.shape),\n  alpha = 0.75, \n  cmap = ListedColormap(('red', 'green'))\n)\n\nplt.xlim(X1.min(), X1.max())\nplt.ylim(X2.min(), X2.max())\n\nfor i, j in enumerate(np.unique(y_set)):\n  plt.scatter(\n    X_set[y_set == j, 0], \n    X_set[y_set == j, 1], \n    c = ListedColormap(('red', 'green'))(i), \n    label = j\n  )\n\nplt.title('KNN Regression (Training set)')\nplt.xlabel('Age')\nplt.ylabel('Estimated Salary')\nplt.legend()\nplt.show()\n\n\n\n\nKNN training set results"
+  },
+  {
+    "objectID": "blog/posts/2024-04-19-KNN-in-python.html#visualizing-the-test-set-results",
+    "href": "blog/posts/2024-04-19-KNN-in-python.html#visualizing-the-test-set-results",
+    "title": "Machine Learning in Python - KNN",
+    "section": "Visualizing the test set results",
+    "text": "Visualizing the test set results\n\nX_set, y_set = sc.inverse_transform(X_test), y_test\nX1, X2 = np.meshgrid(\n  np.arange(\n    start = X_set[:, 0].min() - 10, \n    stop = X_set[:, 0].max() + 10, \n    step = 0.25\n  ),\n  np.arange(\n    start = X_set[:, 1].min() - 1000, \n    stop = X_set[:, 1].max() + 1000, \n    step = 0.25\n  )\n)\nplt.contourf(\n  X1, X2, \n  classifier.predict(\n    sc.transform(np.array([X1.ravel(), X2.ravel()]).T)\n  ).reshape(X1.shape),\n  alpha = 0.75, \n  cmap = ListedColormap(('red', 'green'))\n)\n\nplt.xlim(X1.min(), X1.max())\nplt.ylim(X2.min(), X2.max())\n\nfor i, j in enumerate(np.unique(y_set)):\n    plt.scatter(\n      X_set[y_set == j, 0], \n      X_set[y_set == j, 1], \n      c = ListedColormap(('red', 'green'))(i), \n      label = j\n    )\n\nplt.title('KNN Regression (Test set)')\nplt.xlabel('Age')\nplt.ylabel('Estimated Salary')\nplt.legend()\nplt.show()\n\n\n\n\nKNN testing set results\n\n\nShare your insights at kylegrealis@icloud.com. Together, we can make our R projects more robust, reproducible, and ready for collaboration!\nHappy coding!\n~Kyle"
+  },
+  {
+    "objectID": "blog/index.html",
+    "href": "blog/index.html",
+    "title": "My Blog",
+    "section": "",
+    "text": "Home Lab, part 1: Tailscale\n\n\n\nhomelab\n\n\nselfhosting\n\n\nlinux\n\n\n\n\n\n\n\nKyle Grealis\n\n\nApr 22, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHome Lab, part 0: The “Why”?\n\n\n\nhomelab\n\n\nselfhosting\n\n\nlinux\n\n\n\n\n\n\n\nKyle Grealis\n\n\nApr 22, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nUPDATE: Collaborative Git Workflow\n\n\n\nData science\n\n\nR\n\n\nGitHub\n\n\n\n\n\n\n\nKyle Grealis\n\n\nApr 17, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAutomating a GitHub Actions status email\n\n\n\nData science\n\n\nR\n\n\nGitHub\n\n\n\n\n\n\n\nKyle Grealis\n\n\nApr 14, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nrenv Project Setup and Sharing Guide\n\n\n\nData science\n\n\nR\n\n\nrenv\n\n\n\n\n\n\n\nKyle Grealis\n\n\nAug 19, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nQuick git for beginners… yeah, that’s me!\n\n\n\nData science\n\n\nR\n\n\ngit\n\n\n\n\n\n\n\nKyle Grealis\n\n\nMay 22, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSetting Up a Python or R Project with Docker\n\n\n\nPython\n\n\nR\n\n\nDocker\n\n\nData science\n\n\n\n\n\n\n\nKyle Grealis\n\n\nMay 14, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMachine Learning in Python - KNN\n\n\n\nPython\n\n\nQuarto\n\n\nMachine Learning\n\n\n\n\n\n\n\nKyle Grealis\n\n\nApr 19, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCreating a Quarto website hero panel\n\n\n\nR\n\n\nQuarto\n\n\nSCSS\n\n\n\n\n\n\n\nKyle Grealis\n\n\nMar 4, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHow to scrape Google Scholar using {httr2}\n\n\n\nR\n\n\nhttr2\n\n\nwebscraping\n\n\n\n\n\n\n\nKyle Grealis\n\n\nFeb 15, 2024\n\n\n\n\n\n\n\n\nNo matching items"
   }
 ]
