@@ -1,67 +1,67 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://azimuth-project.tech/apps/index.html</loc>
-    <lastmod>2025-04-23T01:12:02.204Z</lastmod>
-  </url>
-  <url>
-    <loc>https://azimuth-project.tech/blog/posts/2024-04-19-KNN-in-python.html</loc>
-    <lastmod>2025-04-23T01:12:02.204Z</lastmod>
-  </url>
-  <url>
-    <loc>https://azimuth-project.tech/blog/posts/2024-05-22-beginner-git-team-workflow.html</loc>
-    <lastmod>2025-04-23T01:12:02.204Z</lastmod>
-  </url>
-  <url>
-    <loc>https://azimuth-project.tech/blog/posts/2025-04-17-github-teams.html</loc>
-    <lastmod>2025-04-23T01:12:02.204Z</lastmod>
-  </url>
-  <url>
-    <loc>https://azimuth-project.tech/blog/posts/2024-08-19-renv-project-sharing-guide.html</loc>
-    <lastmod>2025-04-23T01:12:02.204Z</lastmod>
-  </url>
-  <url>
-    <loc>https://azimuth-project.tech/blog/posts/2025-04-14-github-actions-email.html</loc>
-    <lastmod>2025-04-23T01:12:02.204Z</lastmod>
-  </url>
-  <url>
-    <loc>https://azimuth-project.tech/blog/index.html</loc>
-    <lastmod>2025-04-23T01:12:02.204Z</lastmod>
-  </url>
-  <url>
-    <loc>https://azimuth-project.tech/about/index.html</loc>
-    <lastmod>2025-04-23T01:12:02.203Z</lastmod>
+    <loc>https://azimuth-project.tech/nascar/dashboard.html</loc>
+    <lastmod>2025-07-08T16:51:06.993Z</lastmod>
   </url>
   <url>
     <loc>https://azimuth-project.tech/index.html</loc>
-    <lastmod>2025-04-23T01:12:02.381Z</lastmod>
+    <lastmod>2025-07-08T16:51:06.993Z</lastmod>
   </url>
   <url>
-    <loc>https://azimuth-project.tech/nascar/dashboard.html</loc>
-    <lastmod>2025-04-23T01:12:02.381Z</lastmod>
+    <loc>https://azimuth-project.tech/blog/index.html</loc>
+    <lastmod>2025-07-08T16:51:06.819Z</lastmod>
   </url>
   <url>
-    <loc>https://azimuth-project.tech/blog/posts/2024-05-14-using-docker-python-r.html</loc>
-    <lastmod>2025-04-23T01:12:02.204Z</lastmod>
-  </url>
-  <url>
-    <loc>https://azimuth-project.tech/blog/posts/2025-04-22-tailscale.html</loc>
-    <lastmod>2025-04-23T01:12:02.204Z</lastmod>
-  </url>
-  <url>
-    <loc>https://azimuth-project.tech/blog/posts/2025-04-22-the-why.html</loc>
-    <lastmod>2025-04-23T01:12:02.204Z</lastmod>
+    <loc>https://azimuth-project.tech/blog/posts/2024-08-19-renv-project-sharing-guide.html</loc>
+    <lastmod>2025-07-08T16:51:06.819Z</lastmod>
   </url>
   <url>
     <loc>https://azimuth-project.tech/blog/posts/2024-02-15-how-to-scrape-google-scholar.html</loc>
-    <lastmod>2025-04-23T01:12:02.204Z</lastmod>
+    <lastmod>2025-07-08T16:51:06.819Z</lastmod>
+  </url>
+  <url>
+    <loc>https://azimuth-project.tech/blog/posts/2025-04-22-tailscale.html</loc>
+    <lastmod>2025-07-08T16:51:06.820Z</lastmod>
+  </url>
+  <url>
+    <loc>https://azimuth-project.tech/blog/posts/2024-05-14-using-docker-python-r.html</loc>
+    <lastmod>2025-07-08T16:51:06.819Z</lastmod>
   </url>
   <url>
     <loc>https://azimuth-project.tech/blog/posts/2024-03-04-creating-quarto-hero.html</loc>
-    <lastmod>2025-04-23T01:12:02.204Z</lastmod>
+    <lastmod>2025-07-08T16:51:06.819Z</lastmod>
   </url>
   <url>
     <loc>https://azimuth-project.tech/r-packages/index.html</loc>
-    <lastmod>2025-04-23T01:12:02.381Z</lastmod>
+    <lastmod>2025-07-08T16:51:06.993Z</lastmod>
+  </url>
+  <url>
+    <loc>https://azimuth-project.tech/blog/posts/2024-05-22-beginner-git-team-workflow.html</loc>
+    <lastmod>2025-07-08T16:51:06.819Z</lastmod>
+  </url>
+  <url>
+    <loc>https://azimuth-project.tech/blog/posts/2025-04-17-github-teams.html</loc>
+    <lastmod>2025-07-08T16:51:06.820Z</lastmod>
+  </url>
+  <url>
+    <loc>https://azimuth-project.tech/blog/posts/2025-04-14-github-actions-email.html</loc>
+    <lastmod>2025-07-08T16:51:06.819Z</lastmod>
+  </url>
+  <url>
+    <loc>https://azimuth-project.tech/blog/posts/2024-04-19-KNN-in-python.html</loc>
+    <lastmod>2025-07-08T16:51:06.819Z</lastmod>
+  </url>
+  <url>
+    <loc>https://azimuth-project.tech/blog/posts/2025-04-22-the-why.html</loc>
+    <lastmod>2025-07-08T16:51:06.820Z</lastmod>
+  </url>
+  <url>
+    <loc>https://azimuth-project.tech/about/index.html</loc>
+    <lastmod>2025-07-08T16:51:06.819Z</lastmod>
+  </url>
+  <url>
+    <loc>https://azimuth-project.tech/apps/index.html</loc>
+    <lastmod>2025-07-08T16:51:06.819Z</lastmod>
   </url>
 </urlset>
