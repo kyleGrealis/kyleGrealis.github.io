@@ -24,8 +24,8 @@ website:
         href: r-packages/index.qmd
       - text: Apps
         href: apps/index.qmd
-      - text: NASCAR
-        href: nascar/dashboard.qmd
+      # - text: NASCAR
+      #   href: nascar/dashboard.qmd
       - text: Blog
         href: blog/index.qmd
       - text: UM Team
