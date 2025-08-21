@@ -233,16 +233,16 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "kyleGrealis.com",
+    "title": "Kyle Grealis",
     "section": "",
-    "text": "An azimuth is the angle of compass direction. An azimuth demands you know where you’re going, you have intentional movement in your journey. My journey in creating the Azimuth Project is not one singular project. My career is the Azimuth Project. My direction is forward. Our paces may differ. Like entering into realms of uncharted territory, I cannot foresee how each step will feel or how sure-footed progress will be. I do anticipate setbacks, restarts, and – yeah – at times questioning if it’s worth the effort.\nThose feelings are natural and I am here to challenge myself and to be challenged. Here and now is where I plot my course, set my way-points, and shoot my azimuth. Here is where I document those steps."
+    "text": "I’m a Biostatistician and Lead Data Analyst at the University of Miami. After nearly 20 years as a respiratory therapist, I discovered data science and its potential to transform healthcare. The attention to detail that’s essential in bedside care translates directly to data analysis.\nI’ve worked with physicians and researchers in pulmonary medicine, and since COVID-19, I’ve transitioned to the Department of Public Health Sciences. Currently, we’re developing machine learning algorithms to predict individual relapse in those affected by the opioid epidemic.\nI’m passionate about open source software and have authored the {froggeR} and {nascaR.data} R packages, co-authored {rUM}, and contributed to {tidyREDCap} and other packages. This website showcases my R packages and web applications that streamline workflows and contribute to the community.\nWhen I’m not analyzing data, you’ll find me following track & field, running, or tinkering with Linux systems."
   },
   {
-    "objectID": "index.html#the-azimuth-project",
-    "href": "index.html#the-azimuth-project",
-    "title": "kyleGrealis.com",
+    "objectID": "index.html#hey-there-im-kyle-grealis",
+    "href": "index.html#hey-there-im-kyle-grealis",
+    "title": "Kyle Grealis",
     "section": "",
-    "text": "An azimuth is the angle of compass direction. An azimuth demands you know where you’re going, you have intentional movement in your journey. My journey in creating the Azimuth Project is not one singular project. My career is the Azimuth Project. My direction is forward. Our paces may differ. Like entering into realms of uncharted territory, I cannot foresee how each step will feel or how sure-footed progress will be. I do anticipate setbacks, restarts, and – yeah – at times questioning if it’s worth the effort.\nThose feelings are natural and I am here to challenge myself and to be challenged. Here and now is where I plot my course, set my way-points, and shoot my azimuth. Here is where I document those steps."
+    "text": "I’m a Biostatistician and Lead Data Analyst at the University of Miami. After nearly 20 years as a respiratory therapist, I discovered data science and its potential to transform healthcare. The attention to detail that’s essential in bedside care translates directly to data analysis.\nI’ve worked with physicians and researchers in pulmonary medicine, and since COVID-19, I’ve transitioned to the Department of Public Health Sciences. Currently, we’re developing machine learning algorithms to predict individual relapse in those affected by the opioid epidemic.\nI’m passionate about open source software and have authored the {froggeR} and {nascaR.data} R packages, co-authored {rUM}, and contributed to {tidyREDCap} and other packages. This website showcases my R packages and web applications that streamline workflows and contribute to the community.\nWhen I’m not analyzing data, you’ll find me following track & field, running, or tinkering with Linux systems."
   },
   {
     "objectID": "apps/index.html",
