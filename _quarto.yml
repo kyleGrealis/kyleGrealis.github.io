@@ -10,15 +10,15 @@ project:
 #   freeze: auto
 
 website:
-  title: "The Azimuth Project"
+  title: "kyleGrealis.com"
   favicon: /static/images/favicon.ico
-  # site-url: https://www.kyleGrealis.com/
+  site-url: https://www.kyleGrealis.com/about/
 
   navbar:
     right:
       - text: Home
-        href: index.qmd
-      - text: About
+      #   href: index.qmd
+      # - text: About
         href: about/index.qmd
       - text: R Packages
         href: r-packages/index.qmd
