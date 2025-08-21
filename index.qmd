@@ -25,10 +25,12 @@ toc: false
 ::: {#ppc}
 ## Hey there! 👋  I'm Kyle Grealis...
 
-I'm a Biostatistician and Lead Data Analyst at the University of Miami. I spent nearly 20 years as a respiratory therapist before discovering the world of data science and its importance on healthcare. Attention to detail is as critical a skill in bedside care as it is in data analysis. 
+I'm a Biostatistician and Lead Data Analyst at the University of Miami. After nearly 20 years as a respiratory therapist, I discovered data science and its potential to transform healthcare. The attention to detail that's essential in bedside care translates directly to data analysis.
 
-I've been fortunate to work with some great physicians and researchers in the field of pulmonary medicine. Since the COVID-19 pandemic, I have transitioned to the Department of Public Health Sciences at the University of Miami. Currently, we are developing machine learning algorithms to predict individual relapse in those affected by the opioid epidemic.
+I've worked with physicians and researchers in pulmonary medicine, and since COVID-19, I've transitioned to the Department of Public Health Sciences. Currently, we're developing machine learning algorithms to predict individual relapse in those affected by the opioid epidemic.
 
-I'm excited about data science and the potential it has to improve healthcare and outcomes. This website is a collection of my work: R packages & web applications that I've developed to improve my day-to-day processes and contribute to the open source community. Let's come together to grow the fields of data science and healthcare.
+I'm passionate about open source software and have authored the {froggeR} and {nascaR.data} R packages, co-authored {rUM}, and contributed to {tidyREDCap} and other packages. This website showcases my R packages and web applications that streamline workflows and contribute to the community.
+
+When I'm not analyzing data, you'll find me following track & field, running, or tinkering with Linux systems.
 :::
 
