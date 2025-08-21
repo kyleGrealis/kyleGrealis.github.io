@@ -1,19 +1,34 @@
 ---
-format: html
+title: "Kyle Grealis"
+image: ../static/images/kyle.jpg
+resources: ../static/files/KGrealis_cv.pdf
+about:
+  template: trestles
+  image-shape: rounded
+  image-width: 15em
+  links:
+    - text: "GitHub"
+      icon: github
+      href: https://github.com/kyleGrealis/
+      target: _blank
+    - text: "LinkedIn"
+      icon: linkedin
+      href: https://www.linkedin.com/in/kyle-grealis-044030180/
+      target: _blank
+    - text: "CV"
+      icon: file-text
+      href: /static/files/KGrealis_cv.pdf
+      target: _blank
 toc: false
 ---
 
-<style>
-  body {
-    background-image: url("static/images/nord-background.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
-  h2, p { color: #d1d1d1 }
-</style>
+::: {#ppc}
+## Hey there! 👋  I'm Kyle Grealis...
 
-## The Azimuth Project
+I'm a Biostatistician and Lead Data Analyst at the University of Miami. I spent nearly 20 years as a respiratory therapist before discovering the world of data science and its importance on healthcare. Attention to detail is as critical a skill in bedside care as it is in data analysis. 
 
-An azimuth is the angle of compass direction. An azimuth demands you know where you're going, you have intentional movement in your journey. My journey in creating the Azimuth Project is not one singular project. My career is the Azimuth Project. My direction is forward. Our paces may differ. Like entering into realms of uncharted territory, I cannot foresee how each step will feel or how sure-footed progress will be. I do anticipate setbacks, restarts, and -- yeah -- at times questioning if it's worth the effort.
+I've been fortunate to work with some great physicians and researchers in the field of pulmonary medicine. Since the COVID-19 pandemic, I have transitioned to the Department of Public Health Sciences at the University of Miami. Currently, we are developing machine learning algorithms to predict individual relapse in those affected by the opioid epidemic.
 
-Those feelings are natural and I am here to challenge myself and to be challenged. Here and now is where I plot my course, set my way-points, and shoot my azimuth. Here is where I document those steps.
+I'm excited about data science and the potential it has to improve healthcare and outcomes. This website is a collection of my work: R packages & web applications that I've developed to improve my day-to-day processes and contribute to the open source community. Let's come together to grow the fields of data science and healthcare.
+:::
+

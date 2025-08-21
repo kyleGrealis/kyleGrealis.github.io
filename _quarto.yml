@@ -17,9 +17,9 @@ website:
   navbar:
     right:
       - text: Home
-      #   href: index.qmd
+        href: index.qmd
       # - text: About
-        href: about/index.qmd
+      #   href: about/index.qmd
       - text: R Packages
         href: r-packages/index.qmd
       - text: Apps
