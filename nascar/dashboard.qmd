@@ -9,7 +9,7 @@ format:
       - dashboard.scss
     # nav-buttons: 
     #   - icon: laptop
-    #     href: https://azimuth-project.tech/nascaR.data/
+    #     href: https://www.kyleGrealis.com/nascaR.data/
     #   - icon: github
     #     href: https://github.com/kyleGrealis/nascaR.data/
     orientation: columns
