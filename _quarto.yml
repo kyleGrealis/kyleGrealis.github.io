@@ -20,6 +20,9 @@ website:
         href: index.qmd
       # - text: About
       #   href: about/index.qmd
+      - text: Publications
+        href: https://scholar.google.com/citations?hl=en&user=sdB7YAkAAAAJ
+        target: _blank
       - text: R Packages
         href: r-packages/index.qmd
       - text: Apps
