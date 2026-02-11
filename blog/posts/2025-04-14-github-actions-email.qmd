@@ -152,7 +152,7 @@ jobs:
 
             Job: ${{ github.job }}
             Status: ${{ job.status }}"
-          to: "kylegrealis@icloud.com"
+          to: "kylegrealis@proton.me"
           from: "From my GitHub Actions Bot"
 ```
 
@@ -220,7 +220,7 @@ to action-specific or chronological jobs. Integrating them is quite easy and onl
 requires about 30 minutes of reading and testing before you will be able to adapt this 
 simple example to meet your needs.
 
-Share your insights at [kylegrealis@icloud.com](mailto:kylegrealis@icloud.com). Together, we can make our R projects more robust, reproducible, and ready for collaboration!
+Share your insights at [kylegrealis@proton.me](mailto:kylegrealis@proton.me). Together, we can make our R projects more robust, reproducible, and ready for collaboration!
 
 [Happy coding!]{style='font-size: 1.5rem;'}
 

@@ -136,7 +136,7 @@ CMD ["Rscript", "your_script.R"]
 
 As with the Python example, if you have multiple R scripts that need to be run in a specific order, you can create a main R script that sources and runs your other scripts in the necessary order, and call that script in the `CMD` line.
 
-Share your insights at [kylegrealis@icloud.com](mailto:kylegrealis@icloud.com). Together, we can make our R projects more robust, reproducible, and ready for collaboration!
+Share your insights at [kylegrealis@proton.me](mailto:kylegrealis@proton.me). Together, we can make our R projects more robust, reproducible, and ready for collaboration!
 
 [Happy coding!]{style='font-size: 1.5rem;'}
 

@@ -370,7 +370,7 @@ something amazing on top of it!
 
 ---
 
-Share your insights at [kylegrealis@icloud.com](mailto:kylegrealis@icloud.com). Together, 
+Share your insights at [kylegrealis@proton.me](mailto:kylegrealis@proton.me). Together, 
 we can make our R (and self-hosted) projects more robust, reproducible, and ready for collaboration!
 
 [Happy coding!]{style='font-size: 1.5rem;'}

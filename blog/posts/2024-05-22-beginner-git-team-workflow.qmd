@@ -52,7 +52,7 @@ When collaborating with a team (or even when creating and using personal data sc
 
 I hope this little guide was helpful and provides insight on how to work as a team. I'm a beginner and always find ways to improve my workflow. I tend to test things on my own before doing them in the collaborative setting. Working with other people affords the opportunity to communicate effectively and efficiently. Use those same concepts when working with git: write commit messages that aren't `update done` and rather `edit: added forest plot for subset predictors`. Lastly, this post will probably be updated as I find better ways. 
 
-Share your insights at [kylegrealis@icloud.com](mailto:kylegrealis@icloud.com). Together, we can make our R projects more robust, reproducible, and ready for collaboration!
+Share your insights at [kylegrealis@proton.me](mailto:kylegrealis@proton.me). Together, we can make our R projects more robust, reproducible, and ready for collaboration!
 
 [Happy coding!]{style='font-size: 1.5rem;'}
 
