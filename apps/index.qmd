@@ -39,7 +39,7 @@ A Shiny dashboard for tracking and visualizing data stored in Cloudflare R2. Bui
 
 ### Baby Tracker
 
-A Shiny app for tracking feeding, sleep, and daily patterns for a newborn. Built for Sofia. It does what the name says.
+A Shiny app for tracking feeding, sleep, and daily patterns for a newborn. Built for my daughter, customizable for anyone.
 
 ::: { .cntr-btn }
 [Try it!](https://shiny.kylegrealis.com/baby-tracker){target="_blank" .btn}
