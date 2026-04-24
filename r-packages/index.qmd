@@ -65,6 +65,10 @@ froggeR gets out of your way so you can focus on the work:
 
 ::: { .img-text }
 
+::: { .img-group }
+[![](../static/images/nhanesdata-hex.png)](https://www.kylegrealis.com/nhanesdata/){target="_blank"}
+:::
+
 ::: { .text-grp }
 
 ### nhanesdata
