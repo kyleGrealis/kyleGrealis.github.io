@@ -1,7 +1,7 @@
 ---
 title: "Kyle Grealis"
-image: ../static/images/kyle.jpg
-resources: ../static/files/KGrealis_cv.pdf
+image: static/images/kyle.jpg
+resources: static/files/KGrealis_cv.pdf
 about:
   template: trestles
   image-shape: rounded
@@ -25,11 +25,12 @@ toc: false
 ::: {#ppc}
 ## Hey there! 👋  I'm Kyle Grealis...
 
-I'm a biostatistician and open source software developer at the University of Miami. I write R for a living: packages, Shiny apps, and clinical research tools. I'm learning TypeScript, working toward DevOps competence (the sane kind), and increasingly convinced that agentic workflows are the most interesting thing happening in software right now.
+I'm a biostatistician and open source software developer at the University of Miami. Before that, I spent about 20 years as a respiratory therapist and served in the Army. The clinical tools aren't accidental.
+
+I write R for a living: packages, Shiny apps, and clinical research tools. I'm learning TypeScript, working toward DevOps competence (the sane kind), and increasingly convinced that agentic workflows are the most interesting thing happening in software right now.
 
 I don't have a hot take on your favorite package. I just build things and put them here.
 
 My most ambitious side project is NanoClaw, a self-hosted AI assistant running on a Raspberry Pi 5. It keeps getting better.
 
 :::
-
