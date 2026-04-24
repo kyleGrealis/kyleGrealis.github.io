@@ -1,5 +1,5 @@
 ---
-title: "Web Applications"
+title: "Shiny Apps"
 format:
   html: 
     page-layout: full
@@ -17,11 +17,7 @@ format:
 
 ### PowerViz
 
-Introducing PowerViz, an engaging Shiny app designed to bring power calculations to life! Originally crafted as a handy tool for a clinical trials class presentation, it has evolved into a comprehensive web application due to overwhelming positive feedback.
-
-PowerViz was born out of a need to illustrate the impact of sample size and effect size on power calculations. It's a testament to the adage that necessity is the mother of invention. Built on the robust pwr R package, PowerViz offers an interactive platform where users can manipulate variables such as significance level, effect size, and sample size or proportion.
-
-But PowerViz is more than just a tool; it's an immersive learning experience. As you interact with the plots and adjust the inputs, you receive real-time feedback, providing valuable insights into the dynamics of power calculations. Whether you're looking to enhance your learning or in the throes of designing a study, PowerViz is your go-to resource. Dive in and experience the fun side of statistics!
+Interactive power calculation tool built on the `pwr` package. Adjust sample size, effect size, and significance level and watch the plots update in real time. Useful for study design or for making the tradeoffs in power calculations click for a classroom.
 
 ::: { .cntr-btn }
 [Try it!](https://kylegrealis.shinyapps.io/powerViz/){target="_blank" .btn}
@@ -43,16 +39,54 @@ But PowerViz is more than just a tool; it's an immersive learning experience. As
 
 ### EpiMatch
 
-EpiMatch is your indispensable partner for case-control matching and it's now available as a Shiny web application. This tool is designed to streamline the matching process, strategically minimizing biases and saving you precious time. Case-control matching is a critical technique used in epidemiological studies to identify and analyze factors that may contribute to a medical condition or disease.
-
-EpiMatch empowers you to upload your own data and engage with a sophisticated matching algorithm, tailored to your specific criteria. While the tool comes with comprehensive instructions on its main page, it does require a touch of preprocessing before use.
-
-After running through five matching iterations, EpiMatch presents you with the results from the iteration that yielded the highest number of matched cases to controls. And the best part? Every table is downloadable, ensuring no data is lost, even for those individuals (cases and controls) that were not successfully matched.
-
-So why wait? Dive into EpiMatch and experience the future of case-control matching!
+Case-control matching for epidemiological research. Upload your dataset, configure your matching criteria, and EpiMatch runs multiple iterations and returns the best result. Every matched and unmatched record is downloadable so nothing gets lost.
 
 ::: { .cntr-btn }
 [Try it!](https://kylegrealis.shinyapps.io/case-control-matching/){target="_blank" .btn}
+:::
+
+:::
+
+:::
+
+---
+
+::: { .img-text }
+
+::: { .img-group }
+[![](../static/images/r2-dashboard.png)](https://shiny.kylegrealis.com/r2-dashboard){target="_blank"}
+:::
+
+::: { .text-grp }
+
+### R2 Dashboard
+
+A Shiny dashboard for tracking and visualizing data stored in Cloudflare R2. Built as a personal tool for managing and exploring datasets without leaving the browser.
+
+::: { .cntr-btn }
+[Try it!](https://shiny.kylegrealis.com/r2-dashboard){target="_blank" .btn}
+:::
+
+:::
+
+:::
+
+---
+
+::: { .img-text }
+
+::: { .img-group }
+[![](../static/images/baby-tracker.png)](https://shiny.kylegrealis.com/baby-tracker){target="_blank"}
+:::
+
+::: { .text-grp }
+
+### Baby Tracker
+
+A Shiny app for tracking feeding, sleep, and daily patterns for a newborn. Built for Sofia. It does what the name says.
+
+::: { .cntr-btn }
+[Try it!](https://shiny.kylegrealis.com/baby-tracker){target="_blank" .btn}
 :::
 
 :::

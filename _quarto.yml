@@ -23,7 +23,7 @@ website:
       - text: Shiny Apps
         href: apps/index.qmd
       - text: Presentations
-        href: https://slides.kylegrealis.com
+        href: presentations/index.qmd
       - text: Publications
         href: https://scholar.google.com/citations?hl=en&user=sdB7YAkAAAAJ
         target: _blank
