@@ -10,50 +10,6 @@ format:
 ::: { .img-text }
 
 ::: { .img-group }
-[![](../static/images/powerViz.png)](https://kylegrealis.shinyapps.io/powerViz/){target="_blank"}
-:::
-
-::: { .text-grp }
-
-### PowerViz
-
-Interactive power calculation tool built on the `pwr` package. Adjust sample size, effect size, and significance level and watch the plots update in real time. Useful for study design or for making the tradeoffs in power calculations click for a classroom.
-
-::: { .cntr-btn }
-[Try it!](https://kylegrealis.shinyapps.io/powerViz/){target="_blank" .btn}
-:::
-
-:::
-
-:::
-
----
-
-::: { .img-text }
-
-::: { .img-group }
-[![](../static/images/epiMatch.png)](https://kylegrealis.shinyapps.io/case-control-matching/){target="_blank"}
-:::
-
-::: { .text-grp }
-
-### EpiMatch
-
-Case-control matching for epidemiological research. Upload your dataset, configure your matching criteria, and EpiMatch runs multiple iterations and returns the best result. Every matched and unmatched record is downloadable so nothing gets lost.
-
-::: { .cntr-btn }
-[Try it!](https://kylegrealis.shinyapps.io/case-control-matching/){target="_blank" .btn}
-:::
-
-:::
-
-:::
-
----
-
-::: { .img-text }
-
-::: { .img-group }
 [![](../static/images/r2-dashboard.png)](https://shiny.kylegrealis.com/r2-dashboard){target="_blank"}
 :::
 
@@ -87,6 +43,50 @@ A Shiny app for tracking feeding, sleep, and daily patterns for a newborn. Built
 
 ::: { .cntr-btn }
 [Try it!](https://shiny.kylegrealis.com/baby-tracker){target="_blank" .btn}
+:::
+
+:::
+
+:::
+
+---
+
+::: { .img-text }
+
+::: { .img-group }
+[![](../static/images/powerViz.png)](https://kylegrealis.shinyapps.io/powerViz/){target="_blank"}
+:::
+
+::: { .text-grp }
+
+### PowerViz
+
+Interactive power calculation tool built on the `pwr` package. Adjust sample size, effect size, and significance level and watch the plots update in real time. Useful for study design or for making the tradeoffs in power calculations click for a classroom.
+
+::: { .cntr-btn }
+[Try it!](https://kylegrealis.shinyapps.io/powerViz/){target="_blank" .btn}
+:::
+
+:::
+
+:::
+
+---
+
+::: { .img-text }
+
+::: { .img-group }
+[![](../static/images/epiMatch.png)](https://kylegrealis.shinyapps.io/case-control-matching/){target="_blank"}
+:::
+
+::: { .text-grp }
+
+### EpiMatch
+
+Case-control matching for epidemiological research. Upload your dataset, configure your matching criteria, and EpiMatch runs multiple iterations and returns the best result. Every matched and unmatched record is downloadable so nothing gets lost.
+
+::: { .cntr-btn }
+[Try it!](https://kylegrealis.shinyapps.io/case-control-matching/){target="_blank" .btn}
 :::
 
 :::
