@@ -10,29 +10,74 @@ format:
 ::: { .img-text }
 
 ::: { .img-group }
-[![](../static/images/froggeR-hex.png)](https://kylegrealis.github.io/froggeR/){target="_blank"}
+[![](../static/images/sumExtras-hex.png)](https://www.kylegrealis.com/sumExtras/){target="_blank"}
+:::
+
+::: { .text-grp }
+
+### sumExtras
+
+sumExtras reduces boilerplate in clinical research table workflows. One call to `extras()` replaces the five or six `gtsummary` formatting steps that would otherwise clutter every analysis script.
+
+* **Simplicity**: `extras()` consolidates variable labeling, missing value cleanup, theming, and group header styling into a single function
+* **Flexibility**: Works with both `tbl_summary()` and `tbl_svysummary()` tables
+* **Publication-ready**: Built-in JAMA compact themes and bold/italic group header formatting
+* **Resilient**: Warn-and-continue design ensures tables always render, even if individual formatting steps fail
+
+::: { .cntr-btn }
+[Get it now!](https://www.kylegrealis.com/sumExtras/){target="_blank" .btn}
+:::
+
+:::
+
+:::
+
+---
+
+::: { .img-text }
+
+::: { .img-group }
+[![](../static/images/froggeR-hex.png)](https://www.kylegrealis.com/froggeR/){target="_blank"}
 :::
 
 ::: { .text-grp }
 
 ### froggeR
 
-froggeR is an R package designed to streamline the creation and management of Quarto projects. It provides a suite of tools to automate setup, ensure consistency, and enhance collaboration in data science workflows.
+froggeR provides project scaffolding for R and Quarto. Inspired by research compendium principles, it establishes consistent directory structures, pre-configured entry points, and global metadata so you set things up once and reuse across every project.
 
-> Leap ahead in your data science journey with froggeR! Streamline Quarto workflows, create structured projects, and enhance collaboration with ease. 🐸
+froggeR gets out of your way so you can focus on the work:
 
-froggeR simplifies project setup so you can focus on what matters:
-
-* **Efficiency**: Minimize setup time, maximize analysis time
-* **Consistency**: Uniform styling and structure across all your projects
-* **Reliability**: Prevent common setup issues before they occur
-* **Security**: Robust `.gitignore` settings for enhanced data protection
-* **Collaboration**: Structured documentation for seamless team onboarding
-* **Customization**: Easy-to-use tools for tailoring project aesthetics
-* **Reproducibility**: Ensure consistent environments across team members
+* **Structure**: Predictable `R/`, `analysis/`, `data/`, and `www/` directories out of the box
+* **Consistency**: Global configuration for author metadata and branding across all projects
+* **Security**: `.gitignore` and pre-commit hooks to keep sensitive files out of version control
+* **Reproducibility**: Templated Quarto documents with automatic metadata population
 
 ::: { .cntr-btn }
-[Get it now!](https://kylegrealis.github.io/froggeR/){target="_blank" .btn}
+[Get it now!](https://www.kylegrealis.com/froggeR/){target="_blank" .btn}
+:::
+
+:::
+
+:::
+
+---
+
+::: { .img-text }
+
+::: { .text-grp }
+
+### nhanesdata
+
+nhanesdata provides simplified access to the National Health and Nutrition Examination Survey (NHANES), a U.S. public health dataset spanning 1999 to 2023. It solves two persistent pain points: unreliable CDC server access and confusing dataset naming conventions across survey cycles.
+
+* **Reliability**: All datasets hosted on cloud storage, no CDC server timeouts
+* **Ready to use**: Pre-merged datasets with a `year` column for cycle tracking across demographics, biomarkers, physical measurements, and dietary data
+* **Survey-aware**: `create_design()` handles proper weighting out of the box
+* **Discoverable**: `term_search()` and `var_search()` let you find variables by keyword or name
+
+::: { .cntr-btn }
+[Get it now!](https://www.kylegrealis.com/nhanesdata/){target="_blank" .btn}
 :::
 
 :::

@@ -25,12 +25,11 @@ toc: false
 ::: {#ppc}
 ## Hey there! 👋  I'm Kyle Grealis...
 
-I'm a Biostatistician and Lead Data Analyst at the University of Miami. After nearly 20 years as a respiratory therapist, I discovered data science and its potential to transform healthcare. The attention to detail that's essential in bedside care translates directly to data analysis.
+I'm a biostatistician and open source software developer at the University of Miami. I write R for a living: packages, Shiny apps, and clinical research tools. I'm learning TypeScript, working toward DevOps competence (the sane kind), and increasingly convinced that agentic workflows are the most interesting thing happening in software right now.
 
-I've worked with physicians and researchers in pulmonary medicine, and since COVID-19, I've transitioned to the Department of Public Health Sciences. Currently, we're developing machine learning algorithms to predict individual relapse in those affected by the opioid epidemic.
+I don't have a hot take on your favorite package. I just build things and put them here.
 
-I'm passionate about open source software and have authored the {froggeR} and {nascaR.data} R packages, co-authored {rUM}, and contributed to {tidyREDCap} and other packages. This website showcases my R packages and web applications that streamline workflows and contribute to the community.
+My most ambitious side project is NanoClaw, a self-hosted AI assistant running on a Raspberry Pi 5. It keeps getting better.
 
-When I'm not analyzing data, you'll find me following track & field, running, or tinkering with Linux systems.
 :::
 

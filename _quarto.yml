@@ -18,28 +18,22 @@ website:
     right:
       - text: Home
         href: index.qmd
-      # - text: About
-      #   href: about/index.qmd
+      - text: R Packages
+        href: r-packages/index.qmd
+      - text: Shiny Apps
+        href: apps/index.qmd
+      - text: Presentations
+        href: https://slides.kylegrealis.com
       - text: Publications
         href: https://scholar.google.com/citations?hl=en&user=sdB7YAkAAAAJ
         target: _blank
-      - text: R Packages
-        href: r-packages/index.qmd
-      - text: Apps
-        href: apps/index.qmd
-      # - text: NASCAR
-      #   href: nascar/dashboard.qmd
-      - text: Blog
-        href: blog/index.qmd
-      - text: UM Team
-        href: https://kylegrealis.github.io/feaster-balise-lab/
       - icon: github
         href: https://github.com/kyleGrealis/
         target: _blank
 
   page-footer:
     background: "#4c566a"
-    center: This website is built with [Quarto](https://quarto.org/docs/website) &copy;2025
+    center: This website is built with [Quarto](https://quarto.org/docs/website) &copy;2026
 
 format:
   html:
