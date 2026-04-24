@@ -2,13 +2,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.27">
+<meta name="generator" content="quarto-1.9.37">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
 <title>R Packages – kyleGrealis.com</title>
 <style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
 div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -33,15 +36,14 @@ ul.task-list li input[type="checkbox"] {
 <link href="..//static/images/favicon.ico" rel="icon">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-6a256ca4e3dfbd711f38cc1d1c104310.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-68388c52ba69b3af2f6e45758564a17d.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -95,24 +97,20 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="https://scholar.google.com/citations?hl=en&amp;user=sdB7YAkAAAAJ" target="_blank"> 
-<span class="menu-text">Publications</span></a>
-  </li>  
-  <li class="nav-item">
     <a class="nav-link active" href="../r-packages/index.html" aria-current="page"> 
 <span class="menu-text">R Packages</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../apps/index.html"> 
-<span class="menu-text">Apps</span></a>
+<span class="menu-text">Shiny Apps</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../blog/index.html"> 
-<span class="menu-text">Blog</span></a>
+    <a class="nav-link" href="https://slides.kylegrealis.com"> 
+<span class="menu-text">Presentations</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="https://kylegrealis.github.io/feaster-balise-lab/"> 
-<span class="menu-text">UM Team</span></a>
+    <a class="nav-link" href="https://scholar.google.com/citations?hl=en&amp;user=sdB7YAkAAAAJ" target="_blank"> 
+<span class="menu-text">Publications</span></a>
   </li>  
   <li class="nav-item compact">
     <a class="nav-link" href="https://github.com/kyleGrealis/" target="_blank"> <i class="bi bi-github" role="img">
@@ -130,11 +128,17 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#nhanesdata" id="toc-nhanesdata" class="nav-link active" data-scroll-target="#nhanesdata">nhanesdata</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
-<main class="content column-page" id="quarto-document-content">
+<main class="content column-page-left" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
@@ -143,7 +147,7 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<div class="quarto-title-meta column-page">
+<div class="quarto-title-meta column-page-left">
 
     
   
@@ -157,26 +161,55 @@ ul.task-list li input[type="checkbox"] {
 
 <div class="img-text">
 <div class="img-group">
-<p><a href="https://kylegrealis.github.io/froggeR/" target="_blank"><img src="../static/images/froggeR-hex.png" class="img-fluid"></a></p>
+<p><a href="https://www.kylegrealis.com/sumExtras/" target="_blank"><img src="../static/images/sumExtras-hex.png" class="img-fluid"></a></p>
+</div>
+<section id="sumextras" class="level3 text-grp">
+<h3 class="anchored" data-anchor-id="sumextras">sumExtras</h3>
+<p>sumExtras reduces boilerplate in clinical research table workflows. One call to <code>extras()</code> replaces the five or six <code>gtsummary</code> formatting steps that would otherwise clutter every analysis script.</p>
+<ul>
+<li><strong>Simplicity</strong>: <code>extras()</code> consolidates variable labeling, missing value cleanup, theming, and group header styling into a single function</li>
+<li><strong>Flexibility</strong>: Works with both <code>tbl_summary()</code> and <code>tbl_svysummary()</code> tables</li>
+<li><strong>Publication-ready</strong>: Built-in JAMA compact themes and bold/italic group header formatting</li>
+<li><strong>Resilient</strong>: Warn-and-continue design ensures tables always render, even if individual formatting steps fail</li>
+</ul>
+<div class="cntr-btn">
+<p><a href="https://www.kylegrealis.com/sumExtras/" class="btn" target="_blank">Get it now!</a></p>
+</div>
+</section>
+</div>
+<hr>
+<div class="img-text">
+<div class="img-group">
+<p><a href="https://www.kylegrealis.com/froggeR/" target="_blank"><img src="../static/images/froggeR-hex.png" class="img-fluid"></a></p>
 </div>
 <section id="frogger" class="level3 text-grp">
 <h3 class="anchored" data-anchor-id="frogger">froggeR</h3>
-<p>froggeR is an R package designed to streamline the creation and management of Quarto projects. It provides a suite of tools to automate setup, ensure consistency, and enhance collaboration in data science workflows.</p>
-<blockquote class="blockquote">
-<p>Leap ahead in your data science journey with froggeR! Streamline Quarto workflows, create structured projects, and enhance collaboration with ease. 🐸</p>
-</blockquote>
-<p>froggeR simplifies project setup so you can focus on what matters:</p>
+<p>froggeR provides project scaffolding for R and Quarto. Inspired by research compendium principles, it establishes consistent directory structures, pre-configured entry points, and global metadata so you set things up once and reuse across every project.</p>
+<p>froggeR gets out of your way so you can focus on the work:</p>
 <ul>
-<li><strong>Efficiency</strong>: Minimize setup time, maximize analysis time</li>
-<li><strong>Consistency</strong>: Uniform styling and structure across all your projects</li>
-<li><strong>Reliability</strong>: Prevent common setup issues before they occur</li>
-<li><strong>Security</strong>: Robust <code>.gitignore</code> settings for enhanced data protection</li>
-<li><strong>Collaboration</strong>: Structured documentation for seamless team onboarding</li>
-<li><strong>Customization</strong>: Easy-to-use tools for tailoring project aesthetics</li>
-<li><strong>Reproducibility</strong>: Ensure consistent environments across team members</li>
+<li><strong>Structure</strong>: Predictable <code>R/</code>, <code>analysis/</code>, <code>data/</code>, and <code>www/</code> directories out of the box</li>
+<li><strong>Consistency</strong>: Global configuration for author metadata and branding across all projects</li>
+<li><strong>Security</strong>: <code>.gitignore</code> and pre-commit hooks to keep sensitive files out of version control</li>
+<li><strong>Reproducibility</strong>: Templated Quarto documents with automatic metadata population</li>
 </ul>
 <div class="cntr-btn">
-<p><a href="https://kylegrealis.github.io/froggeR/" class="btn" target="_blank">Get it now!</a></p>
+<p><a href="https://www.kylegrealis.com/froggeR/" class="btn" target="_blank">Get it now!</a></p>
+</div>
+</section>
+</div>
+<hr>
+<div class="img-text">
+<section id="nhanesdata" class="level3 text-grp">
+<h3 class="anchored" data-anchor-id="nhanesdata">nhanesdata</h3>
+<p>nhanesdata provides simplified access to the National Health and Nutrition Examination Survey (NHANES), a U.S. public health dataset spanning 1999 to 2023. It solves two persistent pain points: unreliable CDC server access and confusing dataset naming conventions across survey cycles.</p>
+<ul>
+<li><strong>Reliability</strong>: All datasets hosted on cloud storage, no CDC server timeouts</li>
+<li><strong>Ready to use</strong>: Pre-merged datasets with a <code>year</code> column for cycle tracking across demographics, biomarkers, physical measurements, and dietary data</li>
+<li><strong>Survey-aware</strong>: <code>create_design()</code> handles proper weighting out of the box</li>
+<li><strong>Discoverable</strong>: <code>term_search()</code> and <code>var_search()</code> let you find variables by keyword or name</li>
+</ul>
+<div class="cntr-btn">
+<p><a href="https://www.kylegrealis.com/nhanesdata/" class="btn" target="_blank">Get it now!</a></p>
 </div>
 </section>
 </div>
@@ -623,7 +656,7 @@ ul.task-list li input[type="checkbox"] {
       &nbsp;
     </div>   
     <div class="nav-footer-center">
-<p>This website is built with <a href="https://quarto.org/docs/website">Quarto</a> ©2025</p>
+<p>This website is built with <a href="https://quarto.org/docs/website">Quarto</a> ©2026</p>
 </div>
     <div class="nav-footer-right">
       &nbsp;
