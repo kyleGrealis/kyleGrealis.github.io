@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://www.kyleGrealis.com/about/index.html</loc>
+    <lastmod>2026-07-28T00:08:56.772Z</lastmod>
+  </url>
+  <url>
     <loc>https://www.kyleGrealis.com/about/apps/index.html</loc>
-    <lastmod>2026-04-24T17:29:17.622Z</lastmod>
+    <lastmod>2026-07-28T00:08:56.663Z</lastmod>
   </url>
   <url>
     <loc>https://www.kyleGrealis.com/about/presentations/index.html</loc>
-    <lastmod>2026-04-24T17:29:17.739Z</lastmod>
+    <lastmod>2026-07-28T00:08:56.772Z</lastmod>
   </url>
   <url>
     <loc>https://www.kyleGrealis.com/about/r-packages/index.html</loc>
-    <lastmod>2026-04-24T17:29:17.739Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.kyleGrealis.com/about/index.html</loc>
-    <lastmod>2026-04-24T17:29:17.739Z</lastmod>
+    <lastmod>2026-07-28T00:08:56.772Z</lastmod>
   </url>
 </urlset>
