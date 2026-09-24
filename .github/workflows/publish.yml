@@ -1,25 +1,31 @@
-on:
-  workflow_dispatch:
-  push:
-    branches: main
+name: Deploy to Cloudflare Pages
 
-name: Quarto Publish
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
 
 jobs:
   build-deploy:
     runs-on: ubuntu-latest
     permissions:
-      contents: write
+      contents: read
+      deployments: write
     steps:
-      - name: Check out repository
+      - name: Checkout repository
         uses: actions/checkout@v4
 
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
 
-      - name: Render and Publish
-        uses: quarto-dev/quarto-actions/publish@v2
+      - name: Render Quarto Project
+        uses: quarto-dev/quarto-actions/render@v2
+
+      - name: Deploy to Cloudflare Pages
+        uses: cloudflare/wrangler-action@v3
         with:
-          target: gh-pages
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          projectName: kylegrealis
+          directory: docs
+          gitHubToken: ${{ secrets.GITHUB_TOKEN }}

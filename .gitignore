@@ -8,3 +8,5 @@
 
 manifest.json
 search.json
+
+**/*.quarto_ipynb

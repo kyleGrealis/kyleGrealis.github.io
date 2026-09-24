@@ -12,7 +12,7 @@ project:
 website:
   title: "kyleGrealis.com"
   favicon: /static/images/favicon.ico
-  site-url: https://www.kyleGrealis.com/about/
+  site-url: https://kylegrealis.com
 
   navbar:
     right:

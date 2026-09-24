@@ -31,6 +31,4 @@ I write R for a living: packages, Shiny apps, and clinical research tools. I dev
 
 I don't have a hot take on your favorite package. I just build things and put them here.
 
-My main playground right now is **GemiNixOS**: a self-hosted, agentic personal assistant built in TypeScript and powered by Gemini models. It runs locally on a NixOS-powered Raspberry Pi 5, serving as a hands-on project for learning declarative system design.
-
 :::
