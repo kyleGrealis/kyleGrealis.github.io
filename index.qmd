@@ -33,24 +33,9 @@ I don't have a hot take on your favorite package. I just build things and put th
 
 ### Featured Projects
 
-::: {.grid}
-
-::: {.g-col-12 .g-col-md-4}
-#### [sumExtras](r-packages/index.qmd)
-Resilient, boilerplate-free clinical summary tables for `gtsummary`.
-:::
-
-::: {.g-col-12 .g-col-md-4}
-#### [nhanesdata](r-packages/index.qmd)
-Cloud-hosted, survey-weighted access to CDC NHANES data (1999–2023).
-:::
-
-::: {.g-col-12 .g-col-md-4}
-#### [froggeR](r-packages/index.qmd)
-Scaffolding and research compendium templates for reproducible R & Quarto projects.
-:::
-
-:::
+* **[sumExtras](r-packages/index.qmd):** Resilient, boilerplate-free clinical summary tables for `gtsummary`.
+* **[nhanesdata](r-packages/index.qmd):** Cloud-hosted, survey-weighted access to CDC NHANES data (1999–2023).
+* **[froggeR](r-packages/index.qmd):** Scaffolding and research compendium templates for reproducible R & Quarto projects.
 
 ### Active Focus
 
