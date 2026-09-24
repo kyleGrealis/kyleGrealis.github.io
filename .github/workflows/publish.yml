@@ -26,6 +26,5 @@ jobs:
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          projectName: kylegrealis
-          directory: docs
+          command: pages deploy docs --project-name=kylegrealis
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
