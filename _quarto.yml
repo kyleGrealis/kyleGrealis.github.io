@@ -1,6 +1,8 @@
 project:
   type: website
   output-dir: docs
+  resources:
+    - _redirects
   preview:
     port: 7209
     browser: true
