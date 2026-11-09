@@ -10,3 +10,11 @@ manifest.json
 search.json
 
 **/*.quarto_ipynb
+
+# Track repo-scoped update-cv skill
+!/.agents/
+!/.agents/skills/
+!/.agents/skills/update-cv/
+!/.agents/skills/update-cv/**
+!/.claude/
+!/.claude/skills

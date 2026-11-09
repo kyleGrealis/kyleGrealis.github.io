@@ -17,7 +17,7 @@ about:
       target: _blank
     - text: "CV"
       icon: file-text
-      href: /static/files/KGrealis_cv.pdf
+      href: /static/files/KGrealis_cv.pdf?v=2026-11-09
       target: _blank
 toc: false
 ---

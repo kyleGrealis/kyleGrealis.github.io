@@ -1,0 +1,500 @@
+{
+  "date": "Nov 9th, 2026",
+  "personal": {
+    "name": "Kyle Edward Grealis",
+    "email": "kylegrealis@miami.edu",
+    "rank": "Lead Data Analyst / Biostatistician",
+    "department": "Dept. of Public Health Sciences, Division of Biostatistics and Bioinformatics, University of Miami Miller School of Medicine",
+    "secondary_appointments": "N/A",
+    "orcid": "0000-0002-9223-8854",
+    "github": "https://github.com/kyleGrealis"
+  },
+  "education": {
+    "institutional": [
+      {
+        "year": "2023",
+        "text": "University of Miami Miller School of Medicine, Miami, FL; M.S., Biostatistics (Summa Cum Laude)"
+      },
+      {
+        "year": "2020",
+        "text": "Purdue University Global, West Lafayette, IN; B.S., Health Sciences (Summa Cum Laude)"
+      },
+      {
+        "year": "2002",
+        "text": "Rutgers University (f.k.a. UMDNJ), Stratford, NJ; A.A.S., Respiratory Therapy"
+      }
+    ],
+    "non_institutional": [
+      {
+        "year": "2025",
+        "text": "CITI Program; Good Clinical Practice, Biomedical Researchers, Conflict of Interest"
+      },
+      {
+        "year": "2022",
+        "text": "DataCamp; Data Scientist with R Track"
+      }
+    ],
+    "certifications": [
+      {
+        "year": "2022",
+        "text": "SAS Certified Statistical Business Analyst Using SAS 9: Regression and Modeling"
+      },
+      {
+        "year": "2022",
+        "text": "American Heart Association; Advanced Cardiac Life Support (ACLS)"
+      },
+      {
+        "year": "2022",
+        "text": "American Heart Association; Basic Life Support (BLS)"
+      },
+      {
+        "year": "2021",
+        "text": "Florida Department of Health; Registered Respiratory Therapist"
+      },
+      {
+        "year": "2021",
+        "text": "SAS 9.4 Base Programming Certification"
+      },
+      {
+        "year": "2021",
+        "text": "SAS Certified Associate: Programming Fundamentals"
+      },
+      {
+        "year": "2021",
+        "text": "American Heart Association; Pediatric Advanced Life Support (PALS)"
+      },
+      {
+        "year": "2019",
+        "text": "National Board for Respiratory Care (NBRC); Registered Respiratory Therapist"
+      },
+      {
+        "year": "2012",
+        "text": "American Heart Association; Basic Life Support Instructor"
+      },
+      {
+        "year": "2004–2019",
+        "text": "Florida Department of Health; Certified Respiratory Therapy Technician"
+      },
+      {
+        "year": "2003",
+        "text": "New Jersey State Board of Respiratory Care; Certified Respiratory Therapy Technician"
+      },
+      {
+        "year": "2003",
+        "text": "National Board for Respiratory Care (NBRC); Certified Respiratory Therapy Technician"
+      }
+    ]
+  },
+  "experience": {
+    "academic": [
+      {
+        "years": "2023–present",
+        "role": "University of Miami, Department of Public Health Sciences, Miami, FL; Lead Research Analyst",
+        "responsibilities": "Implementation of machine learning models on population health studies; development of data pipelines from REDCap to end users; data visualization and Shiny web application development; coauthoring R packages for data science workflows."
+      },
+      {
+        "years": "2022–2023",
+        "role": "University of Miami, Miami, FL; Bioinformatics Analyst",
+        "responsibilities": "Data cleaning, exploratory analysis, and statistical modeling for international pulmonary research studies; contributed to statistical analysis plans and academic manuscripts; incorporated SAS/STAT, SAS/GRAPH, SAS/MACRO, and R throughout the analytic process; performed pulmonary function testing per ATS protocols."
+      }
+    ],
+    "non_academic": [
+      {
+        "years": "2019–2022",
+        "role": "University of Miami, Miami, FL; Senior Respiratory Therapist",
+        "responsibilities": "Pulmonary function testing; assisted with rigid and fiberoptic bronchoscopy with endobronchial ultrasound; developed in-patient and out-patient plans of care; coordinated home rehabilitation therapies."
+      },
+      {
+        "years": "2004–2019",
+        "role": "Physicians Regional Medical Center, Naples, FL; Registered Respiratory Therapist",
+        "responsibilities": "Clinical Coordinator; critical care evaluation and planning; new employee and student preceptorship; BLS instructor."
+      },
+      {
+        "years": "2003–2004",
+        "role": "Kennedy Health Systems, Stratford, NJ; Certified Respiratory Therapist",
+        "responsibilities": ""
+      },
+      {
+        "years": "1998–2003",
+        "role": "Kennedy Health Systems, Stratford, NJ; Pharmacy Technician",
+        "responsibilities": ""
+      }
+    ],
+    "military": [
+      {
+        "years": "2017–2020",
+        "role": "United States Army Reserve, 365th Engineer Company (SAPPER), Cape Coral, FL; Equal Opportunity Leader"
+      },
+      {
+        "years": "2016–2020",
+        "role": "United States Army Reserve, 365th Engineer Company (SAPPER), Cape Coral, FL; Squad Leader"
+      }
+    ]
+  },
+  "publications": {
+    "books": "N/A",
+    "articles": [
+      {
+        "authors_before": "Balise RR, ",
+        "author_bold": "Grealis K",
+        "authors_after": ", Brandt L, Luo SX, Odom G, Jean-Baptiste G, Feaster DJ.",
+        "year": "2026",
+        "title": "Applying machine learning in predicting medication treatment outcomes for opioid use disorder.",
+        "journal": "Journal of Substance Use and Addiction Treatment",
+        "details": ", 182: 209847 (1-8).",
+        "url": "https://doi.org/10.1016/j.josat.2025.209847"
+      },
+      {
+        "authors_before": "Harkness A, Morales V, ",
+        "author_bold": "Grealis K",
+        "authors_after": ", Reyes N, Feaster DJ, Safren S, Turner D, Balise RR.",
+        "year": "2025",
+        "title": "Implementation determinants of PrEP and behavioral health treatment referral among HIV test counselors.",
+        "journal": "AIDS & Behavior",
+        "details": ", 29(5): 1492–1506.",
+        "url": "https://doi.org/10.1007/s10461-025-04620-2"
+      },
+      {
+        "authors_before": "Poudel L, Baral A, Abdshah A, ",
+        "author_bold": "Grealis K",
+        "authors_after": ", Aka A, Paudel S, Vidot DC.",
+        "year": "2025",
+        "title": "Sleep disturbances among young adult dual users of cigarettes and e-cigarettes: analysis of the 2020 National Health Interview Survey.",
+        "journal": "PLOS ONE",
+        "details": " 20(3), e0320748.",
+        "url": "https://doi.org/10.1371/journal.pone.0320748"
+      },
+      {
+        "authors_before": "Goddard-Eckrich D, ",
+        "author_bold": "Grealis K",
+        "authors_after": ", El-Bassel N, Lounsbury DW, Dsouza N, Bhuiyan J, Cervantes M, Angerame A, Feaster DJ, Kim E, Huang TTK, Sabounchi NS, Gilbert L, Levin FR, Edwards K, Gatanaga OS, McCrimmon T, David JL, Hunt T, Nunes EV, Wu E, Gutnick D, Rodriguez S, Gruss DE, Rodgers E, Campbell ANC, Xu J, Balise R.",
+        "year": "2025",
+        "title": "Development of a brief stigma and perceptions questionnaire for pharmacists: an exploratory factor analysis approach in New York state counties enrolled in the healing communities study.",
+        "journal": "Journal of Substance Use and Addiction Treatment",
+        "details": ", 169: 209566.",
+        "url": "https://doi.org/10.1016/j.josat.2024.209566"
+      },
+      {
+        "authors_before": "Siddharthan T, ",
+        "author_bold": "Grealis K",
+        "authors_after": ", Robertson NM, Lu M, Liu S, Pollard SL, Hossen S, Jackson P, Rykiel NA, Wosu AC, Flores-Flores O, Quaderi SA, Alupo P, Kirenga B, Ricciardi F, Barber JA, Chandyo RK, Sharma AK, Kumar Das S, Shrestha L, Miranda JJ, Checkley W, Hurst JR et al.",
+        "year": "2024",
+        "title": "Assessing the prevalence and impact of preserved ratio impaired spirometry in low-income and middle-income countries: a post-hoc cross-sectional analysis.",
+        "journal": "The Lancet Global Health",
+        "details": " 12(9), p.e1498-e1505.",
+        "url": "https://doi.org/10.1016/S2214-109X(24)00233-X"
+      },
+      {
+        "authors_before": "Alexis A, Punjabi NM, ",
+        "author_bold": "Grealis K",
+        "authors_after": ", Wanner A.",
+        "year": "2024",
+        "title": "A comparative study of bronchodilator response: utilizing pre-bronchodilator versus predicted normal values.",
+        "journal": "BMC Pulmonary Medicine",
+        "details": " 24(1), p.54.",
+        "url": "https://doi.org/10.1186/s12890-024-02859-4"
+      },
+      {
+        "authors_before": "Raju S, ",
+        "author_bold": "Grealis K",
+        "authors_after": ", Gonzalez E, Nakrani K, Otvos T, Kirkness J, Fouras A, Wise R, Punjabi NM, Siddharthan T.",
+        "year": "2023",
+        "title": "Ventilation heterogeneity from x-ray velocimetry predicts COPD severity.",
+        "journal": "European Respiratory Journal",
+        "details": " 62 (suppl 67), OA4953.",
+        "url": "https://doi.org/10.1183/13993003.congress-2023.OA4953"
+      },
+      {
+        "authors_before": "Siddharthan T, ",
+        "author_bold": "Grealis K",
+        "authors_after": ", Kirkness JP, Otvos T, Stefanovski D, Tombelson A, Dalzell M, Gonzalez E, Nakrani K, Wegner D, Lester MG, Richmond B, Fouras A, Punjabi NM.",
+        "year": "2023",
+        "title": "Quantifying ventilation by x-ray velocimetry in healthy adults.",
+        "journal": "Respiratory Research",
+        "details": " 24(1), p.215.",
+        "url": "https://doi.org/10.1186/s12931-023-02517-z"
+      }
+    ],
+    "abstracts": [
+      {
+        "authors_before": "",
+        "author_bold": "Grealis K",
+        "authors_after": ".",
+        "year": "2026",
+        "title": "sumExtras: Streamlining Table Workflows in Clinical Research with R.",
+        "journal": "R/Medicine 2026",
+        "details": ", R Consortium. Lightning Talk, May 8, 2026.",
+        "url": "https://rconsortium.github.io/RMedicine_website/Abstracts.html#sumextras-streamlining-table-workflows-in-clinical-research-"
+      },
+      {
+        "authors_before": "",
+        "author_bold": "Grealis K",
+        "authors_after": ", Balise R.",
+        "year": "2025",
+        "title": "Mix, Pour, Share: The rUM Cocktail for Biomedical Project Packaging.",
+        "journal": "R/Medicine 2025",
+        "details": ", R Consortium. Regular Talk, June 12, 2025.",
+        "url": "https://rconsortium.github.io/RMedicine_2025/abstracts.html#rum-cocktail"
+      },
+      {
+        "authors_before": "Goddard-Eckrich D, ",
+        "author_bold": "Grealis K",
+        "authors_after": ", El-Bassel N, Lounsbury DW, Dsouza N, Bhuiyan J, Angerame A, Feaster DJ, Cervantes M, Huang TTK, Sabounchi NS, Gilbert L, Medley B, McCrimmon T, David JL, Hunt T, Wu E, Gutnick D, Rodriguez S, Gruss DE, Rodgers E, Nunes EV, Levin FR, Edwards K, Balise R.",
+        "year": "2025",
+        "title": "Development of the Brief Stigma and Perceptions Questionnaire for Pharmacists: A Confirmatory Factor Analysis Approach in New York State Counties Enrolled in the Healing Communities Study.",
+        "journal": "Drug and Alcohol Dependence",
+        "details": ", 267: 112166.",
+        "url": "https://doi.org/10.1016/j.drugalcdep.2024.112166"
+      },
+      {
+        "authors_before": "Alexis A, ",
+        "author_bold": "Grealis K",
+        "authors_after": ", Punjabi NM, Wanner A.",
+        "year": "2023",
+        "title": "Normalizing spirometric bronchodilator responses.",
+        "journal": "American Thoracic Society",
+        "details": ". B30. Breathe (In The Air): Studies in Pulmonary Function, A3002-A3002.",
+        "url": "https://doi.org/10.1164/ajrccm-conference.2023.207.1_meetingabstracts.a3002"
+      },
+      {
+        "authors_before": "Moore DM, ",
+        "author_bold": "Grealis K",
+        "authors_after": ", Gonzalez E, Siddharthan T, Punjabi NM, Abreu AR.",
+        "year": "2023",
+        "title": "The association between sleep hygiene and cessation of cigarette smoking.",
+        "journal": "American Thoracic Society",
+        "details": ". A36. Sleep-related Health Services Research, A1433-A1433.",
+        "url": "https://doi.org/10.1164/ajrccm-conference.2023.207.1_meetingabstracts.a1433"
+      },
+      {
+        "authors_before": "Tombelson A, ",
+        "author_bold": "Grealis K",
+        "authors_after": ", Otvos T, Kirkness JP, Fouras A, Punjabi NM, Siddharthan T.",
+        "year": "2023",
+        "title": "Validation of x-ray velocimetry with pneumotachograph to assess respiratory physiology.",
+        "journal": "American Thoracic Society",
+        "details": ". A17. Tell Me What You See: New Studies in Lung Imaging, A1045-A1045.",
+        "url": "https://doi.org/10.1164/ajrccm-conference.2023.207.1_meetingabstracts.a1045"
+      },
+      {
+        "authors_before": "Karmali D, Dalzell M, Gonzalez E, ",
+        "author_bold": "Grealis K",
+        "authors_after": ", Castillo E, Kirkness JP, Otvos T, Fouras A, Punjabi NM, Siddharthan T.",
+        "year": "2023",
+        "title": "Assessment of regional lung ventilation using computer tomography (CT) lung ventilation analysis in chronic obstructive pulmonary disease (COPD).",
+        "journal": "American Thoracic Society",
+        "details": ". A108. New Insights into Chronic Obstructive Pulmonary Disease, A2699-A2699.",
+        "url": "https://doi.org/10.1164/ajrccm-conference.2023.207.1_meetingabstracts.a2699"
+      },
+      {
+        "authors_before": "",
+        "author_bold": "Grealis K",
+        "authors_after": ", Siddharthan T, Pollard S, Hossain D, Alupo P, Chandyo R, Cardenas M, Flores-Flores O, Kirenga B, Miranda J, Sharma A, Shrestha L, Checkley W, Hurst J.",
+        "year": "2023",
+        "title": "Prevalence and burden of PRISm in population cohorts from three LMIC settings.",
+        "journal": "American Thoracic Society",
+        "details": ". C17. In This Together: Confronting Environmental Health Challenges Around the World, A4510-A4510.",
+        "url": "https://doi.org/10.1164/ajrccm-conference.2023.207.1_meetingabstracts.a4510"
+      },
+      {
+        "authors_before": "Siddharthan T, Dalzell M, ",
+        "author_bold": "Grealis K",
+        "authors_after": ", Gonzalez E, Wanner A.",
+        "year": "2023",
+        "title": "Accuracy and reproducibility of plethysmographic thoracic gas volume measurements in healthy subjects.",
+        "journal": "American Thoracic Society",
+        "details": ". A41. Emerging Clinical and Translational Research in COPD and Alpha-1-Antitrypsin, A1555-A1555.",
+        "url": "https://doi.org/10.1164/ajrccm-conference.2023.207.1_meetingabstracts.a1555"
+      },
+      {
+        "authors_before": "Rovinsky R, ",
+        "author_bold": "Grealis K",
+        "authors_after": ", Kumar N, Velasquez Duran M, Patel S, Ferriera T, Gershengorn HB, Mallow C.",
+        "year": "2023",
+        "title": "Hemodynamic variations are associated with increased likelihood of discrepancy between pulse oximeter and directly measured oxygen saturation.",
+        "journal": "American Thoracic Society",
+        "details": ". D16. Advancing the Science of ARDS and Acute Respiratory Failure, A6230-A6230.",
+        "url": "https://doi.org/10.1164/ajrccm-conference.2023.207.1_meetingabstracts.a6230"
+      }
+    ],
+    "software_packages": [
+      {
+        "years": "2026 - ongoing: ",
+        "name": "nhanesdata",
+        "description": " software package for the R language (Harmonized Access to NHANES Survey Data; doi: 10.32614/CRAN.package.nhanesdata)",
+        "url": "https://cran.r-project.org/package=nhanesdata"
+      },
+      {
+        "years": "2026 - ongoing: ",
+        "name": "Open.Visualization.Academy",
+        "description": " software package for the R language (Content to Support Classes Taught Through the Open Visualization Academy; doi: 10.32614/CRAN.package.Open.Visualization.Academy)",
+        "url": "https://cran.r-project.org/package=Open.Visualization.Academy"
+      },
+      {
+        "years": "2025 - ongoing: ",
+        "name": "sumExtras",
+        "description": " software package for the R language (Convenience functions to produce publication quality tables in R; doi: 10.32614/CRAN.package.sumExtras)",
+        "url": "https://cran.r-project.org/package=sumExtras"
+      },
+      {
+        "years": "2025 - ongoing: ",
+        "name": "froggeR",
+        "description": " software package for the R language (Enhancing reproducibility in Quarto by providing structured templates and methods of reusing metadata across projects; doi: 10.32614/CRAN.package.froggeR)",
+        "url": "https://cran.r-project.org/package=froggeR"
+      },
+      {
+        "years": "2024 - ongoing: ",
+        "name": "nascaR.data",
+        "description": " software package for the R language (R data package with functions for exploring curated NASCAR datasets of race results and driver performance; doi: 10.32614/CRAN.package.nascaR.data)",
+        "url": "https://cran.r-project.org/package=nascaR.data"
+      },
+      {
+        "years": "2023 - ongoing: ",
+        "name": "public.ctn0094data",
+        "description": " software package for the R language (De-Identified Data from CTN-0094; doi: 10.32614/CRAN.package.public.ctn0094data)",
+        "url": "https://cran.r-project.org/package=public.ctn0094data"
+      },
+      {
+        "years": "2022 - ongoing: ",
+        "name": "rUM",
+        "description": " software package for the R language (R templates from the University of Miami; doi: 10.32614/CRAN.package.rUM)",
+        "url": "https://cran.r-project.org/package=rUM"
+      },
+      {
+        "years": "2020 - ongoing: ",
+        "name": "tidyREDCap",
+        "description": " software package for the R language (Helper Functions for Working with 'REDCap' Data; doi: 10.32614/CRAN.package.tidyREDCap)",
+        "url": "https://cran.r-project.org/package=tidyREDCap"
+      }
+    ],
+    "web_applications": [
+      {
+        "years": "2024: ",
+        "name": "EpiMatch",
+        "description": ": An automated case-control matching tool for epidemiological studies useful in bias reduction and time management",
+        "url": "https://kylegrealis.shinyapps.io/case-control-matching/"
+      },
+      {
+        "years": "2024: ",
+        "name": "PowerViz",
+        "description": ": A statistical power calculator and visualization tool written in R Shiny",
+        "url": "https://kylegrealis.shinyapps.io/powerViz/"
+      }
+    ],
+    "accepted": "N/A"
+  },
+  "professional": {
+    "research_studies": [
+      {
+        "title": "Pulse Oximetry Bias in Hospitalized Patients",
+        "pi": "Christopher M. Mallow, MD",
+        "irb": "IRB20220093",
+        "period": "10/2022–present",
+        "role": "Data analysis and statistics"
+      },
+      {
+        "title": "ENDS: E-Cigarette and Vascular Diseases",
+        "pi": "Adam Wanner, MD",
+        "irb": "IRB20211060",
+        "period": "08/2022–present",
+        "role": "Data collection/management; data analysis and statistics; behavioral assessment"
+      },
+      {
+        "title": "Airway Blood Flow as an Expression of Airway Inflammation in Cystic Fibrosis",
+        "pi": "Maria Tupayachi Ortiz, MD",
+        "irb": "IRB20220600",
+        "period": "06/2022–present",
+        "role": "Lab testing"
+      },
+      {
+        "title": "Early Detection of Vaping-related Vascular Disease",
+        "pi": "Michael Campos, MD",
+        "irb": "IRB20211060",
+        "period": "02/2022–present",
+        "role": "Data collection/management; data analysis and statistics; behavioral assessment"
+      },
+      {
+        "title": "Effect of Abdominal Gas on Body Plethysmography Measurement of Thoracic Gas Volume",
+        "pi": "Trishul Siddharthan, MD",
+        "irb": "IRB20210336",
+        "period": "12/2021–07/2022",
+        "role": "Data collection"
+      },
+      {
+        "title": "Follow-up Study on Adverse Airway Effects of Inhaled Nicotine from Tobacco and E-cigarettes",
+        "pi": "Michael Campos, MD",
+        "irb": "IRB20210416",
+        "period": "08/2020–11/2020",
+        "role": "Study coordinator"
+      }
+    ],
+    "editorial": "N/A",
+    "organizations": [
+      "2022: Delta Omega, Beta Sigma Chapter; Honor Society for Graduate Studies in Public Health",
+      "2020: International Society of Sports Nutrition, Student Member",
+      "2020: National Honor Society",
+      "2020: SALUTE Veterans Honor Society (Purdue University Global Chapter)"
+    ],
+    "awards": [
+      "2023: University of Miami; Summa Cum Laude",
+      "2023: University of Miami; Graduate + Postdoctoral Research Symposium, Poster Winner (Health & Life Sciences)",
+      "2020: Purdue University Global; Summa Cum Laude",
+      "2020: Purdue University Global; Chancellor’s List (four consecutive semesters)",
+      "2019: Physicians Regional Medical Center; Employee of the Month (April)",
+      "2019: Department of the Army; Army Achievement Medal: distinguished service with 101st Airborne Division",
+      "2016: Department of the Army; Leadership Award, Basic Leadership Course",
+      "2016: Department of the Army; Distinguished Honor Graduate",
+      "2009: Physicians Regional Medical Center; Employee of the Quarter (October)",
+      "2002: Rutgers University (f.k.a. UMDNJ); Clinical Excellence Award"
+    ],
+    "fellowships": "N/A",
+    "presentations_international": [
+      {
+        "title_and_authors_before": "sumExtras: Streamlining Table Workflows in Clinical Research with R. ",
+        "author_bold": "Grealis K",
+        "authors_after": ". ",
+        "venue_italic": "R/Medicine 2026",
+        "details": ", R Consortium, online conference. Lightning Talk, May 8, 2026."
+      },
+      {
+        "title_and_authors_before": "Mix, Pour, Share: The rUM Cocktail for Biomedical Project Packaging. ",
+        "author_bold": "Grealis K",
+        "authors_after": ", Balise R. ",
+        "venue_italic": "R/Medicine 2025",
+        "details": ", R Consortium, online conference. Regular Talk, June 12, 2025."
+      },
+      {
+        "title_and_authors_before": "Development of a Brief Stigma and Perceptions Questionnaire for Pharmacists: A Confirmatory Factor Analysis Approach in New York State Counties Enrolled in the Healing Communities Study. Goddard-Eckrich D, ",
+        "author_bold": "Grealis K",
+        "authors_after": ", El-Bassel K, Lounsbury D, Dsouza N, Bhuiyan J, Angerame A, Feaster D, Cervantes M, Huang T, Sabounchi N, Gilbert L, Medley B, McCrimmon T, David J, Hunt T, Wu E, Gutnick D, Rodriguez D, Gruss D, Rodgers E, Nunes E, Levin F, Edwards K, Balise R. ",
+        "venue_italic": "College on Problems of Drug Dependence (CPDD), Annual Scientific Meeting",
+        "details": ", Montreal, Canada, June 17, 2024."
+      },
+      {
+        "title_and_authors_before": "Validation of x-ray velocimetry with pneumotachograph to assess respiratory physiology. Tombelson A, ",
+        "author_bold": "Grealis K",
+        "authors_after": ", Otvos T, Kirkness JP, Fouras A, Punjabi NM, Siddharthan T. ",
+        "venue_italic": "Young Scientists’ Forum",
+        "details": ". Oral presentation, May 2023."
+      }
+    ],
+    "presentations_local": [
+      {
+        "title_and_authors_before": "Customizable SAS macro program for case-control matching. ",
+        "author_bold": "Grealis K",
+        "authors_after": ". ",
+        "venue_italic": "Graduate + Postdoctoral Research Symposium",
+        "details": ", University of Miami, Miami, FL, March 23, 2023."
+      }
+    ]
+  },
+  "teaching": {
+    "awards": "N/A",
+    "specialization": "N/A",
+    "advising": "N/A"
+  },
+  "service": {
+    "university_committees": "N/A",
+    "community_summary": "2020 – Present: Open-Source R & Quarto Software Development (nhanesdata, Open.Visualization.Academy, sumExtras, froggeR, nascaR.data, public.ctn0094data, rUM, tidyREDCap)"
+  }
+}
